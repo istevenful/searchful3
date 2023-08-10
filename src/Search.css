@@ -1,0 +1,111 @@
+.Search-Page{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.Banner{
+    width: 100%;
+    height: 40vh;
+    background: linear-gradient(to right, #FFD3DD 0%, #FFCBCD 20%, #FFD8E6 50%, #FFE7FF 75%, #FFF6E9 100%);
+    position: relative;
+    border-radius: 15px;
+    margin-bottom:-40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Banner-Context{
+    height: 100%;
+    margin-bottom: 40px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    font-family: "Euclid Circular B";
+    align-items: start;
+}
+.Banner-Logo{
+    width: 22%;
+    padding-bottom: 40px;
+}
+.Banner-Heading{
+    width: fit-content;
+    font-size: 3.5vw;
+    font-weight: 700;
+    background: linear-gradient(to right, #FF357E 0%,#FF7C9E 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+    padding-bottom: 20px;
+
+}
+.Banner-Text{
+    width: fit-content;
+    font-size:.8vw;
+    padding-bottom: 40px;
+}
+.BannerCircle{
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top:0;
+}
+
+.Search-Area{
+    border: 1px solid #DFDFDF;
+    border-radius: 7px;
+    width: 50%;
+    height: 30vh;
+    padding-top:30px;
+    padding-bottom:30px;
+    padding-left: 40px;
+    padding-right:40px;
+    z-index: 100;
+    background-color: white;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.Search-Fields-Home{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.Location-Search{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+}
+.Location-Text{
+    display: flex;
+    align-items: center;
+    font-family: "Euclid Circular B SemiBold";
+    font-size: .8vw;
+    padding-bottom:10px;
+}
+.Location-Logo{
+    padding-right:5px;
+}
+.Diagnosis-Search{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+}
+.Diagnosis-Text{
+    display: flex;
+    align-items: center;
+    font-family: "Euclid Circular B SemiBold";
+    font-size: .8vw;
+    padding-bottom:10px;
+}
+.Diagnosis-Logo{
+    padding-right:5px;
+}
+#combo-box-demo{
+    width: 40%;
+}

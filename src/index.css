@@ -11,3 +11,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: "Euclid Circular B";
+  src: url(./fonts/EuclidCircularB/Euclid\ Circular\ B\ Regular.ttf) format("truetype");
+
+}
+@font-face {
+  font-family: "Euclid Circular B SemiBold";
+  src: url(./fonts/EuclidCircularB/Euclid\ Circular\ B\ SemiBold.ttf) format("truetype");
+
+}
