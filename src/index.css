@@ -22,3 +22,8 @@ code {
   src: url(./fonts/EuclidCircularB/Euclid\ Circular\ B\ SemiBold.ttf) format("truetype");
 
 }
+@font-face {
+  font-family: "Euclid Circular B Bold";
+  src: url(./fonts/EuclidCircularB/Euclid\ Circular\ B\ Bold.ttf) format("truetype");
+
+}

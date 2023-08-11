@@ -24,7 +24,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    font-family: "Euclid Circular B";
+
     align-items: start;
 }
 .Banner-Logo{
@@ -34,7 +34,6 @@
 .Banner-Heading{
     width: fit-content;
     font-size: 3.5vw;
-    font-weight: 700;
     background: linear-gradient(to right, #FF357E 0%,#FF7C9E 100%);
     background-size: 100%;
     -webkit-background-clip: text;
@@ -42,12 +41,15 @@
     -webkit-text-fill-color: transparent; 
     -moz-text-fill-color: transparent;
     padding-bottom: 20px;
+    font-family: "Euclid Circular B Bold";
 
 }
 .Banner-Text{
     width: fit-content;
     font-size:.8vw;
     padding-bottom: 40px;
+    font-family: "Euclid Circular B";
+    
 }
 .BannerCircle{
     height: 100%;
@@ -60,7 +62,8 @@
     border: 1px solid #DFDFDF;
     border-radius: 7px;
     width: 50%;
-    height: 30vh;
+    height: 25vh;
+    min-height: 250px;
     padding-top:30px;
     padding-bottom:30px;
     padding-left: 40px;
@@ -68,6 +71,9 @@
     z-index: 100;
     background-color: white;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .Search-Fields-Home{
@@ -106,6 +112,75 @@
 .Diagnosis-Logo{
     padding-right:5px;
 }
-#combo-box-demo{
-    width: 40%;
+
+.Discover-Home{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: start;
+    justify-content: flex-start;
+    padding-top: 40px;
+}
+.Discover-Header{
+    font-family: "Euclid Circular B Bold";
+    font-size: 1.75vw
+}
+.Discover-Text{
+    padding-top: 15px;
+    font-family: "Euclid Circular B";
+    font-size: .8vw;
+    padding-bottom: 15px;
+}
+
+.Discover-Cities{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 30vh;
+    justify-content: space-between;
+    align-items: center
+}
+
+.City-Card{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 30%;
+    background-color: black;
+    justify-content: space-between;
+
+    overflow-x: hidden;
+    border-radius: 15px;
+    position: relative;
+}
+
+.Chicago{
+    height: 100%;
+    position: absolute;
+}
+.Dallas{
+    height: 100%;
+}
+.GoldenGate{
+    height: 100%;
+}
+
+.CityHeader{
+    position: absolute;
+    padding-top:15px;
+    padding-left:15px;
+
+    color:white;
+    display: flex;
+    flex-direction: column;
+}
+.cityName{
+    font-size: 1.25vw;
+    font-family: "Euclid Circular B SemiBold";
+    
+}
+.cityRes{
+    padding-top:2px;
+    font-size:.8vw;
+    font-family: "Euclid Circular B";
 }
