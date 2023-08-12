@@ -1,0 +1,76 @@
+.Rec-Page{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.Nav-Bar{
+    width: 100%;
+    height: 10vh;
+    min-height: 64px;
+    background: linear-gradient(to right, #FFD3DD 0%, #FFCBCD 20%, #FFD8E6 50%, #FFE7FF 75%, #FFF6E9 100%);
+    position: relative;
+    border-radius: 15px;
+    padding-left:25px;
+    padding-right:25px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.Nav-Logo{
+    height: 30%;
+}
+
+.Nav-Bar-Search{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 30%;
+    background-color: black;
+}
+
+.Rec-Scroll-Area{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.LocationAndDiagnosis{
+    font-family: "Euclid Circular B SemiBold";
+    font-size: 1.75vw
+}
+b {
+    color:#FF756D;
+}
+.Rec-Sub-Text{
+    padding-top: 20px;
+    font-family: "Euclid Circular B";
+    font-size: .8vw;
+    padding-bottom: 15px;
+}
+.Filter-List{
+    display: flex;
+    flex-direction: row;
+
+}
+.filter-buttons{
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #DFDFDF;
+    width: fit-content;
+    border-radius: 100px;
+    padding: 15px 20px 15px 20px;
+    font-size: .8vw;
+    color: black;
+    margin-right: 20px;
+}
+.Delete-Icon{
+    width: .8vw;
+    margin-left: 25px;
+    cursor: pointer;
+}

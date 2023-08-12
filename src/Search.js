@@ -1,12 +1,38 @@
-import React from 'react'
+import React ,{useState, useEffect} from 'react'
 import TextField from '@mui/material/TextField';
 import Stack from '@mui/material/Stack';
 import Autocomplete from '@mui/material/Autocomplete';
 import Button from '@mui/material/Button';
 import "./Search.css"
-
+import { Link } from 'react-router-dom'
 
 function Search() {
+
+    const [searchData, setSearchData] = useState(["San Francisco, CA", "Migraine"])
+    let handleLocationChange = (event, value) => {
+        let bufferData = searchData;
+        if(value==null){
+            bufferData[0] = "San Francisco, CA";
+            console.log(bufferData);
+            setSearchData(bufferData)
+        }
+        else{
+            bufferData[0] = value.label;
+            console.log(bufferData);
+            setSearchData(bufferData)
+        }
+    };
+    let handleDiagnosisChange = (event, value) => {
+        let bufferData = searchData;
+        if(value==null){
+            bufferData[1] = "Migraine";
+            setSearchData(bufferData)
+        }
+        else{
+            bufferData[1] = value.label;
+            setSearchData(bufferData)
+        }
+    };
     return (
         <>
             <div className='Search-Page'>
@@ -35,6 +61,7 @@ function Search() {
                                 options={listOfCities}
                                 sx={{ width: '100%' }}
                                 renderInput={(params) => <TextField {...params} label="" placeholder="San Francisco, CA" />}
+                                onChange= {handleLocationChange}
                             />
                         </div>
                         <div className='Diagnosis-Search'>
@@ -46,9 +73,10 @@ function Search() {
                             <Autocomplete
                                 disablePortal
                                 id="combo-box-demo"
-                                options={listOfCities}
+                                options={listOfDiagnosis}
                                 sx={{ width: '100%' }}
                                 renderInput={(params) => <TextField {...params} label="" placeholder="Migraine" />}
+                                onChange= {handleDiagnosisChange}
                             />
                         </div>
                     </div>
@@ -63,7 +91,7 @@ function Search() {
                             },
 
                         }}
-                    >Search</Button>
+                    ><Link to={`/recommendations`}  className="Home-Search-Button" state={{ from: { searchData } }}>Search</Link></Button>
                 </div>
                 <div className='Discover-Home'>
                     <div className='Discover-Header'>
@@ -74,7 +102,7 @@ function Search() {
                     </div>
                     <div className='Discover-Cities'>
                         <div className='City-Card'>
-                            <img className='Chicago' src='Chicago.jpg'>
+                            <img className='Chicago' src='Chicago.jpg' alt='Chicago'>
 
                             </img>
                             <div className='CityHeader'>
@@ -88,7 +116,7 @@ function Search() {
 
                         </div>
                         <div className='City-Card'>
-                            <img className='GoldenGate' src='GoldenGate.avif'>
+                            <img className='GoldenGate' src='GoldenGate.avif' alt='GGB'>
 
                             </img>
                             <div className='CityHeader'>
@@ -102,7 +130,7 @@ function Search() {
 
                         </div>
                         <div className='City-Card'>
-                            <img className='Dallas' src='Dallas.jpg'>
+                            <img className='Dallas' src='Dallas.jpg' alt='Dallas'>
 
                             </img>
                             <div className='CityHeader'>
@@ -123,7 +151,19 @@ function Search() {
 
 
 const listOfCities = [
-    { label: "City 1" }
+    { label: "Atlanta, GA" },
+    { label: "Brooklyn, NY" },
+    { label: "Chicago Downtown, IL" },
+    { label: "Dallas, TX" },
+    { label: "Manhattan, NY" },
+    { label: "San Francisco, CA" },
 ]
-
+const listOfDiagnosis = [
+    { label: "Cold" },
+    { label: "Flu" },
+    { label: "Migraine" },
+    { label: "Nausea" },
+    { label: "Sinus Infection" },
+    { label: "Spre Throat" },
+]
 export default Search
