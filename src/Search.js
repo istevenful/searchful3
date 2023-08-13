@@ -40,18 +40,18 @@ function Search() {
 
                 <div className='Banner'>
                     <div className='Banner-Context'>
-                        <img src='SearchfulLogo.png' alt='Logo' className='Banner-Logo'></img>
+                        <img src='/SearchfulLogo.png' alt='Logo' className='Banner-Logo'></img>
                         <div className='Banner-Heading'>Start your Search</div>
                         <div className='Banner-Text'>In the fields below type the patient’s location and their diagnosis</div>
                     </div>
-                    <img src='BannerAnimation.png' alt="Banner Circle" className='BannerCircle'></img>
+                    <img src='/BannerAnimation.png' alt="Banner Circle" className='BannerCircle'></img>
                 </div>
 
                 <div className='Search-Area'>
                     <div className='Search-Fields-Home'>
                         <div className='Location-Search'>
                             <div className='Location-Text'>
-                                <img className='Location-Logo' alt='Globe' src='Location.png'></img>
+                                <img className='Location-Logo' alt='Globe' src='/Location.png'></img>
 
                                 Location
                             </div>
@@ -66,7 +66,7 @@ function Search() {
                         </div>
                         <div className='Diagnosis-Search'>
                             <div className='Diagnosis-Text'>
-                                <img className='Diagnosis-Logo' alt='Heart' src='Diagnosis.png'></img>
+                                <img className='Diagnosis-Logo' alt='Heart' src='/Diagnosis.png'></img>
 
                                 Diagnosis
                             </div>
@@ -102,7 +102,7 @@ function Search() {
                     </div>
                     <div className='Discover-Cities'>
                         <div className='City-Card'>
-                            <img className='Chicago' src='Chicago.jpg' alt='Chicago'>
+                            <img className='Chicago' src='/Chicago.jpg' alt='Chicago'>
 
                             </img>
                             <div className='CityHeader'>
@@ -116,7 +116,7 @@ function Search() {
 
                         </div>
                         <div className='City-Card'>
-                            <img className='GoldenGate' src='GoldenGate.avif' alt='GGB'>
+                            <img className='GoldenGate' src='/GoldenGate.avif' alt='GGB'>
 
                             </img>
                             <div className='CityHeader'>
@@ -130,7 +130,7 @@ function Search() {
 
                         </div>
                         <div className='City-Card'>
-                            <img className='Dallas' src='Dallas.jpg' alt='Dallas'>
+                            <img className='Dallas' src='/Dallas.jpg' alt='Dallas'>
 
                             </img>
                             <div className='CityHeader'>
@@ -164,6 +164,6 @@ const listOfDiagnosis = [
     { label: "Migraine" },
     { label: "Nausea" },
     { label: "Sinus Infection" },
-    { label: "Spre Throat" },
+    { label: "Sore Throat" },
 ]
 export default Search

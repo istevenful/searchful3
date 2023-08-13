@@ -18,7 +18,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-
+    margin-bottom:5vh;
 }
 .Nav-Logo{
     height: 30%;
@@ -30,10 +30,18 @@
     justify-content: space-between;
     align-items: center;
     height: 100%;
-    width: 30%;
-    background-color: black;
+    width: 60%;
 }
-
+.New-Search-Button{
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    background-color: #FF756D;
+    padding: 18px 5% 18px 5%;
+    border-radius: 7px;
+    color:white;
+}
 .Rec-Scroll-Area{
     display: flex;
     flex-direction: column;
@@ -42,7 +50,8 @@
 
 .LocationAndDiagnosis{
     font-family: "Euclid Circular B SemiBold";
-    font-size: 1.75vw
+    font-size: 1.75vw;
+    width: 75%;
 }
 b {
     color:#FF756D;
@@ -55,10 +64,11 @@ b {
 }
 .Filter-List{
     display: flex;
-    flex-direction: row;
-
+    width: 100%;
+    flex-wrap: wrap;
 }
 .filter-buttons{
+    
     display: flex;
     flex-direction: row;
     border: 1px solid #DFDFDF;
@@ -68,9 +78,152 @@ b {
     font-size: .8vw;
     color: black;
     margin-right: 20px;
+    align-items: center;
+    margin-bottom:15px;
 }
 .Delete-Icon{
     width: .8vw;
     margin-left: 25px;
     cursor: pointer;
+}
+.Filter-Add{
+    font-size: .8vw;
+    color: #FF756D;
+    align-self: center;
+    cursor: pointer;
+    margin-bottom:15px;
+}
+
+.Filter-Item-List{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 15px;
+}
+
+.item-Box{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    border: 1px solid #DFDFDF;
+    padding: 30px;
+    margin-bottom: 15px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 15px;
+    justify-content: space-between;
+}
+.item-box-left{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 90%;
+    height: fit-content;
+}
+.item-Header{
+    font-size: 1.2vw;
+    font-family: "Euclid Circular B SemiBold";
+}
+.item-row-1{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    margin-bottom:20px;
+
+}
+.item-row-2{
+    display: flex;
+    flex-direction: row;
+
+}
+.item-info-1{
+    display: flex;
+    align-items: center;
+    font-size: .8vw;
+    width: 30%;
+}
+.item-info{
+    display: flex;
+    align-items: center;
+    font-size: .8vw;
+}
+.item-image{
+    margin-right: 15px;
+    width: .8vw;
+}
+.item-image-wide{
+    margin-right: 15px;
+    width: 1vw;
+}
+
+.item-box-buttons{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+
+}
+.item-box-add{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #DFDFDF;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.item-img-button{
+    width: 1vw;
+    height: 1vw;
+}
+.item-box-refresh{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #DFDFDF;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.item-website{
+    color: #FF756D;
+    font-family: "Euclid Circular B SemiBold";
+}
+
+.Magic-Search{
+    width: 100%;
+    padding: 40px;
+    background: linear-gradient(to right, #FFD0D9 0%,#FFC8CA 30%,#FFD4E0 50%,#FFE3FA 70%,#FFEAFA 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;;
+}
+.MagicStars{
+    height: 40px;
+}
+.MagicHeader{
+    font-size: 1.2vw;
+    font-family: "Euclid Circular B SemiBold";
+    padding-top: 25px;
+    padding-bottom: 20px;
+}
+.MagicText{
+    font-size:.9vw;
+    font-family: "Euclid Circular B";
+    padding-bottom: 20px;   
+    text-align: center;
+}
+
+.MagicButton{
+    font-size: .9vw;
+    border:1px solid #FFB2C3;
+    border-radius: 100px;
+    background-color: white;
+    color:#FF756D;
+    font-family: "Euclid Circular B SemiBold";
+    padding: 10px 20px 10px 20px;
 }
