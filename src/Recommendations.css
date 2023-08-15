@@ -150,10 +150,17 @@ b {
 .item-image{
     margin-right: 15px;
     width: .8vw;
+    height: 0.8vw;
 }
 .item-image-wide{
     margin-right: 15px;
     width: 1vw;
+    
+}
+.item-image-tall{
+    margin-right: 15px;
+    height: 1vw;
+    
 }
 
 .item-box-buttons{
@@ -226,4 +233,133 @@ b {
     color:#FF756D;
     font-family: "Euclid Circular B SemiBold";
     padding: 10px 20px 10px 20px;
+}
+
+.popup{
+    width: 100vw;
+    height: 100vh;;
+    display: flex;
+    position: fixed;
+    background-color: rgba(1,1,1,0.5);
+    top: 0;
+    left: 0;
+    justify-content: center;
+    z-index: 1000;
+}
+.popupContainer{
+    width: 60%;
+    margin-top: 2.5vh;
+    margin-bottom: 2.5vh;
+    height: 95vh;
+    background-color: white;
+    padding: 2.5% 3% 2.5% 3%;
+    border-radius: 15px;
+    overflow-y: scroll;
+}
+.BackPopup{
+    display: flex;
+    cursor: pointer;
+    font-size: .8vw;
+    border: 1px solid #DFDFDF;
+    color:#FF756D;
+    border-radius: 7px;
+    width: fit-content;
+    padding-left: 25px;
+    padding-top:15px;
+    padding-bottom: 15px;
+    font-family: "Euclid Circular B SemiBold";
+    padding-right:25px;
+}
+.popupButtons-Top{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.fourButtons{
+    display: flex;
+    flex-direction: row;
+}
+.popUpClickableButtons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #FF756D;
+    border-radius: 10px;
+    padding: 15px;
+    margin-left: 15px;
+    cursor: pointer;;
+}
+.popUpClickableButtonsActive{
+    background-color: #FFF0F0;
+}
+.categoty-Popups{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 5px;
+}
+.categoty-Popups{
+    color: #FF756D;
+    font-size: .8vw;
+    padding-right: 10px;
+    font-family: "Euclid Circular B SemiBold";
+    
+}
+.popUpHeaderText{
+    font-size: 2vw;
+    font-family: "Euclid Circular B SemiBold";
+    padding-bottom:10px;
+}
+.divider{
+    width: 100%;
+    border: 1px solid #DFDFDF;
+}
+.popup-info-1{
+    display: flex;
+    align-items: center;
+    font-size: .8vw;
+    width: 20%;
+}
+.popup-info{
+    display: flex;
+    align-items: center;
+    font-size: .8vw;
+}
+.popup-Times{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.time-slots{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.time-slot{
+    font-size: .8vw;
+    margin-bottom: 5px;
+}
+.Search-additional-features{
+    width: 100%;
+    color:#7E7E7E;
+    border: 1px solid #DFDFDF;
+    border-radius: 7px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: .8vw;
+    padding-left:15px;
+    padding-top:15px;
+    padding-bottom:15px;
+}
+.add-details-header{
+    font-size: .8vw;
+    color:#7E7E7E;
+    font-family: "Euclid Circular B SemiBold";
+    padding-bottom:8px;
+}
+.popup-providers{
+    font-size: .8vw;
+    padding-bottom:15px;
 }

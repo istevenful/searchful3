@@ -173,7 +173,24 @@ function Recommendations() {
         }
         return filtersToShow
     }
-
+    const [popUpInfo, setPopUpInfo] = useState(null);
+    const [showPopUp, setShowPopUp] = useState(false);
+    let handleItemBoxWasClicked = (itemData) => {
+        setPopUpInfo(itemData);
+    }
+    let handleItemBoxCloseWasClicked = () => {
+        setShowPopUp(false)
+        setPopUpInfo(null);
+    }
+    useEffect(() => {
+        console.log("dsa")
+        if (popUpInfo != null) {
+            setShowPopUp(true);
+        }
+        else if (popUpInfo == null) {
+            setShowPopUp(false);
+        }
+    }, [popUpInfo])
     function FilterItemList() {
         console.log(filterItemsToShow)
         let filterItemData = filterItemsToShow;
@@ -192,7 +209,7 @@ function Recommendations() {
                                 {itemData.Distance}
                             </div>
                             <div className='item-info'>
-                                <img src='/LocationPin.png' alt='Pin' className='item-image'></img>
+                                <img src='/LocationPin.png' alt='Pin' className='item-image-tall'></img>
                                 {itemData.Address}
                             </div>
                         </div>
@@ -211,7 +228,7 @@ function Recommendations() {
                         <div className='item-box-add'>
                             <img src='/AddFile.png' alt='Add' className='item-img-button'></img>
                         </div>
-                        <div className='item-box-refresh'>
+                        <div className='item-box-refresh' onClick={() => { handleItemBoxWasClicked(itemData) }}>
                             <img src='/Refresh.png' alt='Refresh' className='item-img-button'></img>
                         </div>
                     </div>
@@ -221,6 +238,19 @@ function Recommendations() {
             numberTag++;
         }
         return filterItemsCards;
+    }
+
+
+    let changeClassToActive = (id) => {
+
+        let classObj = document.getElementById(id).classList;
+        console.log(classObj.length);
+        if (classObj.length == 1){
+            document.getElementById(id).classList = ["popUpClickableButtons popUpClickableButtonsActive"]
+        }
+        else if (classObj.length == 2){
+            document.getElementById(id).classList = ["popUpClickableButtons"]
+        }
     }
 
     return (
@@ -294,6 +324,117 @@ function Recommendations() {
                     </div>
                 </div>
             </div>
+            {showPopUp == true ?
+                <div className='popup'>
+                    <div className='popupContainer'>
+                        <div className='popupButtons-Top'>
+                            <div className='BackPopup' onClick={() => { handleItemBoxCloseWasClicked() }}>
+                                Back to list
+                            </div>
+                            <div className='fourButtons'>
+                                <div className='popUpClickableButtons' id="Add" onClick={()=>{changeClassToActive("Add")}}>
+                                    <img src='/AddFile.png' alt='Add' className='item-img-button'></img>
+                                </div>
+                                <div className='popUpClickableButtons' id="Refresh" onClick={()=>{changeClassToActive("Refresh")}}>
+                                    <img src='/Refresh.png' alt='Refresh' className='item-img-button'></img>
+                                </div>
+                                <div className='popUpClickableButtons' id="Pencil" onClick={()=>{changeClassToActive("Pencil")}}>
+                                    <img src='/Pencil.png' alt='Pencil' className='item-img-button'></img>
+                                </div>
+                                <div className='popUpClickableButtons' id="Trash" onClick={()=>{changeClassToActive("Trash")}}>
+                                    <img src='/TrashRed.png' alt='TrashRed' className='item-img-button'></img>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className='categoty-Popups'>
+                            <div className='categoty-Popups'>
+                                Cardiology
+                            </div>
+                            <div className='categoty-Popups'>
+                                •
+                            </div>
+                            <div className='categoty-Popups'>
+                                Dental Care
+                            </div>
+                            <div className='categoty-Popups'>
+                                •
+                            </div>
+                            <div className='categoty-Popups'>
+                                Category 3
+                            </div>
+                        </div>
+                        <div className='popUpHeaderText'>
+                            {popUpInfo.FullName}
+                        </div>
+                        <div className='divider'></div>
+
+                        <div className='item-row-1'>
+                            <div className='popup-info-1'>
+                                <img src='/Distance.png' alt='Distance' className='item-image-wide'></img>
+                                {popUpInfo.Distance}
+                            </div>
+                            <div className='popup-info'>
+                                <img src='/LocationPin.png' alt='Pin' className='item-image-tall'></img>
+                                {popUpInfo.Address}
+                            </div>
+                        </div>
+                        <div className='item-row-2'>
+                            <div className='popup-info-1'>
+                                <img src='/Car.png' alt='Phone' className='item-image'></img>
+                                13 minutes by car
+                            </div>
+                            <div className='popup-info-1'>
+                                <img src='/Phone.png' alt='Phone' className='item-image'></img>
+                                {popUpInfo.Phone}
+                            </div>
+
+                            <div className='popup-info'>
+                                <img src='/WWW.png' alt='Web Globe' className='item-image'></img>
+                                <a href={popUpInfo.Website} className='item-website' target='_blank'>Website</a>
+                            </div>
+                        </div>
+                        <div className='popup-Times'>
+                            <img src='/Clock.png' alt='Web Globe' className='item-image'></img>
+                            <div className='time-slots'>
+                                <div className='time-slot'>
+                                    MON: 8:00AM - 5:00PM
+                                </div>
+                                <div className='time-slot'>
+                                    TUE: 8:00AM - 5:00PM
+                                </div>
+                                <div className='time-slot'>
+                                    WED: 8:00AM - 5:00PM
+                                </div>
+                                <div className='time-slot'>
+                                    THU: 8:00AM - 5:00PM
+                                </div>
+                                <div className='time-slot'>
+                                    FRI: 8:00AM - 5:00PM
+                                </div>
+                                <div className='time-slot'>
+                                    SAT: CLOSED
+                                </div>
+                                <div className='time-slot'>
+                                    SUN: CLOSED
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div className='divider'></div>
+                        <div className='Search-additional-features'>
+                            Search additional details
+                        </div>
+                        <div className='add-details-header'>
+                            Providers
+                        </div>
+                        <div className='popup-providers'>{popUpInfo.Providers[0]}</div>
+                        <div className='popup-providers'>{popUpInfo.Providers[1]}</div>
+                    </div>
+                </div>
+                :
+                <></>
+            }
         </>
     )
 }
