@@ -313,7 +313,7 @@ function Recommendations() {
         <>
             <div className='Rec-Page'>
                 <div className='Nav-Bar'>
-                    <img src="/SearchfulLogo.png" alt="Logo" className='Nav-Logo'></img>
+                    <a href='/' className='Nav-Logo'><img src="/SearchfulLogo.png" alt="Logo" className='Logo-img'></img></a>
                     <div className='Nav-Bar-Search'>
                         <Autocomplete
                             disablePortal

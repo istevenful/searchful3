@@ -22,8 +22,12 @@
 }
 .Nav-Logo{
     height: 30%;
+    cursor: pointer;
 }
-
+.Logo-img{
+    height: 100%;
+    
+}
 .Nav-Bar-Search{
     display: flex;
     flex-direction: row;
