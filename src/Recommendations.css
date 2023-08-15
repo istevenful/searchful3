@@ -92,6 +92,9 @@ b {
     align-self: center;
     cursor: pointer;
     margin-bottom:15px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
 }
 
 .Filter-Item-List{
@@ -256,6 +259,32 @@ b {
     border-radius: 15px;
     overflow-y: scroll;
 }
+.popup-filter{
+    width: 100vw;
+    height: 100vh;;
+    display: flex;
+    position: fixed;
+    background-color: rgba(1,1,1,0.5);
+    top: 0;
+    left: 0;
+    justify-content: center;
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+.popupContainer-filters{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    margin-top: 2.5vh;
+    margin-bottom: 2.5vh;
+    height: fit-content;
+    background-color: white;
+    padding: 2.5% 3% 2.5% 3%;
+    border-radius: 15px;
+    justify-content: center;
+
+}
 .BackPopup{
     display: flex;
     cursor: pointer;
@@ -269,6 +298,22 @@ b {
     padding-bottom: 15px;
     font-family: "Euclid Circular B SemiBold";
     padding-right:25px;
+}
+.BackPopup-Filters{
+    display: flex;
+    cursor: pointer;
+    font-size: .8vw;
+    border: 1px solid #DFDFDF;
+    color:#FF756D;
+    border-radius: 7px;
+    width: fit-content;
+    padding-left: 25px;
+    padding-top:15px;
+    padding-bottom: 15px;
+    font-family: "Euclid Circular B SemiBold";
+    padding-right:25px;
+    align-self: center;
+    margin-top:15px;
 }
 .popupButtons-Top{
     display: flex;

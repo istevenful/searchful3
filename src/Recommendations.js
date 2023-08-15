@@ -6,17 +6,27 @@ import Stack from '@mui/material/Stack';
 import Autocomplete from '@mui/material/Autocomplete';
 import Button from '@mui/material/Button';
 import { Link } from 'react-router-dom'
+import FormGroup from '@mui/material/FormGroup';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Checkbox from '@mui/material/Checkbox';
 function Recommendations() {
     console.log(useLocation())
     const [location, setLocation] = useState(useLocation().state.from.searchData[0]);
     const [diagnosis, setDiagnosis] = useState(useLocation().state.from.searchData[1]);
-    const [currentFilters, setCurrentFilters] = useState(["Pharmacy", "General Physician"])
+    const [currentFilters, setCurrentFilters] = useState([])
 
+    const [diagnosisFilters, setDiagnosisFilters] = useState([])
+    useEffect(() => {
+        let diagObj = listOfCategories.find(obj => obj.Name === diagnosis);
+        let diagnosisList = diagObj.Categories;
+        setDiagnosisFilters(diagnosisList);
+        setCurrentFilters(diagnosisList.slice(0, 3))
+    }, [diagnosis])
     const [searchData, setSearchData] = useState([useLocation().state.from.searchData[0], useLocation().state.from.searchData[1]])
     let handleLocationChange = (event, value) => {
         let bufferData = searchData;
         if (value == null) {
-            bufferData[0] = "San Francisco, CA";
+            bufferData[0] = location;
             console.log(bufferData);
             setSearchData(bufferData)
         }
@@ -30,7 +40,7 @@ function Recommendations() {
         let bufferData = searchData;
         console.log(value)
         if (value == null) {
-            bufferData[1] = "Migraine";
+            bufferData[1] = diagnosis;
             setSearchData(bufferData)
         }
         else {
@@ -43,6 +53,12 @@ function Recommendations() {
         console.log(searchData)
         setLocation(searchData[0]);
         setDiagnosis(searchData[1]);
+    }
+    let deleteFilter = (name) => {
+        let filters = [...currentFilters];
+        let filterToDeleteIndex = filters.indexOf(name);
+        filters.splice(filterToDeleteIndex, 1);
+        setCurrentFilters(filters);
     }
     const [filterItems, setFilterItems] = useState(
         [
@@ -154,11 +170,13 @@ function Recommendations() {
     }, [diagnosis, location])
     const [filterItemsToShow, setFilterItemsToShow] = useState()
     useEffect(() => {
-        let filterButtons = currentFilters;
+        let filterButtons = [...currentFilters];
         let locationsToShow = [];
         for (const filters of filterButtons) {
             let foundObj = filterItems.find(obj => obj.Category === filters);
-            locationsToShow = locationsToShow.concat(foundObj.Locations)
+            if (foundObj != undefined) {
+                locationsToShow = locationsToShow.concat(foundObj.Locations)
+            }
 
         }
         locationsToShow.sort(function (a, b) { return (a.Distance > b.Distance) ? 1 : ((b.Distance > a.Distance) ? -1 : 0); });
@@ -166,10 +184,11 @@ function Recommendations() {
     }, [currentFilters, filterItems])
 
     function FilterList() {
-        let filterButtons = currentFilters;
+        let filterButtons = [...currentFilters];
         let filtersToShow = [];
         for (var filters of filterButtons) {
-            filtersToShow.push(<div className="filter-buttons">{filters} <img src='/Trash.png' alt='Trash' className='Delete-Icon'></img></div>)
+            let name = filters
+            filtersToShow.push(<div className="filter-buttons">{name} <img src='/Trash.png' alt='Trash' className='Delete-Icon' onClick={() => { deleteFilter(name) }}></img></div>)
         }
         return filtersToShow
     }
@@ -183,7 +202,6 @@ function Recommendations() {
         setPopUpInfo(null);
     }
     useEffect(() => {
-        console.log("dsa")
         if (popUpInfo != null) {
             setShowPopUp(true);
         }
@@ -245,12 +263,50 @@ function Recommendations() {
 
         let classObj = document.getElementById(id).classList;
         console.log(classObj.length);
-        if (classObj.length == 1){
+        if (classObj.length == 1) {
             document.getElementById(id).classList = ["popUpClickableButtons popUpClickableButtonsActive"]
         }
-        else if (classObj.length == 2){
+        else if (classObj.length == 2) {
             document.getElementById(id).classList = ["popUpClickableButtons"]
         }
+    }
+
+
+    const [showFilterChange, setShowFilterChange] = useState(false)
+
+    function DiagnosisToggleList() {
+
+        let allFilters = [...diagnosisFilters];
+        let filtersOn = [...currentFilters];
+        let returnedList = [];
+        function changeToggle(name) {
+            //find if the button is in filters on;
+            let newFilterList = [...currentFilters];
+            let isItOn = filtersOn.indexOf(name);
+            //turn off/remove
+            if (isItOn != -1) {
+                newFilterList.splice(isItOn, 1);
+                setCurrentFilters(newFilterList);
+            }
+            else {
+                //add
+                newFilterList.push(name);
+                setCurrentFilters(newFilterList);
+            }
+        }
+        for (var filter of allFilters) {
+            let cateName = filter;
+            let filterFind = filtersOn.indexOf(filter);
+            if (filterFind != -1) {
+                returnedList.push(<FormControlLabel control={<Checkbox defaultChecked style={{
+                    color: "#FF756D",
+                }} onClick={() => { changeToggle(cateName) }} />} label={cateName} />)
+            }
+            else {
+                returnedList.push(<FormControlLabel control={<Checkbox onClick={() => { changeToggle(cateName) }} />} label={cateName} />)
+            }
+        }
+        return returnedList
     }
 
     return (
@@ -303,8 +359,8 @@ function Recommendations() {
                     </div>
                     <div className='Filter-List'>
                         <FilterList></FilterList>
-                        <div className='Filter-Add'>
-                            + Add mre
+                        <div className='Filter-Add' onClick={() => setShowFilterChange(!showFilterChange)}>
+                            + Add more
                         </div>
                     </div>
                     <div className='Filter-Item-List'>
@@ -332,16 +388,16 @@ function Recommendations() {
                                 Back to list
                             </div>
                             <div className='fourButtons'>
-                                <div className='popUpClickableButtons' id="Add" onClick={()=>{changeClassToActive("Add")}}>
+                                <div className='popUpClickableButtons' id="Add" onClick={() => { changeClassToActive("Add") }}>
                                     <img src='/AddFile.png' alt='Add' className='item-img-button'></img>
                                 </div>
-                                <div className='popUpClickableButtons' id="Refresh" onClick={()=>{changeClassToActive("Refresh")}}>
+                                <div className='popUpClickableButtons' id="Refresh" onClick={() => { changeClassToActive("Refresh") }}>
                                     <img src='/Refresh.png' alt='Refresh' className='item-img-button'></img>
                                 </div>
-                                <div className='popUpClickableButtons' id="Pencil" onClick={()=>{changeClassToActive("Pencil")}}>
+                                <div className='popUpClickableButtons' id="Pencil" onClick={() => { changeClassToActive("Pencil") }}>
                                     <img src='/Pencil.png' alt='Pencil' className='item-img-button'></img>
                                 </div>
-                                <div className='popUpClickableButtons' id="Trash" onClick={()=>{changeClassToActive("Trash")}}>
+                                <div className='popUpClickableButtons' id="Trash" onClick={() => { changeClassToActive("Trash") }}>
                                     <img src='/TrashRed.png' alt='TrashRed' className='item-img-button'></img>
                                 </div>
                             </div>
@@ -419,7 +475,7 @@ function Recommendations() {
                                     SUN: CLOSED
                                 </div>
                             </div>
-                            
+
                         </div>
                         <div className='divider'></div>
                         <div className='Search-additional-features'>
@@ -435,6 +491,17 @@ function Recommendations() {
                 :
                 <></>
             }
+            {showFilterChange == true ?
+                <div className='popup-filter'>
+                    <div className='popupContainer-filters'>
+
+                        <DiagnosisToggleList></DiagnosisToggleList>
+                        <div className='BackPopup-Filters' onClick={() => { setShowFilterChange(!showFilterChange) }}>
+                            Back to list
+                        </div>
+                    </div>
+                </div>
+                : <></>}
         </>
     )
 }
@@ -447,11 +514,35 @@ const listOfCities = [
     { label: "San Francisco, CA" },
 ]
 const listOfDiagnosis = [
-    { label: "Cold" },
-    { label: "Flu" },
-    { label: "Migraine" },
-    { label: "Nausea" },
-    { label: "Sinus Infection" },
-    { label: "Sore Throat" },
+    { label: "Fatty Liver Disease" },
+    { label: "Kidney Stones" },
+    { label: "Osteoporosis" },
+    { label: "Sleep Apnea" },
+    { label: "Type II Diabetes" },
 ]
+
+const listOfCategories = [
+    {
+        Name: "Fatty Liver Disease",
+        Categories: ["Hepatologist", "Gastroenterologist", "Gyms", "Nutritionist", "Pharmacy"]
+    },
+    {
+        Name: "Kidney Stones",
+        Categories: ["Gym", "Nutritionist", "Ophthalmologist", "Pharmacy", "Podiatrist", "Primary care provider (PCP)"]
+    },
+    {
+        Name: "Osteoporosis",
+        Categories: ["Endocrinology", "Nutritionist", "OBGYN", "Occupational Therapy", "Physical Therapy", "Rheumatology"]
+    },
+    {
+        Name: "Sleep Apnea",
+        Categories: ["Nephrology", "Nutritionist", "Pharmacy", "Urology"]
+    },
+    {
+        Name: "Type II Diabetes",
+        Categories: ["ENT", "Gym", "Neurology", "Nutritionist", "Pulmonologist", "Respiratory Therapy", "Sleep Medicine"]
+    },
+]
+
+
 export default Recommendations

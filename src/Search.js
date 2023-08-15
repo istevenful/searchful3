@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom'
 
 function Search() {
 
-    const [searchData, setSearchData] = useState(["San Francisco, CA", "Migraine"])
+    const [searchData, setSearchData] = useState(["San Francisco, CA", "Osteoporosis"])
     let handleLocationChange = (event, value) => {
         let bufferData = searchData;
         if(value==null){
@@ -25,7 +25,7 @@ function Search() {
     let handleDiagnosisChange = (event, value) => {
         let bufferData = searchData;
         if(value==null){
-            bufferData[1] = "Migraine";
+            bufferData[1] = "Osteoporosis";
             setSearchData(bufferData)
         }
         else{
@@ -75,7 +75,7 @@ function Search() {
                                 id="combo-box-demo"
                                 options={listOfDiagnosis}
                                 sx={{ width: '100%' }}
-                                renderInput={(params) => <TextField {...params} label="" placeholder="Migraine" />}
+                                renderInput={(params) => <TextField {...params} label="" placeholder="Osteoporosis" />}
                                 onChange= {handleDiagnosisChange}
                             />
                         </div>
@@ -159,11 +159,10 @@ const listOfCities = [
     { label: "San Francisco, CA" },
 ]
 const listOfDiagnosis = [
-    { label: "Cold" },
-    { label: "Flu" },
-    { label: "Migraine" },
-    { label: "Nausea" },
-    { label: "Sinus Infection" },
-    { label: "Sore Throat" },
+    { label: "Fatty Liver Disease" },
+    { label: "Kidney Stones" },
+    { label: "Osteoporosis" },
+    { label: "Sleep Apnea" },
+    { label: "Type II Diabetes" },
 ]
 export default Search
