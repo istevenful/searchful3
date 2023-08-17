@@ -130,6 +130,14 @@ b {
 .item-Header{
     font-size: 1.2vw;
     font-family: "Euclid Circular B SemiBold";
+    display: flex;;
+    flex-direction: row;
+    align-items: center;
+}
+.item-badges{
+    height: 1.3vw;
+    padding-left: 5px;
+    cursor: pointer;
 }
 .item-row-1{
     display: flex;
@@ -169,30 +177,24 @@ b {
     height: 1vw;
     
 }
-
+.item-Category{
+    font-family: "Euclid Circular B SemiBold";
+    font-size: 1vw;
+    padding-bottom: 10px;
+    color: #FF756D;
+}
 .item-box-buttons{
     display: flex;
     flex-direction: column;
-    height: 100%;
-    justify-content: space-between;
+    justify-content: space-evenly;
 
-}
-.item-box-add{
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid #DFDFDF;
-    padding: 15px;
-    border-radius: 10px;
-    margin-bottom: 10px;
 }
 
 .item-img-button{
     width: 1vw;
     height: 1vw;
 }
-.item-box-refresh{
+.item-box{
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -201,7 +203,16 @@ b {
     padding: 15px;
     border-radius: 10px;
 }
-
+.item-box-active{
+    border: 1px solid #FF756D;
+    background-color: #FFF0F0;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    border-radius: 10px;
+}
 .item-website{
     color: #FF756D;
     font-family: "Euclid Circular B SemiBold";
@@ -337,7 +348,7 @@ b {
     border-radius: 10px;
     padding: 15px;
     margin-left: 15px;
-    cursor: pointer;;
+    cursor: pointer;
 }
 .popUpClickableButtonsActive{
     background-color: #FFF0F0;

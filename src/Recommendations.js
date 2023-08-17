@@ -9,8 +9,8 @@ import { Link } from 'react-router-dom'
 import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
+import Tooltip from '@mui/material/Tooltip';
 function Recommendations() {
-    console.log(useLocation())
     const [location, setLocation] = useState(useLocation().state.from.searchData[0]);
     const [diagnosis, setDiagnosis] = useState(useLocation().state.from.searchData[1]);
     const [currentFilters, setCurrentFilters] = useState([])
@@ -20,25 +20,22 @@ function Recommendations() {
         let diagObj = listOfCategories.find(obj => obj.Name === diagnosis);
         let diagnosisList = diagObj.Categories;
         setDiagnosisFilters(diagnosisList);
-        setCurrentFilters(diagnosisList.slice(0, 3))
+        setCurrentFilters(diagnosisList)
     }, [diagnosis])
     const [searchData, setSearchData] = useState([useLocation().state.from.searchData[0], useLocation().state.from.searchData[1]])
     let handleLocationChange = (event, value) => {
         let bufferData = searchData;
         if (value == null) {
             bufferData[0] = location;
-            console.log(bufferData);
             setSearchData(bufferData)
         }
         else {
             bufferData[0] = value.label;
-            console.log(bufferData);
             setSearchData(bufferData)
         }
     };
     let handleDiagnosisChange = (event, value) => {
         let bufferData = searchData;
-        console.log(value)
         if (value == null) {
             bufferData[1] = diagnosis;
             setSearchData(bufferData)
@@ -50,7 +47,6 @@ function Recommendations() {
         }
     };
     let handleLDChange = () => {
-        console.log(searchData)
         setLocation(searchData[0]);
         setDiagnosis(searchData[1]);
     }
@@ -127,7 +123,8 @@ function Recommendations() {
                         Phone: "(916) 999-2020",
                         Website: "https://www.walgreens.com/",
                         Providers: ["Raye Bellinger, M.D., MBA (In the network), Mark H. Eaton, M.D, FACC (preferred provider)", "Philip Morris Bach, M.D., FACC Georg Emlein , M.D., FACC Daniel Dale Vanhamersveld, M.D., FACC Michael David Fugit, M.D., FACC Kyle J. Michaelis, M.D., FACC Richard A. Clark, M.D."],
-                        FaxNumber: "(916) 830-2001"
+                        FaxNumber: "(916) 830-2001",
+                        Type: "Pharmacy"
                     },
                     {
                         Name: "Lucky Pharmacy",
@@ -137,7 +134,8 @@ function Recommendations() {
                         Phone: "(916) 800-2031",
                         Website: "https://luckysupermarkets.com/",
                         Providers: ["Raye Bellinger, M.D., MBA (In the network), Mark H. Eaton, M.D, FACC (preferred provider)", "Philip Morris Bach, M.D., FACC Georg Emlein , M.D., FACC Daniel Dale Vanhamersveld, M.D., FACC Michael David Fugit, M.D., FACC Kyle J. Michaelis, M.D., FACC Richard A. Clark, M.D."],
-                        FaxNumber: "(916) 830-2001"
+                        FaxNumber: "(916) 830-2001",
+                        Type: "Pharmacy"
                     },
                     {
                         Name: "CVS Pharmacy",
@@ -147,7 +145,9 @@ function Recommendations() {
                         Phone: "(916) 120-2222",
                         Website: "https://www.cvs.com/pharmacy/v2/#/pharmacy",
                         Providers: ["Raye Bellinger, M.D., MBA (In the network), Mark H. Eaton, M.D, FACC (preferred provider)", "Philip Morris Bach, M.D., FACC Georg Emlein , M.D., FACC Daniel Dale Vanhamersveld, M.D., FACC Michael David Fugit, M.D., FACC Kyle J. Michaelis, M.D., FACC Richard A. Clark, M.D."],
-                        FaxNumber: "(916) 830-2001"
+                        FaxNumber: "(916) 830-2001",
+                        Type: "Pharmacy"
+
                     },
                 ]
             },
@@ -162,7 +162,8 @@ function Recommendations() {
                         Phone: "(916) 834-1234",
                         Website: "https://www.ucsfhealth.org/",
                         Providers: ["Raye Bellinger, M.D., MBA (In the network), Mark H. Eaton, M.D, FACC (preferred provider)", "Philip Morris Bach, M.D., FACC Georg Emlein , M.D., FACC Daniel Dale Vanhamersveld, M.D., FACC Michael David Fugit, M.D., FACC Kyle J. Michaelis, M.D., FACC Richard A. Clark, M.D."],
-                        FaxNumber: "(916) 830-2001"
+                        FaxNumber: "(916) 830-2001",
+                        Type: "ENT"
                     },
                 ]
             },
@@ -177,7 +178,8 @@ function Recommendations() {
                         Phone: "(916) 980-4132",
                         Website: "https://www.ucsfhealth.org/",
                         Providers: ["Raye Bellinger, M.D., MBA (In the network), Mark H. Eaton, M.D, FACC (preferred provider)", "Philip Morris Bach, M.D., FACC Georg Emlein , M.D., FACC Daniel Dale Vanhamersveld, M.D., FACC Michael David Fugit, M.D., FACC Kyle J. Michaelis, M.D., FACC Richard A. Clark, M.D."],
-                        FaxNumber: "(916) 830-2001"
+                        FaxNumber: "(916) 830-2001",
+                        Type: "Hepatologist"
                     },
                 ]
             },
@@ -192,7 +194,8 @@ function Recommendations() {
                         Phone: "(916) 123-4321",
                         Website: "https://www.ucsfhealth.org/",
                         Providers: ["Raye Bellinger, M.D., MBA (In the network), Mark H. Eaton, M.D, FACC (preferred provider)", "Philip Morris Bach, M.D., FACC Georg Emlein , M.D., FACC Daniel Dale Vanhamersveld, M.D., FACC Michael David Fugit, M.D., FACC Kyle J. Michaelis, M.D., FACC Richard A. Clark, M.D."],
-                        FaxNumber: "(916) 830-2001"
+                        FaxNumber: "(916) 830-2001",
+                        Type: "Gastroenterologist"
                     },
                 ]
             },
@@ -207,27 +210,30 @@ function Recommendations() {
                         Phone: "(916) 400-4390",
                         Website: "https://www.ucsfhealth.org/",
                         Providers: ["Raye Bellinger, M.D., MBA (In the network), Mark H. Eaton, M.D, FACC (preferred provider)", "Philip Morris Bach, M.D., FACC Georg Emlein , M.D., FACC Daniel Dale Vanhamersveld, M.D., FACC Michael David Fugit, M.D., FACC Kyle J. Michaelis, M.D., FACC Richard A. Clark, M.D."],
-                        FaxNumber: "(916) 830-2001"
+                        FaxNumber: "(916) 830-2001",
+                        Type: "Gym"
                     },
                     {
                         Name: `Orangetheory Fitness`,
-                        FullName: `Orangetheory Fitness in ${location.substring(0,location.length-4)}`,
+                        FullName: `Orangetheory Fitness in ${location.substring(0, location.length - 4)}`,
                         Distance: "2.13 miles",
                         Address: `2190 W Bayshore Rd #150, ${location} 60657`,
                         Phone: "(916) 411-3200",
                         Website: "https://www.ucsfhealth.org/",
                         Providers: ["Raye Bellinger, M.D., MBA (In the network), Mark H. Eaton, M.D, FACC (preferred provider)", "Philip Morris Bach, M.D., FACC Georg Emlein , M.D., FACC Daniel Dale Vanhamersveld, M.D., FACC Michael David Fugit, M.D., FACC Kyle J. Michaelis, M.D., FACC Richard A. Clark, M.D."],
-                        FaxNumber: "(916) 830-2001"
+                        FaxNumber: "(916) 830-2001",
+                        Type: "Gym"
                     },
                     {
                         Name: `NCFIT`,
-                        FullName: `NCFIT ${location.substring(0,location.length-4)}`,
+                        FullName: `NCFIT ${location.substring(0, location.length - 4)}`,
                         Distance: "5.93 miles",
                         Address: ` 112 N Rengstorff Ave, ${location} 60657`,
                         Phone: "(916) 789-1467",
                         Website: "https://www.ucsfhealth.org/",
                         Providers: ["Raye Bellinger, M.D., MBA (In the network), Mark H. Eaton, M.D, FACC (preferred provider)", "Philip Morris Bach, M.D., FACC Georg Emlein , M.D., FACC Daniel Dale Vanhamersveld, M.D., FACC Michael David Fugit, M.D., FACC Kyle J. Michaelis, M.D., FACC Richard A. Clark, M.D."],
-                        FaxNumber: "(916) 830-2001"
+                        FaxNumber: "(916) 830-2001",
+                        Type: "Gym"
                     },
                 ]
             },
@@ -242,17 +248,20 @@ function Recommendations() {
                         Phone: "(916) 441-3519",
                         Website: "https://www.ucsfhealth.org/",
                         Providers: ["Raye Bellinger, M.D., MBA (In the network), Mark H. Eaton, M.D, FACC (preferred provider)", "Philip Morris Bach, M.D., FACC Georg Emlein , M.D., FACC Daniel Dale Vanhamersveld, M.D., FACC Michael David Fugit, M.D., FACC Kyle J. Michaelis, M.D., FACC Richard A. Clark, M.D."],
-                        FaxNumber: "(916) 830-2001"
+                        FaxNumber: "(916) 830-2001",
+                        Type: "Nutritionist",
+                        Badge: ["Patient", "Professional"]
                     },
                     {
-                        Name: `${location.substring(0,location.length-4)} Nutrition`,
-                        FullName: `${location.substring(0,location.length-4)} Nutrition`,
+                        Name: `${location.substring(0, location.length - 4)} Nutrition`,
+                        FullName: `${location.substring(0, location.length - 4)} Nutrition`,
                         Distance: "1.98 miles",
                         Address: `879 Newark St., ${location} 60657`,
                         Phone: "(916) 111-6546",
                         Website: "https://www.ucsfhealth.org/",
                         Providers: ["Raye Bellinger, M.D., MBA (In the network), Mark H. Eaton, M.D, FACC (preferred provider)", "Philip Morris Bach, M.D., FACC Georg Emlein , M.D., FACC Daniel Dale Vanhamersveld, M.D., FACC Michael David Fugit, M.D., FACC Kyle J. Michaelis, M.D., FACC Richard A. Clark, M.D."],
-                        FaxNumber: "(916) 830-2001"
+                        FaxNumber: "(916) 830-2001",
+                        Type: "Nutritionist"
                     },
                     {
                         Name: `RD Nutrition Coaching`,
@@ -262,7 +271,8 @@ function Recommendations() {
                         Phone: "(916) 221-3288",
                         Website: "https://www.ucsfhealth.org/",
                         Providers: ["Raye Bellinger, M.D., MBA (In the network), Mark H. Eaton, M.D, FACC (preferred provider)", "Philip Morris Bach, M.D., FACC Georg Emlein , M.D., FACC Daniel Dale Vanhamersveld, M.D., FACC Michael David Fugit, M.D., FACC Kyle J. Michaelis, M.D., FACC Richard A. Clark, M.D."],
-                        FaxNumber: "(916) 830-2001"
+                        FaxNumber: "(916) 830-2001",
+                        Type: "Nutritionist"
                     },
                 ]
             },
@@ -270,24 +280,26 @@ function Recommendations() {
                 Category: "Ophthalmologist",
                 Locations: [
                     {
-                        Name: `${location.substring(0,location.length-4)} Eye Care`,
-                        FullName: `${location.substring(0,location.length-4)} Eye Care`,
+                        Name: `${location.substring(0, location.length - 4)} Eye Care`,
+                        FullName: `${location.substring(0, location.length - 4)} Eye Care`,
                         Distance: "1.18 miles",
                         Address: `999 Edgewater Blvd, ${location} 60657`,
                         Phone: "(916) 180-8000",
                         Website: "https://www.ucsfhealth.org/",
                         Providers: ["Raye Bellinger, M.D., MBA (In the network), Mark H. Eaton, M.D, FACC (preferred provider)", "Philip Morris Bach, M.D., FACC Georg Emlein , M.D., FACC Daniel Dale Vanhamersveld, M.D., FACC Michael David Fugit, M.D., FACC Kyle J. Michaelis, M.D., FACC Richard A. Clark, M.D."],
-                        FaxNumber: "(916) 830-2001"
+                        FaxNumber: "(916) 830-2001",
+                        Type: "Ophthalmologist"
                     },
                     {
-                        Name: `${location.substring(0,location.length-4)} Eye Group`,
-                        FullName: `${location.substring(0,location.length-4)} Eye Group`,
+                        Name: `${location.substring(0, location.length - 4)} Eye Group`,
+                        FullName: `${location.substring(0, location.length - 4)} Eye Group`,
                         Distance: "2.01 miles",
                         Address: `2452 Watson Ct., ${location} 60657`,
                         Phone: "(916) 670-5422",
                         Website: "https://www.ucsfhealth.org/",
                         Providers: ["Raye Bellinger, M.D., MBA (In the network), Mark H. Eaton, M.D, FACC (preferred provider)", "Philip Morris Bach, M.D., FACC Georg Emlein , M.D., FACC Daniel Dale Vanhamersveld, M.D., FACC Michael David Fugit, M.D., FACC Kyle J. Michaelis, M.D., FACC Richard A. Clark, M.D."],
-                        FaxNumber: "(916) 830-2001"
+                        FaxNumber: "(916) 830-2001",
+                        Type: "Ophthalmologist"
                     },
                 ]
             },
@@ -296,13 +308,14 @@ function Recommendations() {
                 Locations: [
                     {
                         Name: `Midtown Podiatry`,
-                        FullName: `Midtown Podiatry in ${location.substring(0,location.length-4)}`,
+                        FullName: `Midtown Podiatry in ${location.substring(0, location.length - 4)}`,
                         Distance: "4.64 miles",
                         Address: `20 Middlefield Rd., ${location} 60657`,
                         Phone: "(916) 312-9348",
                         Website: "https://www.ucsfhealth.org/",
                         Providers: ["Raye Bellinger, M.D., MBA (In the network), Mark H. Eaton, M.D, FACC (preferred provider)", "Philip Morris Bach, M.D., FACC Georg Emlein , M.D., FACC Daniel Dale Vanhamersveld, M.D., FACC Michael David Fugit, M.D., FACC Kyle J. Michaelis, M.D., FACC Richard A. Clark, M.D."],
-                        FaxNumber: "(916) 830-2001"
+                        FaxNumber: "(916) 830-2001",
+                        Type: "Podiatrist"
                     },
                 ]
             },
@@ -317,7 +330,8 @@ function Recommendations() {
                         Phone: "(916) 114-4148",
                         Website: "https://www.ucsfhealth.org/",
                         Providers: ["Raye Bellinger, M.D., MBA (In the network), Mark H. Eaton, M.D, FACC (preferred provider)", "Philip Morris Bach, M.D., FACC Georg Emlein , M.D., FACC Daniel Dale Vanhamersveld, M.D., FACC Michael David Fugit, M.D., FACC Kyle J. Michaelis, M.D., FACC Richard A. Clark, M.D."],
-                        FaxNumber: "(916) 830-2001"
+                        FaxNumber: "(916) 830-2001",
+                        Type: "Primary care provider (PCP)"
                     },
                 ]
             },
@@ -332,7 +346,8 @@ function Recommendations() {
                         Phone: "(916) 992-4021",
                         Website: "https://www.ucsfhealth.org/",
                         Providers: ["Raye Bellinger, M.D., MBA (In the network), Mark H. Eaton, M.D, FACC (preferred provider)", "Philip Morris Bach, M.D., FACC Georg Emlein , M.D., FACC Daniel Dale Vanhamersveld, M.D., FACC Michael David Fugit, M.D., FACC Kyle J. Michaelis, M.D., FACC Richard A. Clark, M.D."],
-                        FaxNumber: "(916) 830-2001"
+                        FaxNumber: "(916) 830-2001",
+                        Type: "OBGYN"
                     },
                 ]
             },
@@ -347,7 +362,8 @@ function Recommendations() {
                         Phone: "(916) 800-1021",
                         Website: "https://www.ucsfhealth.org/",
                         Providers: ["Raye Bellinger, M.D., MBA (In the network), Mark H. Eaton, M.D, FACC (preferred provider)", "Philip Morris Bach, M.D., FACC Georg Emlein , M.D., FACC Daniel Dale Vanhamersveld, M.D., FACC Michael David Fugit, M.D., FACC Kyle J. Michaelis, M.D., FACC Richard A. Clark, M.D."],
-                        FaxNumber: "(916) 830-2001"
+                        FaxNumber: "(916) 830-2001",
+                        Type: "Occupational Therapy"
                     },
                 ]
             },
@@ -355,14 +371,15 @@ function Recommendations() {
                 Category: "Physical Therapy",
                 Locations: [
                     {
-                        Name: `${location.substring(0,location.length-4)} Rehabilitation`,
-                        FullName: `${location.substring(0,location.length-4)} Rehabilitation and Sports Therapy`,
+                        Name: `${location.substring(0, location.length - 4)} Rehabilitation`,
+                        FullName: `${location.substring(0, location.length - 4)} Rehabilitation and Sports Therapy`,
                         Distance: "2.67 miles",
                         Address: `800 Union Blvd., ${location} 60657`,
                         Phone: "(916) 800-1021",
                         Website: "https://www.ucsfhealth.org/",
                         Providers: ["Raye Bellinger, M.D., MBA (In the network), Mark H. Eaton, M.D, FACC (preferred provider)", "Philip Morris Bach, M.D., FACC Georg Emlein , M.D., FACC Daniel Dale Vanhamersveld, M.D., FACC Michael David Fugit, M.D., FACC Kyle J. Michaelis, M.D., FACC Richard A. Clark, M.D."],
-                        FaxNumber: "(916) 830-2001"
+                        FaxNumber: "(916) 830-2001",
+                        Type: "Physical Therapy"
                     },
                 ]
             },
@@ -377,7 +394,8 @@ function Recommendations() {
                         Phone: "(916) 430-2321",
                         Website: "https://www.ucsfhealth.org/",
                         Providers: ["Raye Bellinger, M.D., MBA (In the network), Mark H. Eaton, M.D, FACC (preferred provider)", "Philip Morris Bach, M.D., FACC Georg Emlein , M.D., FACC Daniel Dale Vanhamersveld, M.D., FACC Michael David Fugit, M.D., FACC Kyle J. Michaelis, M.D., FACC Richard A. Clark, M.D."],
-                        FaxNumber: "(916) 830-2001"
+                        FaxNumber: "(916) 830-2001",
+                        Type: "Endocrinology"
                     },
                 ]
             },
@@ -392,7 +410,8 @@ function Recommendations() {
                         Phone: "(916) 430-2321",
                         Website: "https://www.ucsfhealth.org/",
                         Providers: ["Raye Bellinger, M.D., MBA (In the network), Mark H. Eaton, M.D, FACC (preferred provider)", "Philip Morris Bach, M.D., FACC Georg Emlein , M.D., FACC Daniel Dale Vanhamersveld, M.D., FACC Michael David Fugit, M.D., FACC Kyle J. Michaelis, M.D., FACC Richard A. Clark, M.D."],
-                        FaxNumber: "(916) 830-2001"
+                        FaxNumber: "(916) 830-2001",
+                        Type: "Rheumatology"
                     },
                 ]
             },
@@ -401,13 +420,14 @@ function Recommendations() {
                 Locations: [
                     {
                         Name: `Chabot Nephrology`,
-                        FullName: `Chabot Nephrology in ${location.substring(0,location.length-4)}`,
+                        FullName: `Chabot Nephrology in ${location.substring(0, location.length - 4)}`,
                         Distance: "4.76 miles",
                         Address: `6001 Chabot Ave., ${location} 60657`,
                         Phone: "(916) 654-1237",
                         Website: "https://www.ucsfhealth.org/",
                         Providers: ["Raye Bellinger, M.D., MBA (In the network), Mark H. Eaton, M.D, FACC (preferred provider)", "Philip Morris Bach, M.D., FACC Georg Emlein , M.D., FACC Daniel Dale Vanhamersveld, M.D., FACC Michael David Fugit, M.D., FACC Kyle J. Michaelis, M.D., FACC Richard A. Clark, M.D."],
-                        FaxNumber: "(916) 830-2001"
+                        FaxNumber: "(916) 830-2001",
+                        Type: "Nephrology"
                     },
                 ]
             },
@@ -416,13 +436,14 @@ function Recommendations() {
                 Locations: [
                     {
                         Name: `Pacific Urology`,
-                        FullName: `Pacific Urology in ${location.substring(0,location.length-4)}`,
+                        FullName: `Pacific Urology in ${location.substring(0, location.length - 4)}`,
                         Distance: "2.66 miles",
                         Address: `1999 Mowry Ave., ${location} 60657`,
                         Phone: "(916) 198-8752",
                         Website: "https://www.ucsfhealth.org/",
                         Providers: ["Raye Bellinger, M.D., MBA (In the network), Mark H. Eaton, M.D, FACC (preferred provider)", "Philip Morris Bach, M.D., FACC Georg Emlein , M.D., FACC Daniel Dale Vanhamersveld, M.D., FACC Michael David Fugit, M.D., FACC Kyle J. Michaelis, M.D., FACC Richard A. Clark, M.D."],
-                        FaxNumber: "(916) 830-2001"
+                        FaxNumber: "(916) 830-2001",
+                        Type: "Urology"
                     },
                 ]
             },
@@ -430,14 +451,15 @@ function Recommendations() {
                 Category: "Pulmonologist",
                 Locations: [
                     {
-                        Name: `Pulmonary: ${location.substring(0,location.length-4)} Center`,
-                        FullName: `Pulmonary: ${location.substring(0,location.length-4)} Center`,
+                        Name: `Pulmonary: ${location.substring(0, location.length - 4)} Center`,
+                        FullName: `Pulmonary: ${location.substring(0, location.length - 4)} Center`,
                         Distance: "1.99 miles",
                         Address: `321 El Camino Real, ${location} 60657`,
                         Phone: "(916) 321-1231",
                         Website: "https://www.ucsfhealth.org/",
                         Providers: ["Raye Bellinger, M.D., MBA (In the network), Mark H. Eaton, M.D, FACC (preferred provider)", "Philip Morris Bach, M.D., FACC Georg Emlein , M.D., FACC Daniel Dale Vanhamersveld, M.D., FACC Michael David Fugit, M.D., FACC Kyle J. Michaelis, M.D., FACC Richard A. Clark, M.D."],
-                        FaxNumber: "(916) 830-2001"
+                        FaxNumber: "(916) 830-2001",
+                        Type: "Pulmonologist"
                     },
                 ]
             },
@@ -452,7 +474,8 @@ function Recommendations() {
                         Phone: "(916) 765-5432",
                         Website: "https://www.ucsfhealth.org/",
                         Providers: ["Raye Bellinger, M.D., MBA (In the network), Mark H. Eaton, M.D, FACC (preferred provider)", "Philip Morris Bach, M.D., FACC Georg Emlein , M.D., FACC Daniel Dale Vanhamersveld, M.D., FACC Michael David Fugit, M.D., FACC Kyle J. Michaelis, M.D., FACC Richard A. Clark, M.D."],
-                        FaxNumber: "(916) 830-2001"
+                        FaxNumber: "(916) 830-2001",
+                        Type: "Respiratory Therapy"
                     },
                 ]
             },
@@ -467,11 +490,12 @@ function Recommendations() {
                         Phone: "(916) 645-9211",
                         Website: "https://www.ucsfhealth.org/",
                         Providers: ["Raye Bellinger, M.D., MBA (In the network), Mark H. Eaton, M.D, FACC (preferred provider)", "Philip Morris Bach, M.D., FACC Georg Emlein , M.D., FACC Daniel Dale Vanhamersveld, M.D., FACC Michael David Fugit, M.D., FACC Kyle J. Michaelis, M.D., FACC Richard A. Clark, M.D."],
-                        FaxNumber: "(916) 830-2001"
+                        FaxNumber: "(916) 830-2001",
+                        Type: "Sleep Medicine"
                     },
                 ]
             },
-            
+
         ])
     }, [diagnosis, location])
     const [filterItemsToShow, setFilterItemsToShow] = useState()
@@ -516,48 +540,96 @@ function Recommendations() {
         }
     }, [popUpInfo])
     function FilterItemList() {
-        console.log(filterItemsToShow)
+
+
+        function CreateBadges(badgeData) {
+            let returnBadges = [];
+            if (badgeData.data != undefined) {
+                if (badgeData.data.length != 0) {
+                    let badges = badgeData.data;
+                    for (var name of badges) {
+                        console.log(name);
+                        if (name == "Patient") {
+                            returnBadges.push(
+
+                                <Tooltip title="User Verified">
+                                    <img src='/UserVerified.png' alt='User Badge' className='item-badges'></img>
+                                </Tooltip>
+                            )
+                        }
+                        else if (name == "Professional") {
+                            returnBadges.push(
+
+                                <Tooltip title="Verified By A Medical Professional">
+                                    <img src='/ProfessionalBadge.png' alt='Professional Badge' className='item-badges'></img>
+                                </Tooltip>
+                            )
+                        }
+
+                    }
+                }
+
+
+            }
+            return returnBadges;
+        }
+        function Test(itself){
+            console.log(itself)
+            if (itself.classList[0] == "item-box") {
+                itself.classList = ["item-box-active"]
+            }
+            else if (itself.classList[0] == "item-box-active") {
+                itself.classList = ["item-box"]
+            }
+        }
+
+
         let filterItemData = filterItemsToShow;
         let filterItemsCards = [];
         let numberTag = 1;
+        let categoriesUsed = [];
         for (var filters in filterItemData) {
             let itemData = filterItemData[filters];
-            console.log(itemData);
-            filterItemsCards.push(
-                <div className='item-Box'>
-                    <div className='item-box-left'>
-                        <div className='item-Header'>{numberTag}. {itemData.Name}</div>
-                        <div className='item-row-1'>
-                            <div className='item-info-1'>
-                                <img src='/Distance.png' alt='Distance' className='item-image-wide'></img>
-                                {itemData.Distance}
+            if (categoriesUsed.indexOf(filterItemData[filters].Type) == -1) {
+                categoriesUsed.push(filterItemData[filters].Type)
+                filterItemsCards.push(
+                    <div className='item-Box'>
+                        <div className='item-box-left'>
+                            <div className='item-Category'>{itemData.Type} </div>
+                            <div className='item-Header'>{itemData.Name} <CreateBadges data={itemData.Badge}></CreateBadges></div>
+                            <div className='item-row-1'>
+                                <div className='item-info-1'>
+                                    <img src='/Distance.png' alt='Distance' className='item-image-wide'></img>
+                                    {itemData.Distance}
+                                </div>
+                                <div className='item-info'>
+                                    <img src='/LocationPin.png' alt='Pin' className='item-image-tall'></img>
+                                    {itemData.Address}
+                                </div>
                             </div>
-                            <div className='item-info'>
-                                <img src='/LocationPin.png' alt='Pin' className='item-image-tall'></img>
-                                {itemData.Address}
+                            <div className='item-row-2'>
+                                <div className='item-info-1'>
+                                    <img src='/Phone.png' alt='Phone' className='item-image'></img>
+                                    {itemData.Phone}
+                                </div>
+                                <div className='item-info'>
+                                    <img src='/WWW.png' alt='Web Globe' className='item-image'></img>
+                                    <a href={itemData.Website} className='item-website' target='_blank'>Website</a>
+                                </div>
                             </div>
                         </div>
-                        <div className='item-row-2'>
-                            <div className='item-info-1'>
-                                <img src='/Phone.png' alt='Phone' className='item-image'></img>
-                                {itemData.Phone}
+                        <div className='item-box-buttons'>
+                            <div className='item-box' onClick={(e)=> {Test(e.target)}}>
+                                <img src='/AddFile.png' alt='Add' className='item-img-button unselectable' onClick={(e)=> {Test(e.target.parentElement)}}></img>
                             </div>
-                            <div className='item-info'>
-                                <img src='/WWW.png' alt='Web Globe' className='item-image'></img>
-                                <a href={itemData.Website} className='item-website' target='_blank'>Website</a>
+                            <div className='item-box ' onClick={() => { handleItemBoxWasClicked(itemData) }}>
+                                <img src='/Refresh.png' alt='Refresh' className='item-img-button unselectable'></img>
                             </div>
                         </div>
                     </div>
-                    <div className='item-box-buttons'>
-                        <div className='item-box-add'>
-                            <img src='/AddFile.png' alt='Add' className='item-img-button'></img>
-                        </div>
-                        <div className='item-box-refresh' onClick={() => { handleItemBoxWasClicked(itemData) }}>
-                            <img src='/Refresh.png' alt='Refresh' className='item-img-button'></img>
-                        </div>
-                    </div>
-                </div>
-            )
+                )
+            }
+
             // filterItemsCards.push(<div className="filter-buttons">{filters} <img src='Trash.png' alt='Trash' className='Delete-Icon'></img></div>)
             numberTag++;
         }
@@ -568,7 +640,7 @@ function Recommendations() {
     let changeClassToActive = (id) => {
 
         let classObj = document.getElementById(id).classList;
-        console.log(classObj.length);
+        // console.log(classObj.length);
         if (classObj.length == 1) {
             document.getElementById(id).classList = ["popUpClickableButtons popUpClickableButtonsActive"]
         }
@@ -660,15 +732,15 @@ function Recommendations() {
                     <div className='LocationAndDiagnosis'>
                         We recommend the following resources in <b>{location}</b> for <b>{diagnosis}</b>
                     </div>
-                    <div className='Rec-Sub-Text' onClick={() => console.log(filterItems)}>
+                    <div className='Rec-Sub-Text'>
                         We selected the best resource from each category below
                     </div>
-                    <div className='Filter-List'>
+                    {/* <div className='Filter-List'>
                         <FilterList></FilterList>
                         <div className='Filter-Add' onClick={() => setShowFilterChange(!showFilterChange)}>
                             + Add more
                         </div>
-                    </div>
+                    </div> */}
                     <div className='Filter-Item-List'>
                         <FilterItemList></FilterItemList>
                     </div>
