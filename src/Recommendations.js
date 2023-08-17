@@ -747,7 +747,7 @@ function Recommendations() {
                     <div className='Magic-Search'>
                         <img className='MagicStars' src='/MagicStars.png' alt='Stars'></img>
                         <div className='MagicHeader'>
-                            Unlock Magic Search for this query
+                            Unlock Advance Search Features For This Query
                         </div>
                         <div className='MagicText'>
                             With insurance data and biographical data of the patient we are able to give an even better recommendation!
