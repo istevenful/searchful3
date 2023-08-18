@@ -499,13 +499,21 @@ function Recommendations() {
         ])
     }, [diagnosis, location])
     const [filterItemsToShow, setFilterItemsToShow] = useState()
+    function randomNumber(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
     useEffect(() => {
         let filterButtons = [...currentFilters];
         let locationsToShow = [];
         for (const filters of filterButtons) {
             let foundObj = filterItems.find(obj => obj.Category === filters);
             if (foundObj != undefined) {
-                locationsToShow = locationsToShow.concat(foundObj.Locations)
+                let numberInRange = randomNumber(0, foundObj.Locations.length - 1);
+                console.log(numberInRange);
+                console.log(foundObj.Locations)
+                locationsToShow.push(foundObj.Locations[numberInRange])
             }
 
         }
@@ -573,7 +581,7 @@ function Recommendations() {
             }
             return returnBadges;
         }
-        function Test(itself){
+        function ChangeButtonColor(itself) {
             console.log(itself)
             if (itself.classList[0] == "item-box") {
                 itself.classList = ["item-box-active"]
@@ -583,52 +591,76 @@ function Recommendations() {
             }
         }
 
-
+        function ChangeBoxValues(currentValue) {
+            console.log(currentValue)
+            let copyOfCurrentFilters = [...filterItemsToShow];
+            console.log(filterItems)
+            let listOfDataToChange = filterItems.find(obj => obj.Category === currentValue.Type);
+            console.log(listOfDataToChange);
+            let locationsListToPickFrom = listOfDataToChange.Locations;
+            console.log(locationsListToPickFrom)
+            if(locationsListToPickFrom.length > 1){
+                let currentItemInArrayIndex= locationsListToPickFrom.indexOf(currentValue);
+                while (true){
+                    let randomIndex = randomNumber(0, locationsListToPickFrom.length-1)
+                    if (randomIndex != currentItemInArrayIndex){
+                        let copyIndex = copyOfCurrentFilters.indexOf(currentValue);
+                        copyOfCurrentFilters[copyIndex] = locationsListToPickFrom[randomIndex];
+                        break;
+                    }
+                }
+                
+            }
+            setFilterItemsToShow(copyOfCurrentFilters);
+            // let indexOfCurrent = locationsListToPickFrom.indexOf
+        }
         let filterItemData = filterItemsToShow;
         let filterItemsCards = [];
         let numberTag = 1;
         let categoriesUsed = [];
         for (var filters in filterItemData) {
             let itemData = filterItemData[filters];
-            if (categoriesUsed.indexOf(filterItemData[filters].Type) == -1) {
-                categoriesUsed.push(filterItemData[filters].Type)
-                filterItemsCards.push(
-                    <div className='item-Box'>
-                        <div className='item-box-left'>
-                            <div className='item-Category'>{itemData.Type} </div>
-                            <div className='item-Header'>{itemData.Name} <CreateBadges data={itemData.Badge}></CreateBadges></div>
-                            <div className='item-row-1'>
-                                <div className='item-info-1'>
-                                    <img src='/Distance.png' alt='Distance' className='item-image-wide'></img>
-                                    {itemData.Distance}
-                                </div>
-                                <div className='item-info'>
-                                    <img src='/LocationPin.png' alt='Pin' className='item-image-tall'></img>
-                                    {itemData.Address}
-                                </div>
+            categoriesUsed.push(filterItemData[filters].Type)
+            filterItemsCards.push(
+                <div className='item-Box' >
+                    <div className='item-box-left'>
+                        <div className='item-Category'>{itemData.Type} </div>
+                        <div className='item-Header'>{itemData.Name} <CreateBadges data={itemData.Badge}></CreateBadges></div>
+                        <div className='item-row-1'>
+                            <div className='item-info-1'>
+                                <img src='/Distance.png' alt='Distance' className='item-image-wide'></img>
+                                {itemData.Distance}
                             </div>
-                            <div className='item-row-2'>
-                                <div className='item-info-1'>
-                                    <img src='/Phone.png' alt='Phone' className='item-image'></img>
-                                    {itemData.Phone}
-                                </div>
-                                <div className='item-info'>
-                                    <img src='/WWW.png' alt='Web Globe' className='item-image'></img>
-                                    <a href={itemData.Website} className='item-website' target='_blank'>Website</a>
-                                </div>
+                            <div className='item-info'>
+                                <img src='/LocationPin.png' alt='Pin' className='item-image-tall'></img>
+                                {itemData.Address}
                             </div>
                         </div>
-                        <div className='item-box-buttons'>
-                            <div className='item-box' onClick={(e)=> {Test(e.target)}}>
-                                <img src='/AddFile.png' alt='Add' className='item-img-button unselectable' onClick={(e)=> {Test(e.target.parentElement)}}></img>
+                        <div className='item-row-2'>
+                            <div className='item-info-1'>
+                                <img src='/Phone.png' alt='Phone' className='item-image'></img>
+                                {itemData.Phone}
                             </div>
-                            <div className='item-box ' onClick={() => { handleItemBoxWasClicked(itemData) }}>
-                                <img src='/Refresh.png' alt='Refresh' className='item-img-button unselectable'></img>
+                            <div className='item-info'>
+                                <img src='/WWW.png' alt='Web Globe' className='item-image'></img>
+                                <a href={itemData.Website} className='item-website' target='_blank'>Website</a>
                             </div>
                         </div>
                     </div>
-                )
-            }
+                    <div className='item-box-buttons'>
+                        <div className='item-box' onClick={(e) => { ChangeButtonColor(e.target) }}>
+                            <img src='/AddFile.png' alt='Add' className='item-img-button unselectable' onClick={(e) => { ChangeButtonColor(e.target.parentElement) }}></img>
+                        </div>
+                        <div className='item-box ' onClick={(e) => { ChangeBoxValues(itemData) }}>
+                            <img src='/Refresh.png' alt='Refresh' className='item-img-button unselectable' onClick={(e) => { ChangeBoxValues(itemData) }}></img>
+                        </div>
+                    </div>
+                    <div className='item-box-click-box' onClick={() => { handleItemBoxWasClicked(itemData) }}>
+
+                    </div>
+                </div>
+            )
+
 
             // filterItemsCards.push(<div className="filter-buttons">{filters} <img src='Trash.png' alt='Trash' className='Delete-Icon'></img></div>)
             numberTag++;
