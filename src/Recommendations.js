@@ -165,14 +165,25 @@ function Recommendations() {
                         FaxNumber: "(916) 830-2001",
                         Type: "ENT"
                     },
+                    {
+                        Name: `Sutter Health`,
+                        FullName: `Sutter Health in ${location.substring(0, location.length - 4)}`,
+                        Distance: "2.33 miles",
+                        Address: `1337 Sutter Dr, ${location} 60657`,
+                        Phone: "(916) 834-1234",
+                        Website: "https://www.ucsfhealth.org/",
+                        Providers: ["Raye Bellinger, M.D., MBA (In the network), Mark H. Eaton, M.D, FACC (preferred provider)", "Philip Morris Bach, M.D., FACC Georg Emlein , M.D., FACC Daniel Dale Vanhamersveld, M.D., FACC Michael David Fugit, M.D., FACC Kyle J. Michaelis, M.D., FACC Richard A. Clark, M.D."],
+                        FaxNumber: "(916) 333-3211",
+                        Type: "ENT"
+                    },
                 ]
             },
             {
                 Category: "Hepatologist",
                 Locations: [
                     {
-                        Name: `Hepatologist: ${location.substring(0, location.length - 4)} Center`,
-                        FullName: `Hepatologist: ${location.substring(0, location.length - 4)} Medical Foundation`,
+                        Name: `${location.substring(0, location.length - 4)} Center`,
+                        FullName: `${location.substring(0, location.length - 4)} Medical Foundation`,
                         Distance: "1.90 miles",
                         Address: `795 El Camino Real, ${location} 60657`,
                         Phone: "(916) 980-4132",
@@ -181,13 +192,24 @@ function Recommendations() {
                         FaxNumber: "(916) 830-2001",
                         Type: "Hepatologist"
                     },
+                    {
+                        Name: `Dr. Scott Colton`,
+                        FullName: `Dr. Scott Colton at University Health System`,
+                        Distance: "1.54 miles",
+                        Address: `1546 Frontage Rd, ${location} 60657`,
+                        Phone: "(916) 980-4132",
+                        Website: "https://www.ucsfhealth.org/",
+                        Providers: ["Raye Bellinger, M.D., MBA (In the network), Mark H. Eaton, M.D, FACC (preferred provider)", "Philip Morris Bach, M.D., FACC Georg Emlein , M.D., FACC Daniel Dale Vanhamersveld, M.D., FACC Michael David Fugit, M.D., FACC Kyle J. Michaelis, M.D., FACC Richard A. Clark, M.D."],
+                        FaxNumber: "(916) 543-3426",
+                        Type: "Hepatologist"
+                    },
                 ]
             },
             {
                 Category: "Gastroenterologist",
                 Locations: [
                     {
-                        Name: `Gastroenterologist: Core Wellness Functional Medicine`,
+                        Name: `Core Wellness Functional Medicine`,
                         FullName: `Dr. Carolyn Finnegan - Funcational Medicine`,
                         Distance: "0.73 miles",
                         Address: `600 Grand Ave #301, ${location} 60657`,
@@ -195,6 +217,17 @@ function Recommendations() {
                         Website: "https://www.ucsfhealth.org/",
                         Providers: ["Raye Bellinger, M.D., MBA (In the network), Mark H. Eaton, M.D, FACC (preferred provider)", "Philip Morris Bach, M.D., FACC Georg Emlein , M.D., FACC Daniel Dale Vanhamersveld, M.D., FACC Michael David Fugit, M.D., FACC Kyle J. Michaelis, M.D., FACC Richard A. Clark, M.D."],
                         FaxNumber: "(916) 830-2001",
+                        Type: "Gastroenterologist"
+                    },
+                    {
+                        Name: `Washington Hospital`,
+                        FullName: `Dr. Michelle Chen - Washington Hospital`,
+                        Distance: "4.97 miles",
+                        Address: `9000 Washington St, ${location} 60657`,
+                        Phone: "(916) 123-4321",
+                        Website: "https://www.ucsfhealth.org/",
+                        Providers: ["Raye Bellinger, M.D., MBA (In the network), Mark H. Eaton, M.D, FACC (preferred provider)", "Philip Morris Bach, M.D., FACC Georg Emlein , M.D., FACC Daniel Dale Vanhamersveld, M.D., FACC Michael David Fugit, M.D., FACC Kyle J. Michaelis, M.D., FACC Richard A. Clark, M.D."],
+                        FaxNumber: "(916) 123-3214",
                         Type: "Gastroenterologist"
                     },
                 ]
@@ -317,6 +350,17 @@ function Recommendations() {
                         FaxNumber: "(916) 830-2001",
                         Type: "Podiatrist"
                     },
+                    {
+                        Name: `${location.substring(0, location.length - 4)} Podiatrists Group`,
+                        FullName: `${location.substring(0, location.length - 4)} Podiatrists Group`,
+                        Distance: "2.44 miles",
+                        Address: `5833 Aqua Rd., ${location} 60657`,
+                        Phone: "(916) 765-4834",
+                        Website: "https://www.ucsfhealth.org/",
+                        Providers: ["Raye Bellinger, M.D., MBA (In the network), Mark H. Eaton, M.D, FACC (preferred provider)", "Philip Morris Bach, M.D., FACC Georg Emlein , M.D., FACC Daniel Dale Vanhamersveld, M.D., FACC Michael David Fugit, M.D., FACC Kyle J. Michaelis, M.D., FACC Richard A. Clark, M.D."],
+                        FaxNumber: "(916) 830-2001",
+                        Type: "Podiatrist"
+                    },
                 ]
             },
             {
@@ -328,6 +372,17 @@ function Recommendations() {
                         Distance: "0.14 miles",
                         Address: `4854 West El Camino., ${location} 60657`,
                         Phone: "(916) 114-4148",
+                        Website: "https://www.ucsfhealth.org/",
+                        Providers: ["Raye Bellinger, M.D., MBA (In the network), Mark H. Eaton, M.D, FACC (preferred provider)", "Philip Morris Bach, M.D., FACC Georg Emlein , M.D., FACC Daniel Dale Vanhamersveld, M.D., FACC Michael David Fugit, M.D., FACC Kyle J. Michaelis, M.D., FACC Richard A. Clark, M.D."],
+                        FaxNumber: "(916) 830-2001",
+                        Type: "Primary care provider (PCP)"
+                    },
+                    {
+                        Name: `Mission Primary Care`,
+                        FullName: `Mission Primary Care Medical Clinic`,
+                        Distance: "4.01 miles",
+                        Address: `3755 Mission Blvd., ${location} 60657`,
+                        Phone: "(916) 796-7796",
                         Website: "https://www.ucsfhealth.org/",
                         Providers: ["Raye Bellinger, M.D., MBA (In the network), Mark H. Eaton, M.D, FACC (preferred provider)", "Philip Morris Bach, M.D., FACC Georg Emlein , M.D., FACC Daniel Dale Vanhamersveld, M.D., FACC Michael David Fugit, M.D., FACC Kyle J. Michaelis, M.D., FACC Richard A. Clark, M.D."],
                         FaxNumber: "(916) 830-2001",
@@ -349,6 +404,17 @@ function Recommendations() {
                         FaxNumber: "(916) 830-2001",
                         Type: "OBGYN"
                     },
+                    {
+                        Name: `${location.substring(0, location.length - 4)} Ob-Gyn Medical Group`,
+                        FullName: `${location.substring(0, location.length - 4)} Ob-Gyn Medical Group`,
+                        Distance: "2.43 miles",
+                        Address: `3886 Beacon Ave., ${location} 60657`,
+                        Phone: "(916) 259-5000",
+                        Website: "https://www.ucsfhealth.org/",
+                        Providers: ["Raye Bellinger, M.D., MBA (In the network), Mark H. Eaton, M.D, FACC (preferred provider)", "Philip Morris Bach, M.D., FACC Georg Emlein , M.D., FACC Daniel Dale Vanhamersveld, M.D., FACC Michael David Fugit, M.D., FACC Kyle J. Michaelis, M.D., FACC Richard A. Clark, M.D."],
+                        FaxNumber: "(916) 830-2001",
+                        Type: "OBGYN"
+                    },
                 ]
             },
             {
@@ -363,6 +429,17 @@ function Recommendations() {
                         Website: "https://www.ucsfhealth.org/",
                         Providers: ["Raye Bellinger, M.D., MBA (In the network), Mark H. Eaton, M.D, FACC (preferred provider)", "Philip Morris Bach, M.D., FACC Georg Emlein , M.D., FACC Daniel Dale Vanhamersveld, M.D., FACC Michael David Fugit, M.D., FACC Kyle J. Michaelis, M.D., FACC Richard A. Clark, M.D."],
                         FaxNumber: "(916) 830-2001",
+                        Type: "Occupational Therapy"
+                    },
+                    {
+                        Name: `OT Park`,
+                        FullName: `OT Park - Pediatric Occupational Therapy & Sensory Gym`,
+                        Distance: "4.44 miles",
+                        Address: `284 Digital Dr., ${location} 60657`,
+                        Phone: "(916) 888-3636",
+                        Website: "https://www.ucsfhealth.org/",
+                        Providers: ["Raye Bellinger, M.D., MBA (In the network), Mark H. Eaton, M.D, FACC (preferred provider)", "Philip Morris Bach, M.D., FACC Georg Emlein , M.D., FACC Daniel Dale Vanhamersveld, M.D., FACC Michael David Fugit, M.D., FACC Kyle J. Michaelis, M.D., FACC Richard A. Clark, M.D."],
+                        FaxNumber: "(916) 888-3636",
                         Type: "Occupational Therapy"
                     },
                 ]
@@ -381,6 +458,17 @@ function Recommendations() {
                         FaxNumber: "(916) 830-2001",
                         Type: "Physical Therapy"
                     },
+                    {
+                        Name: `iMotion Physical Therapy`,
+                        FullName: `iMotion Physical Therapy`,
+                        Distance: "3.44 miles",
+                        Address: `4324 Mowry St., ${location} 60657`,
+                        Phone: "(916) 745-7700",
+                        Website: "https://www.ucsfhealth.org/",
+                        Providers: ["Raye Bellinger, M.D., MBA (In the network), Mark H. Eaton, M.D, FACC (preferred provider)", "Philip Morris Bach, M.D., FACC Georg Emlein , M.D., FACC Daniel Dale Vanhamersveld, M.D., FACC Michael David Fugit, M.D., FACC Kyle J. Michaelis, M.D., FACC Richard A. Clark, M.D."],
+                        FaxNumber: "(916) 745-7700",
+                        Type: "Physical Therapy"
+                    },
                 ]
             },
             {
@@ -395,6 +483,17 @@ function Recommendations() {
                         Website: "https://www.ucsfhealth.org/",
                         Providers: ["Raye Bellinger, M.D., MBA (In the network), Mark H. Eaton, M.D, FACC (preferred provider)", "Philip Morris Bach, M.D., FACC Georg Emlein , M.D., FACC Daniel Dale Vanhamersveld, M.D., FACC Michael David Fugit, M.D., FACC Kyle J. Michaelis, M.D., FACC Richard A. Clark, M.D."],
                         FaxNumber: "(916) 830-2001",
+                        Type: "Endocrinology"
+                    },
+                    {
+                        Name: `Endocrinology Physicians Group`,
+                        FullName: `Endocrinology Physicians Group`,
+                        Distance: "5.88 miles",
+                        Address: `2001 Grant Rd # 103, ${location} 60657`,
+                        Phone: "(916) 967-8841",
+                        Website: "https://www.ucsfhealth.org/",
+                        Providers: ["Raye Bellinger, M.D., MBA (In the network), Mark H. Eaton, M.D, FACC (preferred provider)", "Philip Morris Bach, M.D., FACC Georg Emlein , M.D., FACC Daniel Dale Vanhamersveld, M.D., FACC Michael David Fugit, M.D., FACC Kyle J. Michaelis, M.D., FACC Richard A. Clark, M.D."],
+                        FaxNumber: "(916) 967-8841",
                         Type: "Endocrinology"
                     },
                 ]
@@ -413,6 +512,17 @@ function Recommendations() {
                         FaxNumber: "(916) 830-2001",
                         Type: "Rheumatology"
                     },
+                    {
+                        Name: `Tricity Rheumatology`,
+                        FullName: `Tricity Rheumatology`,
+                        Distance: "1.21 miles",
+                        Address: `734 Mowry St., ${location} 60657`,
+                        Phone: "(916) 792-3786",
+                        Website: "https://www.ucsfhealth.org/",
+                        Providers: ["Raye Bellinger, M.D., MBA (In the network), Mark H. Eaton, M.D, FACC (preferred provider)", "Philip Morris Bach, M.D., FACC Georg Emlein , M.D., FACC Daniel Dale Vanhamersveld, M.D., FACC Michael David Fugit, M.D., FACC Kyle J. Michaelis, M.D., FACC Richard A. Clark, M.D."],
+                        FaxNumber: "(916) 792-3786",
+                        Type: "Rheumatology"
+                    },
                 ]
             },
             {
@@ -427,6 +537,17 @@ function Recommendations() {
                         Website: "https://www.ucsfhealth.org/",
                         Providers: ["Raye Bellinger, M.D., MBA (In the network), Mark H. Eaton, M.D, FACC (preferred provider)", "Philip Morris Bach, M.D., FACC Georg Emlein , M.D., FACC Daniel Dale Vanhamersveld, M.D., FACC Michael David Fugit, M.D., FACC Kyle J. Michaelis, M.D., FACC Richard A. Clark, M.D."],
                         FaxNumber: "(916) 830-2001",
+                        Type: "Nephrology"
+                    },
+                    {
+                        Name: `${location.substring(0, location.length - 4)} Nephrology Pro Corporation`,
+                        FullName: `${location.substring(0, location.length - 4)} Nephrology Pro Corporation: Tay David T MD`,
+                        Distance: "2.45 miles",
+                        Address: `39233 Liberty St., ${location} 60657`,
+                        Phone: "(916) 795-8186",
+                        Website: "https://www.ucsfhealth.org/",
+                        Providers: ["Raye Bellinger, M.D., MBA (In the network), Mark H. Eaton, M.D, FACC (preferred provider)", "Philip Morris Bach, M.D., FACC Georg Emlein , M.D., FACC Daniel Dale Vanhamersveld, M.D., FACC Michael David Fugit, M.D., FACC Kyle J. Michaelis, M.D., FACC Richard A. Clark, M.D."],
+                        FaxNumber: "(916) 795-8186",
                         Type: "Nephrology"
                     },
                 ]
@@ -445,6 +566,17 @@ function Recommendations() {
                         FaxNumber: "(916) 830-2001",
                         Type: "Urology"
                     },
+                    {
+                        Name: `Advanced Regen Medical`,
+                        FullName: `Advanced Regen Medical - A Professional Medical Corporation`,
+                        Distance: "1.19 miles",
+                        Address: `471 Division St, ${location} 60657`,
+                        Phone: "(916) 871-8222",
+                        Website: "https://www.ucsfhealth.org/",
+                        Providers: ["Raye Bellinger, M.D., MBA (In the network), Mark H. Eaton, M.D, FACC (preferred provider)", "Philip Morris Bach, M.D., FACC Georg Emlein , M.D., FACC Daniel Dale Vanhamersveld, M.D., FACC Michael David Fugit, M.D., FACC Kyle J. Michaelis, M.D., FACC Richard A. Clark, M.D."],
+                        FaxNumber: "(916) 871-8222",
+                        Type: "Urology"
+                    },
                 ]
             },
             {
@@ -459,6 +591,17 @@ function Recommendations() {
                         Website: "https://www.ucsfhealth.org/",
                         Providers: ["Raye Bellinger, M.D., MBA (In the network), Mark H. Eaton, M.D, FACC (preferred provider)", "Philip Morris Bach, M.D., FACC Georg Emlein , M.D., FACC Daniel Dale Vanhamersveld, M.D., FACC Michael David Fugit, M.D., FACC Kyle J. Michaelis, M.D., FACC Richard A. Clark, M.D."],
                         FaxNumber: "(916) 830-2001",
+                        Type: "Pulmonologist"
+                    },
+                    {
+                        Name: `Washington Township Medical Foundation`,
+                        FullName: `Washington Township Medical Foundation: Jason S. Chu, MD`,
+                        Distance: "5.21 miles",
+                        Address: `1287 Washington Blvd., ${location} 60657`,
+                        Phone: "(916) 248-1550",
+                        Website: "https://www.ucsfhealth.org/",
+                        Providers: ["Raye Bellinger, M.D., MBA (In the network), Mark H. Eaton, M.D, FACC (preferred provider)", "Philip Morris Bach, M.D., FACC Georg Emlein , M.D., FACC Daniel Dale Vanhamersveld, M.D., FACC Michael David Fugit, M.D., FACC Kyle J. Michaelis, M.D., FACC Richard A. Clark, M.D."],
+                        FaxNumber: "(916) 248-1550",
                         Type: "Pulmonologist"
                     },
                 ]
@@ -477,6 +620,17 @@ function Recommendations() {
                         FaxNumber: "(916) 830-2001",
                         Type: "Respiratory Therapy"
                     },
+                    {
+                        Name: `${location.substring(0, location.length - 4)} Pacific Medical Center`,
+                        FullName: `Respiratory Therapy and Diagnostics Program: California Pacific Medical Center`,
+                        Distance: "5.61 miles",
+                        Address: `3555 Cesar Chavez St, ${location} 60657`,
+                        Phone: "(916) 641-6850",
+                        Website: "https://www.ucsfhealth.org/",
+                        Providers: ["Raye Bellinger, M.D., MBA (In the network), Mark H. Eaton, M.D, FACC (preferred provider)", "Philip Morris Bach, M.D., FACC Georg Emlein , M.D., FACC Daniel Dale Vanhamersveld, M.D., FACC Michael David Fugit, M.D., FACC Kyle J. Michaelis, M.D., FACC Richard A. Clark, M.D."],
+                        FaxNumber: "(916) 641-6850",
+                        Type: "Respiratory Therapy"
+                    },
                 ]
             },
             {
@@ -491,6 +645,17 @@ function Recommendations() {
                         Website: "https://www.ucsfhealth.org/",
                         Providers: ["Raye Bellinger, M.D., MBA (In the network), Mark H. Eaton, M.D, FACC (preferred provider)", "Philip Morris Bach, M.D., FACC Georg Emlein , M.D., FACC Daniel Dale Vanhamersveld, M.D., FACC Michael David Fugit, M.D., FACC Kyle J. Michaelis, M.D., FACC Richard A. Clark, M.D."],
                         FaxNumber: "(916) 830-2001",
+                        Type: "Sleep Medicine"
+                    },
+                    {
+                        Name: `Sleep Well Medical Clinic`,
+                        FullName: `Sleep Well Medical Clinic: Advanced Respiratory & Sleep Medicine`,
+                        Distance: "7.11 miles",
+                        Address: `105 N Bascom Ave # 202, ${location} 60657`,
+                        Phone: "(916) 993-1500",
+                        Website: "https://www.ucsfhealth.org/",
+                        Providers: ["Raye Bellinger, M.D., MBA (In the network), Mark H. Eaton, M.D, FACC (preferred provider)", "Philip Morris Bach, M.D., FACC Georg Emlein , M.D., FACC Daniel Dale Vanhamersveld, M.D., FACC Michael David Fugit, M.D., FACC Kyle J. Michaelis, M.D., FACC Richard A. Clark, M.D."],
+                        FaxNumber: "(916) 993-1500",
                         Type: "Sleep Medicine"
                     },
                 ]
