@@ -5,14 +5,12 @@
   font-family: "Euclid Circular B";
 }
 .App {
-  width: 100vw;
+  width: 99vw;
   min-height: 100vh;
   height: auto;
   padding: 2.5vh 2vw 2.5vh 2vw;
   display: flex;
   flex-direction: column;
   position: relative;
-  overflow-y: scroll;
-  overflow-x: hidden;
 }
 

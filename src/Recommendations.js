@@ -69,7 +69,8 @@ function Recommendations() {
                         Phone: "(916) 830-2000",
                         Website: "https://www.walgreens.com/",
                         Providers: ["Raye Bellinger, M.D., MBA (In the network), Mark H. Eaton, M.D, FACC (preferred provider)", "Philip Morris Bach, M.D., FACC Georg Emlein , M.D., FACC Daniel Dale Vanhamersveld, M.D., FACC Michael David Fugit, M.D., FACC Kyle J. Michaelis, M.D., FACC Richard A. Clark, M.D."],
-                        FaxNumber: "(916) 830-2001"
+                        FaxNumber: "(916) 830-2001",
+                        Badge: ["Patient", "Professional"]
                     },
                     {
                         Name: "Lucky Pharmacy",
@@ -79,7 +80,8 @@ function Recommendations() {
                         Phone: "(916) 120-2300",
                         Website: "https://luckysupermarkets.com/",
                         Providers: ["Raye Bellinger, M.D., MBA (In the network), Mark H. Eaton, M.D, FACC (preferred provider)", "Philip Morris Bach, M.D., FACC Georg Emlein , M.D., FACC Daniel Dale Vanhamersveld, M.D., FACC Michael David Fugit, M.D., FACC Kyle J. Michaelis, M.D., FACC Richard A. Clark, M.D."],
-                        FaxNumber: "(916) 830-2001"
+                        FaxNumber: "(916) 830-2001",
+                        Badge: ["Patient"]
                     },
                     {
                         Name: "CVS Pharmacy",
@@ -89,7 +91,8 @@ function Recommendations() {
                         Phone: "(916) 433-1454",
                         Website: "https://www.cvs.com/pharmacy/v2/#/pharmacy",
                         Providers: ["Raye Bellinger, M.D., MBA (In the network), Mark H. Eaton, M.D, FACC (preferred provider)", "Philip Morris Bach, M.D., FACC Georg Emlein , M.D., FACC Daniel Dale Vanhamersveld, M.D., FACC Michael David Fugit, M.D., FACC Kyle J. Michaelis, M.D., FACC Richard A. Clark, M.D."],
-                        FaxNumber: "(916) 830-2001"
+                        FaxNumber: "(916) 830-2001",
+                        Badge: ["Professional"]
                     },
                 ]
             },
@@ -123,8 +126,13 @@ function Recommendations() {
                         Phone: "(916) 999-2020",
                         Website: "https://www.walgreens.com/",
                         Providers: ["Raye Bellinger, M.D., MBA (In the network), Mark H. Eaton, M.D, FACC (preferred provider)", "Philip Morris Bach, M.D., FACC Georg Emlein , M.D., FACC Daniel Dale Vanhamersveld, M.D., FACC Michael David Fugit, M.D., FACC Kyle J. Michaelis, M.D., FACC Richard A. Clark, M.D."],
-                        FaxNumber: "(916) 830-2001",
-                        Type: "Pharmacy"
+                        PPOInsurances: "Aetna, Beechstreet (Viant), Blue Cross Blue Shield, Cigna, Coventry Health Care, Global Excel - PPO, Galaxy Health Network PPO, Health Alliance, HealthLink, HFN, Humana, Imagine Health, Interplan (Chandler/Preferred Plan/ HealthSmart), LifeSynch, MultiPlan/PHCS, Prime Health Services PPO, The Alliance, Three Rivers Provider Network PPO, United Healthcare, Imagine Health, Interplan (Chandler/Preferred Plan/ HealthSmart), LifeSynch, MultiPlan/PHCS, Prime Health Services PPO, The Alliance, Three Rivers Provider Network PPO, United Healthcare",
+                        HMOInsurances: "AETNA, BCBS, CIGNA, Coventry Health Care, Health Alliance, HealthLink, Humana, United Healthcare",
+                        Transportation: "Yes",
+                        Portal: "Yes",
+                        Services: "Lanuage services, Wheelchair access",                        FaxNumber: "(916) 830-2001",
+                        Type: "Pharmacy",
+                        Badge: ["Patient", "Professional"]
                     },
                     {
                         Name: "Lucky Pharmacy",
@@ -134,8 +142,13 @@ function Recommendations() {
                         Phone: "(916) 800-2031",
                         Website: "https://luckysupermarkets.com/",
                         Providers: ["Raye Bellinger, M.D., MBA (In the network), Mark H. Eaton, M.D, FACC (preferred provider)", "Philip Morris Bach, M.D., FACC Georg Emlein , M.D., FACC Daniel Dale Vanhamersveld, M.D., FACC Michael David Fugit, M.D., FACC Kyle J. Michaelis, M.D., FACC Richard A. Clark, M.D."],
-                        FaxNumber: "(916) 830-2001",
-                        Type: "Pharmacy"
+                        PPOInsurances: "Aetna, Beechstreet (Viant), Blue Cross Blue Shield, Cigna, Coventry Health Care, Global Excel - PPO, Galaxy Health Network PPO, Health Alliance, HealthLink, HFN, Humana, Imagine Health, Interplan (Chandler/Preferred Plan/ HealthSmart), LifeSynch, MultiPlan/PHCS, Prime Health Services PPO, The Alliance, Three Rivers Provider Network PPO, United Healthcare, Imagine Health, Interplan (Chandler/Preferred Plan/ HealthSmart), LifeSynch, MultiPlan/PHCS, Prime Health Services PPO, The Alliance, Three Rivers Provider Network PPO, United Healthcare",
+                        HMOInsurances: "AETNA, BCBS, CIGNA, Coventry Health Care, Health Alliance, HealthLink, Humana, United Healthcare",
+                        Transportation: "Yes",
+                        Portal: "Yes",
+                        Services: "Lanuage services, Wheelchair access",                        FaxNumber: "(916) 830-2001",
+                        Type: "Pharmacy",
+                        Badge: ["Professional"]
                     },
                     {
                         Name: "CVS Pharmacy",
@@ -145,8 +158,13 @@ function Recommendations() {
                         Phone: "(916) 120-2222",
                         Website: "https://www.cvs.com/pharmacy/v2/#/pharmacy",
                         Providers: ["Raye Bellinger, M.D., MBA (In the network), Mark H. Eaton, M.D, FACC (preferred provider)", "Philip Morris Bach, M.D., FACC Georg Emlein , M.D., FACC Daniel Dale Vanhamersveld, M.D., FACC Michael David Fugit, M.D., FACC Kyle J. Michaelis, M.D., FACC Richard A. Clark, M.D."],
-                        FaxNumber: "(916) 830-2001",
-                        Type: "Pharmacy"
+                        PPOInsurances: "Aetna, Beechstreet (Viant), Blue Cross Blue Shield, Cigna, Coventry Health Care, Global Excel - PPO, Galaxy Health Network PPO, Health Alliance, HealthLink, HFN, Humana, Imagine Health, Interplan (Chandler/Preferred Plan/ HealthSmart), LifeSynch, MultiPlan/PHCS, Prime Health Services PPO, The Alliance, Three Rivers Provider Network PPO, United Healthcare, Imagine Health, Interplan (Chandler/Preferred Plan/ HealthSmart), LifeSynch, MultiPlan/PHCS, Prime Health Services PPO, The Alliance, Three Rivers Provider Network PPO, United Healthcare",
+                        HMOInsurances: "AETNA, BCBS, CIGNA, Coventry Health Care, Health Alliance, HealthLink, Humana, United Healthcare",
+                        Transportation: "Yes",
+                        Portal: "Yes",
+                        Services: "Lanuage services, Wheelchair access",                        FaxNumber: "(916) 830-2001",
+                        Type: "Pharmacy",
+                        Badge: ["Professional"]
 
                     },
                 ]
@@ -162,8 +180,13 @@ function Recommendations() {
                         Phone: "(916) 834-1234",
                         Website: "https://www.ucsfhealth.org/",
                         Providers: ["Raye Bellinger, M.D., MBA (In the network), Mark H. Eaton, M.D, FACC (preferred provider)", "Philip Morris Bach, M.D., FACC Georg Emlein , M.D., FACC Daniel Dale Vanhamersveld, M.D., FACC Michael David Fugit, M.D., FACC Kyle J. Michaelis, M.D., FACC Richard A. Clark, M.D."],
-                        FaxNumber: "(916) 830-2001",
-                        Type: "ENT"
+                        PPOInsurances: "Aetna, Beechstreet (Viant), Blue Cross Blue Shield, Cigna, Coventry Health Care, Global Excel - PPO, Galaxy Health Network PPO, Health Alliance, HealthLink, HFN, Humana, Imagine Health, Interplan (Chandler/Preferred Plan/ HealthSmart), LifeSynch, MultiPlan/PHCS, Prime Health Services PPO, The Alliance, Three Rivers Provider Network PPO, United Healthcare, Imagine Health, Interplan (Chandler/Preferred Plan/ HealthSmart), LifeSynch, MultiPlan/PHCS, Prime Health Services PPO, The Alliance, Three Rivers Provider Network PPO, United Healthcare",
+                        HMOInsurances: "AETNA, BCBS, CIGNA, Coventry Health Care, Health Alliance, HealthLink, Humana, United Healthcare",
+                        Transportation: "Yes",
+                        Portal: "Yes",
+                        Services: "Lanuage services, Wheelchair access",                        FaxNumber: "(916) 830-2001",
+                        Type: "ENT",
+                        Badge: ["Patient"]
                     },
                     {
                         Name: `Sutter Health`,
@@ -173,8 +196,13 @@ function Recommendations() {
                         Phone: "(916) 834-1234",
                         Website: "https://www.ucsfhealth.org/",
                         Providers: ["Raye Bellinger, M.D., MBA (In the network), Mark H. Eaton, M.D, FACC (preferred provider)", "Philip Morris Bach, M.D., FACC Georg Emlein , M.D., FACC Daniel Dale Vanhamersveld, M.D., FACC Michael David Fugit, M.D., FACC Kyle J. Michaelis, M.D., FACC Richard A. Clark, M.D."],
-                        FaxNumber: "(916) 333-3211",
-                        Type: "ENT"
+                        PPOInsurances: "Aetna, Beechstreet (Viant), Blue Cross Blue Shield, Cigna, Coventry Health Care, Global Excel - PPO, Galaxy Health Network PPO, Health Alliance, HealthLink, HFN, Humana, Imagine Health, Interplan (Chandler/Preferred Plan/ HealthSmart), LifeSynch, MultiPlan/PHCS, Prime Health Services PPO, The Alliance, Three Rivers Provider Network PPO, United Healthcare, Imagine Health, Interplan (Chandler/Preferred Plan/ HealthSmart), LifeSynch, MultiPlan/PHCS, Prime Health Services PPO, The Alliance, Three Rivers Provider Network PPO, United Healthcare",
+                        HMOInsurances: "AETNA, BCBS, CIGNA, Coventry Health Care, Health Alliance, HealthLink, Humana, United Healthcare",
+                        Transportation: "Yes",
+                        Portal: "Yes",
+                        Services: "Lanuage services, Wheelchair access",                        FaxNumber: "(916) 333-3211",
+                        Type: "ENT",
+                        Badge: ["Professional"]
                     },
                 ]
             },
@@ -189,8 +217,13 @@ function Recommendations() {
                         Phone: "(916) 980-4132",
                         Website: "https://www.ucsfhealth.org/",
                         Providers: ["Raye Bellinger, M.D., MBA (In the network), Mark H. Eaton, M.D, FACC (preferred provider)", "Philip Morris Bach, M.D., FACC Georg Emlein , M.D., FACC Daniel Dale Vanhamersveld, M.D., FACC Michael David Fugit, M.D., FACC Kyle J. Michaelis, M.D., FACC Richard A. Clark, M.D."],
-                        FaxNumber: "(916) 830-2001",
-                        Type: "Hepatologist"
+                        PPOInsurances: "Aetna, Beechstreet (Viant), Blue Cross Blue Shield, Cigna, Coventry Health Care, Global Excel - PPO, Galaxy Health Network PPO, Health Alliance, HealthLink, HFN, Humana, Imagine Health, Interplan (Chandler/Preferred Plan/ HealthSmart), LifeSynch, MultiPlan/PHCS, Prime Health Services PPO, The Alliance, Three Rivers Provider Network PPO, United Healthcare, Imagine Health, Interplan (Chandler/Preferred Plan/ HealthSmart), LifeSynch, MultiPlan/PHCS, Prime Health Services PPO, The Alliance, Three Rivers Provider Network PPO, United Healthcare",
+                        HMOInsurances: "AETNA, BCBS, CIGNA, Coventry Health Care, Health Alliance, HealthLink, Humana, United Healthcare",
+                        Transportation: "Yes",
+                        Portal: "Yes",
+                        Services: "Lanuage services, Wheelchair access",                        FaxNumber: "(916) 830-2001",
+                        Type: "Hepatologist",
+                        Badge: ["Professional"]
                     },
                     {
                         Name: `Dr. Scott Colton`,
@@ -200,7 +233,11 @@ function Recommendations() {
                         Phone: "(916) 980-4132",
                         Website: "https://www.ucsfhealth.org/",
                         Providers: ["Raye Bellinger, M.D., MBA (In the network), Mark H. Eaton, M.D, FACC (preferred provider)", "Philip Morris Bach, M.D., FACC Georg Emlein , M.D., FACC Daniel Dale Vanhamersveld, M.D., FACC Michael David Fugit, M.D., FACC Kyle J. Michaelis, M.D., FACC Richard A. Clark, M.D."],
-                        FaxNumber: "(916) 543-3426",
+                        PPOInsurances: "Aetna, Beechstreet (Viant), Blue Cross Blue Shield, Cigna, Coventry Health Care, Global Excel - PPO, Galaxy Health Network PPO, Health Alliance, HealthLink, HFN, Humana, Imagine Health, Interplan (Chandler/Preferred Plan/ HealthSmart), LifeSynch, MultiPlan/PHCS, Prime Health Services PPO, The Alliance, Three Rivers Provider Network PPO, United Healthcare, Imagine Health, Interplan (Chandler/Preferred Plan/ HealthSmart), LifeSynch, MultiPlan/PHCS, Prime Health Services PPO, The Alliance, Three Rivers Provider Network PPO, United Healthcare",
+                        HMOInsurances: "AETNA, BCBS, CIGNA, Coventry Health Care, Health Alliance, HealthLink, Humana, United Healthcare",
+                        Transportation: "Yes",
+                        Portal: "Yes",
+                        Services: "Lanuage services, Wheelchair access",                        FaxNumber: "(916) 543-3426",
                         Type: "Hepatologist"
                     },
                 ]
@@ -216,8 +253,13 @@ function Recommendations() {
                         Phone: "(916) 123-4321",
                         Website: "https://www.ucsfhealth.org/",
                         Providers: ["Raye Bellinger, M.D., MBA (In the network), Mark H. Eaton, M.D, FACC (preferred provider)", "Philip Morris Bach, M.D., FACC Georg Emlein , M.D., FACC Daniel Dale Vanhamersveld, M.D., FACC Michael David Fugit, M.D., FACC Kyle J. Michaelis, M.D., FACC Richard A. Clark, M.D."],
-                        FaxNumber: "(916) 830-2001",
-                        Type: "Gastroenterologist"
+                        PPOInsurances: "Aetna, Beechstreet (Viant), Blue Cross Blue Shield, Cigna, Coventry Health Care, Global Excel - PPO, Galaxy Health Network PPO, Health Alliance, HealthLink, HFN, Humana, Imagine Health, Interplan (Chandler/Preferred Plan/ HealthSmart), LifeSynch, MultiPlan/PHCS, Prime Health Services PPO, The Alliance, Three Rivers Provider Network PPO, United Healthcare, Imagine Health, Interplan (Chandler/Preferred Plan/ HealthSmart), LifeSynch, MultiPlan/PHCS, Prime Health Services PPO, The Alliance, Three Rivers Provider Network PPO, United Healthcare",
+                        HMOInsurances: "AETNA, BCBS, CIGNA, Coventry Health Care, Health Alliance, HealthLink, Humana, United Healthcare",
+                        Transportation: "Yes",
+                        Portal: "Yes",
+                        Services: "Lanuage services, Wheelchair access",                        FaxNumber: "(916) 830-2001",
+                        Type: "Gastroenterologist",
+                        Badge: ["Patient", "Professional"]
                     },
                     {
                         Name: `Washington Hospital`,
@@ -227,8 +269,13 @@ function Recommendations() {
                         Phone: "(916) 123-4321",
                         Website: "https://www.ucsfhealth.org/",
                         Providers: ["Raye Bellinger, M.D., MBA (In the network), Mark H. Eaton, M.D, FACC (preferred provider)", "Philip Morris Bach, M.D., FACC Georg Emlein , M.D., FACC Daniel Dale Vanhamersveld, M.D., FACC Michael David Fugit, M.D., FACC Kyle J. Michaelis, M.D., FACC Richard A. Clark, M.D."],
-                        FaxNumber: "(916) 123-3214",
-                        Type: "Gastroenterologist"
+                        PPOInsurances: "Aetna, Beechstreet (Viant), Blue Cross Blue Shield, Cigna, Coventry Health Care, Global Excel - PPO, Galaxy Health Network PPO, Health Alliance, HealthLink, HFN, Humana, Imagine Health, Interplan (Chandler/Preferred Plan/ HealthSmart), LifeSynch, MultiPlan/PHCS, Prime Health Services PPO, The Alliance, Three Rivers Provider Network PPO, United Healthcare, Imagine Health, Interplan (Chandler/Preferred Plan/ HealthSmart), LifeSynch, MultiPlan/PHCS, Prime Health Services PPO, The Alliance, Three Rivers Provider Network PPO, United Healthcare",
+                        HMOInsurances: "AETNA, BCBS, CIGNA, Coventry Health Care, Health Alliance, HealthLink, Humana, United Healthcare",
+                        Transportation: "Yes",
+                        Portal: "Yes",
+                        Services: "Lanuage services, Wheelchair access",                        FaxNumber: "(916) 123-3214",
+                        Type: "Gastroenterologist",
+                        Badge: ["Professional"]
                     },
                 ]
             },
@@ -243,8 +290,13 @@ function Recommendations() {
                         Phone: "(916) 400-4390",
                         Website: "https://www.ucsfhealth.org/",
                         Providers: ["Raye Bellinger, M.D., MBA (In the network), Mark H. Eaton, M.D, FACC (preferred provider)", "Philip Morris Bach, M.D., FACC Georg Emlein , M.D., FACC Daniel Dale Vanhamersveld, M.D., FACC Michael David Fugit, M.D., FACC Kyle J. Michaelis, M.D., FACC Richard A. Clark, M.D."],
-                        FaxNumber: "(916) 830-2001",
-                        Type: "Gym"
+                        PPOInsurances: "Aetna, Beechstreet (Viant), Blue Cross Blue Shield, Cigna, Coventry Health Care, Global Excel - PPO, Galaxy Health Network PPO, Health Alliance, HealthLink, HFN, Humana, Imagine Health, Interplan (Chandler/Preferred Plan/ HealthSmart), LifeSynch, MultiPlan/PHCS, Prime Health Services PPO, The Alliance, Three Rivers Provider Network PPO, United Healthcare, Imagine Health, Interplan (Chandler/Preferred Plan/ HealthSmart), LifeSynch, MultiPlan/PHCS, Prime Health Services PPO, The Alliance, Three Rivers Provider Network PPO, United Healthcare",
+                        HMOInsurances: "AETNA, BCBS, CIGNA, Coventry Health Care, Health Alliance, HealthLink, Humana, United Healthcare",
+                        Transportation: "Yes",
+                        Portal: "Yes",
+                        Services: "Lanuage services, Wheelchair access",                        FaxNumber: "(916) 830-2001",
+                        Type: "Gym",
+                        Badge: ["Patient"]
                     },
                     {
                         Name: `Orangetheory Fitness`,
@@ -254,8 +306,13 @@ function Recommendations() {
                         Phone: "(916) 411-3200",
                         Website: "https://www.ucsfhealth.org/",
                         Providers: ["Raye Bellinger, M.D., MBA (In the network), Mark H. Eaton, M.D, FACC (preferred provider)", "Philip Morris Bach, M.D., FACC Georg Emlein , M.D., FACC Daniel Dale Vanhamersveld, M.D., FACC Michael David Fugit, M.D., FACC Kyle J. Michaelis, M.D., FACC Richard A. Clark, M.D."],
-                        FaxNumber: "(916) 830-2001",
-                        Type: "Gym"
+                        PPOInsurances: "Aetna, Beechstreet (Viant), Blue Cross Blue Shield, Cigna, Coventry Health Care, Global Excel - PPO, Galaxy Health Network PPO, Health Alliance, HealthLink, HFN, Humana, Imagine Health, Interplan (Chandler/Preferred Plan/ HealthSmart), LifeSynch, MultiPlan/PHCS, Prime Health Services PPO, The Alliance, Three Rivers Provider Network PPO, United Healthcare, Imagine Health, Interplan (Chandler/Preferred Plan/ HealthSmart), LifeSynch, MultiPlan/PHCS, Prime Health Services PPO, The Alliance, Three Rivers Provider Network PPO, United Healthcare",
+                        HMOInsurances: "AETNA, BCBS, CIGNA, Coventry Health Care, Health Alliance, HealthLink, Humana, United Healthcare",
+                        Transportation: "Yes",
+                        Portal: "Yes",
+                        Services: "Lanuage services, Wheelchair access",                        FaxNumber: "(916) 830-2001",
+                        Type: "Gym",
+                        Badge: ["Professional"]
                     },
                     {
                         Name: `NCFIT`,
@@ -265,8 +322,13 @@ function Recommendations() {
                         Phone: "(916) 789-1467",
                         Website: "https://www.ucsfhealth.org/",
                         Providers: ["Raye Bellinger, M.D., MBA (In the network), Mark H. Eaton, M.D, FACC (preferred provider)", "Philip Morris Bach, M.D., FACC Georg Emlein , M.D., FACC Daniel Dale Vanhamersveld, M.D., FACC Michael David Fugit, M.D., FACC Kyle J. Michaelis, M.D., FACC Richard A. Clark, M.D."],
-                        FaxNumber: "(916) 830-2001",
-                        Type: "Gym"
+                        PPOInsurances: "Aetna, Beechstreet (Viant), Blue Cross Blue Shield, Cigna, Coventry Health Care, Global Excel - PPO, Galaxy Health Network PPO, Health Alliance, HealthLink, HFN, Humana, Imagine Health, Interplan (Chandler/Preferred Plan/ HealthSmart), LifeSynch, MultiPlan/PHCS, Prime Health Services PPO, The Alliance, Three Rivers Provider Network PPO, United Healthcare, Imagine Health, Interplan (Chandler/Preferred Plan/ HealthSmart), LifeSynch, MultiPlan/PHCS, Prime Health Services PPO, The Alliance, Three Rivers Provider Network PPO, United Healthcare",
+                        HMOInsurances: "AETNA, BCBS, CIGNA, Coventry Health Care, Health Alliance, HealthLink, Humana, United Healthcare",
+                        Transportation: "Yes",
+                        Portal: "Yes",
+                        Services: "Lanuage services, Wheelchair access",                        FaxNumber: "(916) 830-2001",
+                        Type: "Gym",
+                        Badge: ["Patient"]
                     },
                 ]
             },
@@ -281,6 +343,11 @@ function Recommendations() {
                         Phone: "(916) 441-3519",
                         Website: "https://www.ucsfhealth.org/",
                         Providers: ["Raye Bellinger, M.D., MBA (In the network), Mark H. Eaton, M.D, FACC (preferred provider)", "Philip Morris Bach, M.D., FACC Georg Emlein , M.D., FACC Daniel Dale Vanhamersveld, M.D., FACC Michael David Fugit, M.D., FACC Kyle J. Michaelis, M.D., FACC Richard A. Clark, M.D."],
+                        PPOInsurances: "Aetna, Beechstreet (Viant), Blue Cross Blue Shield, Cigna, Coventry Health Care, Global Excel - PPO, Galaxy Health Network PPO, Health Alliance, HealthLink, HFN, Humana, Imagine Health, Interplan (Chandler/Preferred Plan/ HealthSmart), LifeSynch, MultiPlan/PHCS, Prime Health Services PPO, The Alliance, Three Rivers Provider Network PPO, United Healthcare, Imagine Health, Interplan (Chandler/Preferred Plan/ HealthSmart), LifeSynch, MultiPlan/PHCS, Prime Health Services PPO, The Alliance, Three Rivers Provider Network PPO, United Healthcare",
+                        HMOInsurances: "AETNA, BCBS, CIGNA, Coventry Health Care, Health Alliance, HealthLink, Humana, United Healthcare",
+                        Transportation: "Yes",
+                        Portal: "Yes",
+                        Services: "Lanuage services, Wheelchair access",
                         FaxNumber: "(916) 830-2001",
                         Type: "Nutritionist",
                         Badge: ["Patient", "Professional"]
@@ -293,8 +360,13 @@ function Recommendations() {
                         Phone: "(916) 111-6546",
                         Website: "https://www.ucsfhealth.org/",
                         Providers: ["Raye Bellinger, M.D., MBA (In the network), Mark H. Eaton, M.D, FACC (preferred provider)", "Philip Morris Bach, M.D., FACC Georg Emlein , M.D., FACC Daniel Dale Vanhamersveld, M.D., FACC Michael David Fugit, M.D., FACC Kyle J. Michaelis, M.D., FACC Richard A. Clark, M.D."],
-                        FaxNumber: "(916) 830-2001",
-                        Type: "Nutritionist"
+                        PPOInsurances: "Aetna, Beechstreet (Viant), Blue Cross Blue Shield, Cigna, Coventry Health Care, Global Excel - PPO, Galaxy Health Network PPO, Health Alliance, HealthLink, HFN, Humana, Imagine Health, Interplan (Chandler/Preferred Plan/ HealthSmart), LifeSynch, MultiPlan/PHCS, Prime Health Services PPO, The Alliance, Three Rivers Provider Network PPO, United Healthcare, Imagine Health, Interplan (Chandler/Preferred Plan/ HealthSmart), LifeSynch, MultiPlan/PHCS, Prime Health Services PPO, The Alliance, Three Rivers Provider Network PPO, United Healthcare",
+                        HMOInsurances: "AETNA, BCBS, CIGNA, Coventry Health Care, Health Alliance, HealthLink, Humana, United Healthcare",
+                        Transportation: "Yes",
+                        Portal: "Yes",
+                        Services: "Lanuage services, Wheelchair access",                        FaxNumber: "(916) 830-2001",
+                        Type: "Nutritionist",
+                        Badge: ["Patient"]
                     },
                     {
                         Name: `RD Nutrition Coaching`,
@@ -304,8 +376,13 @@ function Recommendations() {
                         Phone: "(916) 221-3288",
                         Website: "https://www.ucsfhealth.org/",
                         Providers: ["Raye Bellinger, M.D., MBA (In the network), Mark H. Eaton, M.D, FACC (preferred provider)", "Philip Morris Bach, M.D., FACC Georg Emlein , M.D., FACC Daniel Dale Vanhamersveld, M.D., FACC Michael David Fugit, M.D., FACC Kyle J. Michaelis, M.D., FACC Richard A. Clark, M.D."],
-                        FaxNumber: "(916) 830-2001",
-                        Type: "Nutritionist"
+                        PPOInsurances: "Aetna, Beechstreet (Viant), Blue Cross Blue Shield, Cigna, Coventry Health Care, Global Excel - PPO, Galaxy Health Network PPO, Health Alliance, HealthLink, HFN, Humana, Imagine Health, Interplan (Chandler/Preferred Plan/ HealthSmart), LifeSynch, MultiPlan/PHCS, Prime Health Services PPO, The Alliance, Three Rivers Provider Network PPO, United Healthcare, Imagine Health, Interplan (Chandler/Preferred Plan/ HealthSmart), LifeSynch, MultiPlan/PHCS, Prime Health Services PPO, The Alliance, Three Rivers Provider Network PPO, United Healthcare",
+                        HMOInsurances: "AETNA, BCBS, CIGNA, Coventry Health Care, Health Alliance, HealthLink, Humana, United Healthcare",
+                        Transportation: "Yes",
+                        Portal: "Yes",
+                        Services: "Lanuage services, Wheelchair access",                        FaxNumber: "(916) 830-2001",
+                        Type: "Nutritionist",
+                        Badge: []
                     },
                 ]
             },
@@ -320,8 +397,14 @@ function Recommendations() {
                         Phone: "(916) 180-8000",
                         Website: "https://www.ucsfhealth.org/",
                         Providers: ["Raye Bellinger, M.D., MBA (In the network), Mark H. Eaton, M.D, FACC (preferred provider)", "Philip Morris Bach, M.D., FACC Georg Emlein , M.D., FACC Daniel Dale Vanhamersveld, M.D., FACC Michael David Fugit, M.D., FACC Kyle J. Michaelis, M.D., FACC Richard A. Clark, M.D."],
-                        FaxNumber: "(916) 830-2001",
-                        Type: "Ophthalmologist"
+                        PPOInsurances: "Aetna, Beechstreet (Viant), Blue Cross Blue Shield, Cigna, Coventry Health Care, Global Excel - PPO, Galaxy Health Network PPO, Health Alliance, HealthLink, HFN, Humana, Imagine Health, Interplan (Chandler/Preferred Plan/ HealthSmart), LifeSynch, MultiPlan/PHCS, Prime Health Services PPO, The Alliance, Three Rivers Provider Network PPO, United Healthcare, Imagine Health, Interplan (Chandler/Preferred Plan/ HealthSmart), LifeSynch, MultiPlan/PHCS, Prime Health Services PPO, The Alliance, Three Rivers Provider Network PPO, United Healthcare",
+                        HMOInsurances: "AETNA, BCBS, CIGNA, Coventry Health Care, Health Alliance, HealthLink, Humana, United Healthcare",
+                        Transportation: "Yes",
+                        Portal: "Yes",
+                        Services: "Lanuage services, Wheelchair access",                        FaxNumber: "(916) 830-2001",
+                        Type: "Ophthalmologist",
+                        Badge: ["Patient"]
+
                     },
                     {
                         Name: `${location.substring(0, location.length - 4)} Eye Group`,
@@ -331,8 +414,13 @@ function Recommendations() {
                         Phone: "(916) 670-5422",
                         Website: "https://www.ucsfhealth.org/",
                         Providers: ["Raye Bellinger, M.D., MBA (In the network), Mark H. Eaton, M.D, FACC (preferred provider)", "Philip Morris Bach, M.D., FACC Georg Emlein , M.D., FACC Daniel Dale Vanhamersveld, M.D., FACC Michael David Fugit, M.D., FACC Kyle J. Michaelis, M.D., FACC Richard A. Clark, M.D."],
-                        FaxNumber: "(916) 830-2001",
-                        Type: "Ophthalmologist"
+                        PPOInsurances: "Aetna, Beechstreet (Viant), Blue Cross Blue Shield, Cigna, Coventry Health Care, Global Excel - PPO, Galaxy Health Network PPO, Health Alliance, HealthLink, HFN, Humana, Imagine Health, Interplan (Chandler/Preferred Plan/ HealthSmart), LifeSynch, MultiPlan/PHCS, Prime Health Services PPO, The Alliance, Three Rivers Provider Network PPO, United Healthcare, Imagine Health, Interplan (Chandler/Preferred Plan/ HealthSmart), LifeSynch, MultiPlan/PHCS, Prime Health Services PPO, The Alliance, Three Rivers Provider Network PPO, United Healthcare",
+                        HMOInsurances: "AETNA, BCBS, CIGNA, Coventry Health Care, Health Alliance, HealthLink, Humana, United Healthcare",
+                        Transportation: "Yes",
+                        Portal: "Yes",
+                        Services: "Lanuage services, Wheelchair access",                        FaxNumber: "(916) 830-2001",
+                        Type: "Ophthalmologist",
+                        Badge: ["Professional"]
                     },
                 ]
             },
@@ -347,8 +435,13 @@ function Recommendations() {
                         Phone: "(916) 312-9348",
                         Website: "https://www.ucsfhealth.org/",
                         Providers: ["Raye Bellinger, M.D., MBA (In the network), Mark H. Eaton, M.D, FACC (preferred provider)", "Philip Morris Bach, M.D., FACC Georg Emlein , M.D., FACC Daniel Dale Vanhamersveld, M.D., FACC Michael David Fugit, M.D., FACC Kyle J. Michaelis, M.D., FACC Richard A. Clark, M.D."],
-                        FaxNumber: "(916) 830-2001",
-                        Type: "Podiatrist"
+                        PPOInsurances: "Aetna, Beechstreet (Viant), Blue Cross Blue Shield, Cigna, Coventry Health Care, Global Excel - PPO, Galaxy Health Network PPO, Health Alliance, HealthLink, HFN, Humana, Imagine Health, Interplan (Chandler/Preferred Plan/ HealthSmart), LifeSynch, MultiPlan/PHCS, Prime Health Services PPO, The Alliance, Three Rivers Provider Network PPO, United Healthcare, Imagine Health, Interplan (Chandler/Preferred Plan/ HealthSmart), LifeSynch, MultiPlan/PHCS, Prime Health Services PPO, The Alliance, Three Rivers Provider Network PPO, United Healthcare",
+                        HMOInsurances: "AETNA, BCBS, CIGNA, Coventry Health Care, Health Alliance, HealthLink, Humana, United Healthcare",
+                        Transportation: "Yes",
+                        Portal: "Yes",
+                        Services: "Lanuage services, Wheelchair access",                        FaxNumber: "(916) 830-2001",
+                        Type: "Podiatrist",
+                        Badge: ["Patient"]
                     },
                     {
                         Name: `${location.substring(0, location.length - 4)} Podiatrists Group`,
@@ -358,8 +451,13 @@ function Recommendations() {
                         Phone: "(916) 765-4834",
                         Website: "https://www.ucsfhealth.org/",
                         Providers: ["Raye Bellinger, M.D., MBA (In the network), Mark H. Eaton, M.D, FACC (preferred provider)", "Philip Morris Bach, M.D., FACC Georg Emlein , M.D., FACC Daniel Dale Vanhamersveld, M.D., FACC Michael David Fugit, M.D., FACC Kyle J. Michaelis, M.D., FACC Richard A. Clark, M.D."],
-                        FaxNumber: "(916) 830-2001",
-                        Type: "Podiatrist"
+                        PPOInsurances: "Aetna, Beechstreet (Viant), Blue Cross Blue Shield, Cigna, Coventry Health Care, Global Excel - PPO, Galaxy Health Network PPO, Health Alliance, HealthLink, HFN, Humana, Imagine Health, Interplan (Chandler/Preferred Plan/ HealthSmart), LifeSynch, MultiPlan/PHCS, Prime Health Services PPO, The Alliance, Three Rivers Provider Network PPO, United Healthcare, Imagine Health, Interplan (Chandler/Preferred Plan/ HealthSmart), LifeSynch, MultiPlan/PHCS, Prime Health Services PPO, The Alliance, Three Rivers Provider Network PPO, United Healthcare",
+                        HMOInsurances: "AETNA, BCBS, CIGNA, Coventry Health Care, Health Alliance, HealthLink, Humana, United Healthcare",
+                        Transportation: "Yes",
+                        Portal: "Yes",
+                        Services: "Lanuage services, Wheelchair access",                        FaxNumber: "(916) 830-2001",
+                        Type: "Podiatrist",
+                        Badge: ["Patient", "Professional"]
                     },
                 ]
             },
@@ -374,8 +472,13 @@ function Recommendations() {
                         Phone: "(916) 114-4148",
                         Website: "https://www.ucsfhealth.org/",
                         Providers: ["Raye Bellinger, M.D., MBA (In the network), Mark H. Eaton, M.D, FACC (preferred provider)", "Philip Morris Bach, M.D., FACC Georg Emlein , M.D., FACC Daniel Dale Vanhamersveld, M.D., FACC Michael David Fugit, M.D., FACC Kyle J. Michaelis, M.D., FACC Richard A. Clark, M.D."],
-                        FaxNumber: "(916) 830-2001",
-                        Type: "Primary care provider (PCP)"
+                        PPOInsurances: "Aetna, Beechstreet (Viant), Blue Cross Blue Shield, Cigna, Coventry Health Care, Global Excel - PPO, Galaxy Health Network PPO, Health Alliance, HealthLink, HFN, Humana, Imagine Health, Interplan (Chandler/Preferred Plan/ HealthSmart), LifeSynch, MultiPlan/PHCS, Prime Health Services PPO, The Alliance, Three Rivers Provider Network PPO, United Healthcare, Imagine Health, Interplan (Chandler/Preferred Plan/ HealthSmart), LifeSynch, MultiPlan/PHCS, Prime Health Services PPO, The Alliance, Three Rivers Provider Network PPO, United Healthcare",
+                        HMOInsurances: "AETNA, BCBS, CIGNA, Coventry Health Care, Health Alliance, HealthLink, Humana, United Healthcare",
+                        Transportation: "Yes",
+                        Portal: "Yes",
+                        Services: "Lanuage services, Wheelchair access",                        FaxNumber: "(916) 830-2001",
+                        Type: "Primary care provider (PCP)",
+                        Badge: ["Professional"]
                     },
                     {
                         Name: `Mission Primary Care`,
@@ -385,8 +488,13 @@ function Recommendations() {
                         Phone: "(916) 796-7796",
                         Website: "https://www.ucsfhealth.org/",
                         Providers: ["Raye Bellinger, M.D., MBA (In the network), Mark H. Eaton, M.D, FACC (preferred provider)", "Philip Morris Bach, M.D., FACC Georg Emlein , M.D., FACC Daniel Dale Vanhamersveld, M.D., FACC Michael David Fugit, M.D., FACC Kyle J. Michaelis, M.D., FACC Richard A. Clark, M.D."],
-                        FaxNumber: "(916) 830-2001",
-                        Type: "Primary care provider (PCP)"
+                        PPOInsurances: "Aetna, Beechstreet (Viant), Blue Cross Blue Shield, Cigna, Coventry Health Care, Global Excel - PPO, Galaxy Health Network PPO, Health Alliance, HealthLink, HFN, Humana, Imagine Health, Interplan (Chandler/Preferred Plan/ HealthSmart), LifeSynch, MultiPlan/PHCS, Prime Health Services PPO, The Alliance, Three Rivers Provider Network PPO, United Healthcare, Imagine Health, Interplan (Chandler/Preferred Plan/ HealthSmart), LifeSynch, MultiPlan/PHCS, Prime Health Services PPO, The Alliance, Three Rivers Provider Network PPO, United Healthcare",
+                        HMOInsurances: "AETNA, BCBS, CIGNA, Coventry Health Care, Health Alliance, HealthLink, Humana, United Healthcare",
+                        Transportation: "Yes",
+                        Portal: "Yes",
+                        Services: "Lanuage services, Wheelchair access",                        FaxNumber: "(916) 830-2001",
+                        Type: "Primary care provider (PCP)",
+                        Badge: ["Professional"]
                     },
                 ]
             },
@@ -401,8 +509,13 @@ function Recommendations() {
                         Phone: "(916) 992-4021",
                         Website: "https://www.ucsfhealth.org/",
                         Providers: ["Raye Bellinger, M.D., MBA (In the network), Mark H. Eaton, M.D, FACC (preferred provider)", "Philip Morris Bach, M.D., FACC Georg Emlein , M.D., FACC Daniel Dale Vanhamersveld, M.D., FACC Michael David Fugit, M.D., FACC Kyle J. Michaelis, M.D., FACC Richard A. Clark, M.D."],
-                        FaxNumber: "(916) 830-2001",
-                        Type: "OBGYN"
+                        PPOInsurances: "Aetna, Beechstreet (Viant), Blue Cross Blue Shield, Cigna, Coventry Health Care, Global Excel - PPO, Galaxy Health Network PPO, Health Alliance, HealthLink, HFN, Humana, Imagine Health, Interplan (Chandler/Preferred Plan/ HealthSmart), LifeSynch, MultiPlan/PHCS, Prime Health Services PPO, The Alliance, Three Rivers Provider Network PPO, United Healthcare, Imagine Health, Interplan (Chandler/Preferred Plan/ HealthSmart), LifeSynch, MultiPlan/PHCS, Prime Health Services PPO, The Alliance, Three Rivers Provider Network PPO, United Healthcare",
+                        HMOInsurances: "AETNA, BCBS, CIGNA, Coventry Health Care, Health Alliance, HealthLink, Humana, United Healthcare",
+                        Transportation: "Yes",
+                        Portal: "Yes",
+                        Services: "Lanuage services, Wheelchair access",                        FaxNumber: "(916) 830-2001",
+                        Type: "OBGYN",
+                        Badge: ["Professional"]
                     },
                     {
                         Name: `${location.substring(0, location.length - 4)} Ob-Gyn Medical Group`,
@@ -412,7 +525,11 @@ function Recommendations() {
                         Phone: "(916) 259-5000",
                         Website: "https://www.ucsfhealth.org/",
                         Providers: ["Raye Bellinger, M.D., MBA (In the network), Mark H. Eaton, M.D, FACC (preferred provider)", "Philip Morris Bach, M.D., FACC Georg Emlein , M.D., FACC Daniel Dale Vanhamersveld, M.D., FACC Michael David Fugit, M.D., FACC Kyle J. Michaelis, M.D., FACC Richard A. Clark, M.D."],
-                        FaxNumber: "(916) 830-2001",
+                        PPOInsurances: "Aetna, Beechstreet (Viant), Blue Cross Blue Shield, Cigna, Coventry Health Care, Global Excel - PPO, Galaxy Health Network PPO, Health Alliance, HealthLink, HFN, Humana, Imagine Health, Interplan (Chandler/Preferred Plan/ HealthSmart), LifeSynch, MultiPlan/PHCS, Prime Health Services PPO, The Alliance, Three Rivers Provider Network PPO, United Healthcare, Imagine Health, Interplan (Chandler/Preferred Plan/ HealthSmart), LifeSynch, MultiPlan/PHCS, Prime Health Services PPO, The Alliance, Three Rivers Provider Network PPO, United Healthcare",
+                        HMOInsurances: "AETNA, BCBS, CIGNA, Coventry Health Care, Health Alliance, HealthLink, Humana, United Healthcare",
+                        Transportation: "Yes",
+                        Portal: "Yes",
+                        Services: "Lanuage services, Wheelchair access",                        FaxNumber: "(916) 830-2001",
                         Type: "OBGYN"
                     },
                 ]
@@ -428,8 +545,13 @@ function Recommendations() {
                         Phone: "(916) 800-1021",
                         Website: "https://www.ucsfhealth.org/",
                         Providers: ["Raye Bellinger, M.D., MBA (In the network), Mark H. Eaton, M.D, FACC (preferred provider)", "Philip Morris Bach, M.D., FACC Georg Emlein , M.D., FACC Daniel Dale Vanhamersveld, M.D., FACC Michael David Fugit, M.D., FACC Kyle J. Michaelis, M.D., FACC Richard A. Clark, M.D."],
-                        FaxNumber: "(916) 830-2001",
-                        Type: "Occupational Therapy"
+                        PPOInsurances: "Aetna, Beechstreet (Viant), Blue Cross Blue Shield, Cigna, Coventry Health Care, Global Excel - PPO, Galaxy Health Network PPO, Health Alliance, HealthLink, HFN, Humana, Imagine Health, Interplan (Chandler/Preferred Plan/ HealthSmart), LifeSynch, MultiPlan/PHCS, Prime Health Services PPO, The Alliance, Three Rivers Provider Network PPO, United Healthcare, Imagine Health, Interplan (Chandler/Preferred Plan/ HealthSmart), LifeSynch, MultiPlan/PHCS, Prime Health Services PPO, The Alliance, Three Rivers Provider Network PPO, United Healthcare",
+                        HMOInsurances: "AETNA, BCBS, CIGNA, Coventry Health Care, Health Alliance, HealthLink, Humana, United Healthcare",
+                        Transportation: "Yes",
+                        Portal: "Yes",
+                        Services: "Lanuage services, Wheelchair access",                        FaxNumber: "(916) 830-2001",
+                        Type: "Occupational Therapy",
+                        Badge: ["Patient", "Professional"]
                     },
                     {
                         Name: `OT Park`,
@@ -439,8 +561,13 @@ function Recommendations() {
                         Phone: "(916) 888-3636",
                         Website: "https://www.ucsfhealth.org/",
                         Providers: ["Raye Bellinger, M.D., MBA (In the network), Mark H. Eaton, M.D, FACC (preferred provider)", "Philip Morris Bach, M.D., FACC Georg Emlein , M.D., FACC Daniel Dale Vanhamersveld, M.D., FACC Michael David Fugit, M.D., FACC Kyle J. Michaelis, M.D., FACC Richard A. Clark, M.D."],
-                        FaxNumber: "(916) 888-3636",
-                        Type: "Occupational Therapy"
+                        PPOInsurances: "Aetna, Beechstreet (Viant), Blue Cross Blue Shield, Cigna, Coventry Health Care, Global Excel - PPO, Galaxy Health Network PPO, Health Alliance, HealthLink, HFN, Humana, Imagine Health, Interplan (Chandler/Preferred Plan/ HealthSmart), LifeSynch, MultiPlan/PHCS, Prime Health Services PPO, The Alliance, Three Rivers Provider Network PPO, United Healthcare, Imagine Health, Interplan (Chandler/Preferred Plan/ HealthSmart), LifeSynch, MultiPlan/PHCS, Prime Health Services PPO, The Alliance, Three Rivers Provider Network PPO, United Healthcare",
+                        HMOInsurances: "AETNA, BCBS, CIGNA, Coventry Health Care, Health Alliance, HealthLink, Humana, United Healthcare",
+                        Transportation: "Yes",
+                        Portal: "Yes",
+                        Services: "Lanuage services, Wheelchair access",                        FaxNumber: "(916) 888-3636",
+                        Type: "Occupational Therapy",
+                        Badge: ["Patient"]
                     },
                 ]
             },
@@ -455,8 +582,13 @@ function Recommendations() {
                         Phone: "(916) 800-1021",
                         Website: "https://www.ucsfhealth.org/",
                         Providers: ["Raye Bellinger, M.D., MBA (In the network), Mark H. Eaton, M.D, FACC (preferred provider)", "Philip Morris Bach, M.D., FACC Georg Emlein , M.D., FACC Daniel Dale Vanhamersveld, M.D., FACC Michael David Fugit, M.D., FACC Kyle J. Michaelis, M.D., FACC Richard A. Clark, M.D."],
-                        FaxNumber: "(916) 830-2001",
-                        Type: "Physical Therapy"
+                        PPOInsurances: "Aetna, Beechstreet (Viant), Blue Cross Blue Shield, Cigna, Coventry Health Care, Global Excel - PPO, Galaxy Health Network PPO, Health Alliance, HealthLink, HFN, Humana, Imagine Health, Interplan (Chandler/Preferred Plan/ HealthSmart), LifeSynch, MultiPlan/PHCS, Prime Health Services PPO, The Alliance, Three Rivers Provider Network PPO, United Healthcare, Imagine Health, Interplan (Chandler/Preferred Plan/ HealthSmart), LifeSynch, MultiPlan/PHCS, Prime Health Services PPO, The Alliance, Three Rivers Provider Network PPO, United Healthcare",
+                        HMOInsurances: "AETNA, BCBS, CIGNA, Coventry Health Care, Health Alliance, HealthLink, Humana, United Healthcare",
+                        Transportation: "Yes",
+                        Portal: "Yes",
+                        Services: "Lanuage services, Wheelchair access",                        FaxNumber: "(916) 830-2001",
+                        Type: "Physical Therapy",
+                        Badge: ["Professional"]
                     },
                     {
                         Name: `iMotion Physical Therapy`,
@@ -466,8 +598,13 @@ function Recommendations() {
                         Phone: "(916) 745-7700",
                         Website: "https://www.ucsfhealth.org/",
                         Providers: ["Raye Bellinger, M.D., MBA (In the network), Mark H. Eaton, M.D, FACC (preferred provider)", "Philip Morris Bach, M.D., FACC Georg Emlein , M.D., FACC Daniel Dale Vanhamersveld, M.D., FACC Michael David Fugit, M.D., FACC Kyle J. Michaelis, M.D., FACC Richard A. Clark, M.D."],
-                        FaxNumber: "(916) 745-7700",
-                        Type: "Physical Therapy"
+                        PPOInsurances: "Aetna, Beechstreet (Viant), Blue Cross Blue Shield, Cigna, Coventry Health Care, Global Excel - PPO, Galaxy Health Network PPO, Health Alliance, HealthLink, HFN, Humana, Imagine Health, Interplan (Chandler/Preferred Plan/ HealthSmart), LifeSynch, MultiPlan/PHCS, Prime Health Services PPO, The Alliance, Three Rivers Provider Network PPO, United Healthcare, Imagine Health, Interplan (Chandler/Preferred Plan/ HealthSmart), LifeSynch, MultiPlan/PHCS, Prime Health Services PPO, The Alliance, Three Rivers Provider Network PPO, United Healthcare",
+                        HMOInsurances: "AETNA, BCBS, CIGNA, Coventry Health Care, Health Alliance, HealthLink, Humana, United Healthcare",
+                        Transportation: "Yes",
+                        Portal: "Yes",
+                        Services: "Lanuage services, Wheelchair access",                        FaxNumber: "(916) 745-7700",
+                        Type: "Physical Therapy",
+                        Badge: ["Patient"]
                     },
                 ]
             },
@@ -482,8 +619,13 @@ function Recommendations() {
                         Phone: "(916) 430-2321",
                         Website: "https://www.ucsfhealth.org/",
                         Providers: ["Raye Bellinger, M.D., MBA (In the network), Mark H. Eaton, M.D, FACC (preferred provider)", "Philip Morris Bach, M.D., FACC Georg Emlein , M.D., FACC Daniel Dale Vanhamersveld, M.D., FACC Michael David Fugit, M.D., FACC Kyle J. Michaelis, M.D., FACC Richard A. Clark, M.D."],
-                        FaxNumber: "(916) 830-2001",
-                        Type: "Endocrinology"
+                        PPOInsurances: "Aetna, Beechstreet (Viant), Blue Cross Blue Shield, Cigna, Coventry Health Care, Global Excel - PPO, Galaxy Health Network PPO, Health Alliance, HealthLink, HFN, Humana, Imagine Health, Interplan (Chandler/Preferred Plan/ HealthSmart), LifeSynch, MultiPlan/PHCS, Prime Health Services PPO, The Alliance, Three Rivers Provider Network PPO, United Healthcare, Imagine Health, Interplan (Chandler/Preferred Plan/ HealthSmart), LifeSynch, MultiPlan/PHCS, Prime Health Services PPO, The Alliance, Three Rivers Provider Network PPO, United Healthcare",
+                        HMOInsurances: "AETNA, BCBS, CIGNA, Coventry Health Care, Health Alliance, HealthLink, Humana, United Healthcare",
+                        Transportation: "Yes",
+                        Portal: "Yes",
+                        Services: "Lanuage services, Wheelchair access",                        FaxNumber: "(916) 830-2001",
+                        Type: "Endocrinology",
+                        Badge: ["Patient", "Professional"]
                     },
                     {
                         Name: `Endocrinology Physicians Group`,
@@ -493,8 +635,13 @@ function Recommendations() {
                         Phone: "(916) 967-8841",
                         Website: "https://www.ucsfhealth.org/",
                         Providers: ["Raye Bellinger, M.D., MBA (In the network), Mark H. Eaton, M.D, FACC (preferred provider)", "Philip Morris Bach, M.D., FACC Georg Emlein , M.D., FACC Daniel Dale Vanhamersveld, M.D., FACC Michael David Fugit, M.D., FACC Kyle J. Michaelis, M.D., FACC Richard A. Clark, M.D."],
-                        FaxNumber: "(916) 967-8841",
-                        Type: "Endocrinology"
+                        PPOInsurances: "Aetna, Beechstreet (Viant), Blue Cross Blue Shield, Cigna, Coventry Health Care, Global Excel - PPO, Galaxy Health Network PPO, Health Alliance, HealthLink, HFN, Humana, Imagine Health, Interplan (Chandler/Preferred Plan/ HealthSmart), LifeSynch, MultiPlan/PHCS, Prime Health Services PPO, The Alliance, Three Rivers Provider Network PPO, United Healthcare, Imagine Health, Interplan (Chandler/Preferred Plan/ HealthSmart), LifeSynch, MultiPlan/PHCS, Prime Health Services PPO, The Alliance, Three Rivers Provider Network PPO, United Healthcare",
+                        HMOInsurances: "AETNA, BCBS, CIGNA, Coventry Health Care, Health Alliance, HealthLink, Humana, United Healthcare",
+                        Transportation: "Yes",
+                        Portal: "Yes",
+                        Services: "Lanuage services, Wheelchair access",                        FaxNumber: "(916) 967-8841",
+                        Type: "Endocrinology",
+                        Badge: ["Professional"]
                     },
                 ]
             },
@@ -509,8 +656,13 @@ function Recommendations() {
                         Phone: "(916) 430-2321",
                         Website: "https://www.ucsfhealth.org/",
                         Providers: ["Raye Bellinger, M.D., MBA (In the network), Mark H. Eaton, M.D, FACC (preferred provider)", "Philip Morris Bach, M.D., FACC Georg Emlein , M.D., FACC Daniel Dale Vanhamersveld, M.D., FACC Michael David Fugit, M.D., FACC Kyle J. Michaelis, M.D., FACC Richard A. Clark, M.D."],
-                        FaxNumber: "(916) 830-2001",
-                        Type: "Rheumatology"
+                        PPOInsurances: "Aetna, Beechstreet (Viant), Blue Cross Blue Shield, Cigna, Coventry Health Care, Global Excel - PPO, Galaxy Health Network PPO, Health Alliance, HealthLink, HFN, Humana, Imagine Health, Interplan (Chandler/Preferred Plan/ HealthSmart), LifeSynch, MultiPlan/PHCS, Prime Health Services PPO, The Alliance, Three Rivers Provider Network PPO, United Healthcare, Imagine Health, Interplan (Chandler/Preferred Plan/ HealthSmart), LifeSynch, MultiPlan/PHCS, Prime Health Services PPO, The Alliance, Three Rivers Provider Network PPO, United Healthcare",
+                        HMOInsurances: "AETNA, BCBS, CIGNA, Coventry Health Care, Health Alliance, HealthLink, Humana, United Healthcare",
+                        Transportation: "Yes",
+                        Portal: "Yes",
+                        Services: "Lanuage services, Wheelchair access",                        FaxNumber: "(916) 830-2001",
+                        Type: "Rheumatology",
+                        Badge: ["Patient", "Professional"]
                     },
                     {
                         Name: `Tricity Rheumatology`,
@@ -520,8 +672,13 @@ function Recommendations() {
                         Phone: "(916) 792-3786",
                         Website: "https://www.ucsfhealth.org/",
                         Providers: ["Raye Bellinger, M.D., MBA (In the network), Mark H. Eaton, M.D, FACC (preferred provider)", "Philip Morris Bach, M.D., FACC Georg Emlein , M.D., FACC Daniel Dale Vanhamersveld, M.D., FACC Michael David Fugit, M.D., FACC Kyle J. Michaelis, M.D., FACC Richard A. Clark, M.D."],
-                        FaxNumber: "(916) 792-3786",
-                        Type: "Rheumatology"
+                        PPOInsurances: "Aetna, Beechstreet (Viant), Blue Cross Blue Shield, Cigna, Coventry Health Care, Global Excel - PPO, Galaxy Health Network PPO, Health Alliance, HealthLink, HFN, Humana, Imagine Health, Interplan (Chandler/Preferred Plan/ HealthSmart), LifeSynch, MultiPlan/PHCS, Prime Health Services PPO, The Alliance, Three Rivers Provider Network PPO, United Healthcare, Imagine Health, Interplan (Chandler/Preferred Plan/ HealthSmart), LifeSynch, MultiPlan/PHCS, Prime Health Services PPO, The Alliance, Three Rivers Provider Network PPO, United Healthcare",
+                        HMOInsurances: "AETNA, BCBS, CIGNA, Coventry Health Care, Health Alliance, HealthLink, Humana, United Healthcare",
+                        Transportation: "Yes",
+                        Portal: "Yes",
+                        Services: "Lanuage services, Wheelchair access",                        FaxNumber: "(916) 792-3786",
+                        Type: "Rheumatology",
+                        Badge: ["Patient"]
                     },
                 ]
             },
@@ -536,8 +693,13 @@ function Recommendations() {
                         Phone: "(916) 654-1237",
                         Website: "https://www.ucsfhealth.org/",
                         Providers: ["Raye Bellinger, M.D., MBA (In the network), Mark H. Eaton, M.D, FACC (preferred provider)", "Philip Morris Bach, M.D., FACC Georg Emlein , M.D., FACC Daniel Dale Vanhamersveld, M.D., FACC Michael David Fugit, M.D., FACC Kyle J. Michaelis, M.D., FACC Richard A. Clark, M.D."],
-                        FaxNumber: "(916) 830-2001",
-                        Type: "Nephrology"
+                        PPOInsurances: "Aetna, Beechstreet (Viant), Blue Cross Blue Shield, Cigna, Coventry Health Care, Global Excel - PPO, Galaxy Health Network PPO, Health Alliance, HealthLink, HFN, Humana, Imagine Health, Interplan (Chandler/Preferred Plan/ HealthSmart), LifeSynch, MultiPlan/PHCS, Prime Health Services PPO, The Alliance, Three Rivers Provider Network PPO, United Healthcare, Imagine Health, Interplan (Chandler/Preferred Plan/ HealthSmart), LifeSynch, MultiPlan/PHCS, Prime Health Services PPO, The Alliance, Three Rivers Provider Network PPO, United Healthcare",
+                        HMOInsurances: "AETNA, BCBS, CIGNA, Coventry Health Care, Health Alliance, HealthLink, Humana, United Healthcare",
+                        Transportation: "Yes",
+                        Portal: "Yes",
+                        Services: "Lanuage services, Wheelchair access",                        FaxNumber: "(916) 830-2001",
+                        Type: "Nephrology",
+                        Badge: ["Patient", "Professional"]
                     },
                     {
                         Name: `${location.substring(0, location.length - 4)} Nephrology Pro Corporation`,
@@ -547,8 +709,13 @@ function Recommendations() {
                         Phone: "(916) 795-8186",
                         Website: "https://www.ucsfhealth.org/",
                         Providers: ["Raye Bellinger, M.D., MBA (In the network), Mark H. Eaton, M.D, FACC (preferred provider)", "Philip Morris Bach, M.D., FACC Georg Emlein , M.D., FACC Daniel Dale Vanhamersveld, M.D., FACC Michael David Fugit, M.D., FACC Kyle J. Michaelis, M.D., FACC Richard A. Clark, M.D."],
-                        FaxNumber: "(916) 795-8186",
-                        Type: "Nephrology"
+                        PPOInsurances: "Aetna, Beechstreet (Viant), Blue Cross Blue Shield, Cigna, Coventry Health Care, Global Excel - PPO, Galaxy Health Network PPO, Health Alliance, HealthLink, HFN, Humana, Imagine Health, Interplan (Chandler/Preferred Plan/ HealthSmart), LifeSynch, MultiPlan/PHCS, Prime Health Services PPO, The Alliance, Three Rivers Provider Network PPO, United Healthcare, Imagine Health, Interplan (Chandler/Preferred Plan/ HealthSmart), LifeSynch, MultiPlan/PHCS, Prime Health Services PPO, The Alliance, Three Rivers Provider Network PPO, United Healthcare",
+                        HMOInsurances: "AETNA, BCBS, CIGNA, Coventry Health Care, Health Alliance, HealthLink, Humana, United Healthcare",
+                        Transportation: "Yes",
+                        Portal: "Yes",
+                        Services: "Lanuage services, Wheelchair access",                        FaxNumber: "(916) 795-8186",
+                        Type: "Nephrology",
+                        Badge: ["Professional"]
                     },
                 ]
             },
@@ -563,8 +730,13 @@ function Recommendations() {
                         Phone: "(916) 198-8752",
                         Website: "https://www.ucsfhealth.org/",
                         Providers: ["Raye Bellinger, M.D., MBA (In the network), Mark H. Eaton, M.D, FACC (preferred provider)", "Philip Morris Bach, M.D., FACC Georg Emlein , M.D., FACC Daniel Dale Vanhamersveld, M.D., FACC Michael David Fugit, M.D., FACC Kyle J. Michaelis, M.D., FACC Richard A. Clark, M.D."],
-                        FaxNumber: "(916) 830-2001",
-                        Type: "Urology"
+                        PPOInsurances: "Aetna, Beechstreet (Viant), Blue Cross Blue Shield, Cigna, Coventry Health Care, Global Excel - PPO, Galaxy Health Network PPO, Health Alliance, HealthLink, HFN, Humana, Imagine Health, Interplan (Chandler/Preferred Plan/ HealthSmart), LifeSynch, MultiPlan/PHCS, Prime Health Services PPO, The Alliance, Three Rivers Provider Network PPO, United Healthcare, Imagine Health, Interplan (Chandler/Preferred Plan/ HealthSmart), LifeSynch, MultiPlan/PHCS, Prime Health Services PPO, The Alliance, Three Rivers Provider Network PPO, United Healthcare",
+                        HMOInsurances: "AETNA, BCBS, CIGNA, Coventry Health Care, Health Alliance, HealthLink, Humana, United Healthcare",
+                        Transportation: "Yes",
+                        Portal: "Yes",
+                        Services: "Lanuage services, Wheelchair access",                        FaxNumber: "(916) 830-2001",
+                        Type: "Urology",
+                        Badge: ["Professional"]
                     },
                     {
                         Name: `Advanced Regen Medical`,
@@ -574,8 +746,13 @@ function Recommendations() {
                         Phone: "(916) 871-8222",
                         Website: "https://www.ucsfhealth.org/",
                         Providers: ["Raye Bellinger, M.D., MBA (In the network), Mark H. Eaton, M.D, FACC (preferred provider)", "Philip Morris Bach, M.D., FACC Georg Emlein , M.D., FACC Daniel Dale Vanhamersveld, M.D., FACC Michael David Fugit, M.D., FACC Kyle J. Michaelis, M.D., FACC Richard A. Clark, M.D."],
-                        FaxNumber: "(916) 871-8222",
-                        Type: "Urology"
+                        PPOInsurances: "Aetna, Beechstreet (Viant), Blue Cross Blue Shield, Cigna, Coventry Health Care, Global Excel - PPO, Galaxy Health Network PPO, Health Alliance, HealthLink, HFN, Humana, Imagine Health, Interplan (Chandler/Preferred Plan/ HealthSmart), LifeSynch, MultiPlan/PHCS, Prime Health Services PPO, The Alliance, Three Rivers Provider Network PPO, United Healthcare, Imagine Health, Interplan (Chandler/Preferred Plan/ HealthSmart), LifeSynch, MultiPlan/PHCS, Prime Health Services PPO, The Alliance, Three Rivers Provider Network PPO, United Healthcare",
+                        HMOInsurances: "AETNA, BCBS, CIGNA, Coventry Health Care, Health Alliance, HealthLink, Humana, United Healthcare",
+                        Transportation: "Yes",
+                        Portal: "Yes",
+                        Services: "Lanuage services, Wheelchair access",                        FaxNumber: "(916) 871-8222",
+                        Type: "Urology",
+                        Badge: ["Professional"]
                     },
                 ]
             },
@@ -590,8 +767,13 @@ function Recommendations() {
                         Phone: "(916) 321-1231",
                         Website: "https://www.ucsfhealth.org/",
                         Providers: ["Raye Bellinger, M.D., MBA (In the network), Mark H. Eaton, M.D, FACC (preferred provider)", "Philip Morris Bach, M.D., FACC Georg Emlein , M.D., FACC Daniel Dale Vanhamersveld, M.D., FACC Michael David Fugit, M.D., FACC Kyle J. Michaelis, M.D., FACC Richard A. Clark, M.D."],
-                        FaxNumber: "(916) 830-2001",
-                        Type: "Pulmonologist"
+                        PPOInsurances: "Aetna, Beechstreet (Viant), Blue Cross Blue Shield, Cigna, Coventry Health Care, Global Excel - PPO, Galaxy Health Network PPO, Health Alliance, HealthLink, HFN, Humana, Imagine Health, Interplan (Chandler/Preferred Plan/ HealthSmart), LifeSynch, MultiPlan/PHCS, Prime Health Services PPO, The Alliance, Three Rivers Provider Network PPO, United Healthcare, Imagine Health, Interplan (Chandler/Preferred Plan/ HealthSmart), LifeSynch, MultiPlan/PHCS, Prime Health Services PPO, The Alliance, Three Rivers Provider Network PPO, United Healthcare",
+                        HMOInsurances: "AETNA, BCBS, CIGNA, Coventry Health Care, Health Alliance, HealthLink, Humana, United Healthcare",
+                        Transportation: "Yes",
+                        Portal: "Yes",
+                        Services: "Lanuage services, Wheelchair access",                        FaxNumber: "(916) 830-2001",
+                        Type: "Pulmonologist",
+                        Badge: ["Patient"]
                     },
                     {
                         Name: `Washington Township Medical Foundation`,
@@ -601,8 +783,13 @@ function Recommendations() {
                         Phone: "(916) 248-1550",
                         Website: "https://www.ucsfhealth.org/",
                         Providers: ["Raye Bellinger, M.D., MBA (In the network), Mark H. Eaton, M.D, FACC (preferred provider)", "Philip Morris Bach, M.D., FACC Georg Emlein , M.D., FACC Daniel Dale Vanhamersveld, M.D., FACC Michael David Fugit, M.D., FACC Kyle J. Michaelis, M.D., FACC Richard A. Clark, M.D."],
-                        FaxNumber: "(916) 248-1550",
-                        Type: "Pulmonologist"
+                        PPOInsurances: "Aetna, Beechstreet (Viant), Blue Cross Blue Shield, Cigna, Coventry Health Care, Global Excel - PPO, Galaxy Health Network PPO, Health Alliance, HealthLink, HFN, Humana, Imagine Health, Interplan (Chandler/Preferred Plan/ HealthSmart), LifeSynch, MultiPlan/PHCS, Prime Health Services PPO, The Alliance, Three Rivers Provider Network PPO, United Healthcare, Imagine Health, Interplan (Chandler/Preferred Plan/ HealthSmart), LifeSynch, MultiPlan/PHCS, Prime Health Services PPO, The Alliance, Three Rivers Provider Network PPO, United Healthcare",
+                        HMOInsurances: "AETNA, BCBS, CIGNA, Coventry Health Care, Health Alliance, HealthLink, Humana, United Healthcare",
+                        Transportation: "Yes",
+                        Portal: "Yes",
+                        Services: "Lanuage services, Wheelchair access",                        FaxNumber: "(916) 248-1550",
+                        Type: "Pulmonologist",
+                        Badge: ["Professional"]
                     },
                 ]
             },
@@ -617,8 +804,13 @@ function Recommendations() {
                         Phone: "(916) 765-5432",
                         Website: "https://www.ucsfhealth.org/",
                         Providers: ["Raye Bellinger, M.D., MBA (In the network), Mark H. Eaton, M.D, FACC (preferred provider)", "Philip Morris Bach, M.D., FACC Georg Emlein , M.D., FACC Daniel Dale Vanhamersveld, M.D., FACC Michael David Fugit, M.D., FACC Kyle J. Michaelis, M.D., FACC Richard A. Clark, M.D."],
-                        FaxNumber: "(916) 830-2001",
-                        Type: "Respiratory Therapy"
+                        PPOInsurances: "Aetna, Beechstreet (Viant), Blue Cross Blue Shield, Cigna, Coventry Health Care, Global Excel - PPO, Galaxy Health Network PPO, Health Alliance, HealthLink, HFN, Humana, Imagine Health, Interplan (Chandler/Preferred Plan/ HealthSmart), LifeSynch, MultiPlan/PHCS, Prime Health Services PPO, The Alliance, Three Rivers Provider Network PPO, United Healthcare, Imagine Health, Interplan (Chandler/Preferred Plan/ HealthSmart), LifeSynch, MultiPlan/PHCS, Prime Health Services PPO, The Alliance, Three Rivers Provider Network PPO, United Healthcare",
+                        HMOInsurances: "AETNA, BCBS, CIGNA, Coventry Health Care, Health Alliance, HealthLink, Humana, United Healthcare",
+                        Transportation: "Yes",
+                        Portal: "Yes",
+                        Services: "Lanuage services, Wheelchair access",                        FaxNumber: "(916) 830-2001",
+                        Type: "Respiratory Therapy",
+                        Badge: ["Patient"]
                     },
                     {
                         Name: `${location.substring(0, location.length - 4)} Pacific Medical Center`,
@@ -628,8 +820,13 @@ function Recommendations() {
                         Phone: "(916) 641-6850",
                         Website: "https://www.ucsfhealth.org/",
                         Providers: ["Raye Bellinger, M.D., MBA (In the network), Mark H. Eaton, M.D, FACC (preferred provider)", "Philip Morris Bach, M.D., FACC Georg Emlein , M.D., FACC Daniel Dale Vanhamersveld, M.D., FACC Michael David Fugit, M.D., FACC Kyle J. Michaelis, M.D., FACC Richard A. Clark, M.D."],
-                        FaxNumber: "(916) 641-6850",
-                        Type: "Respiratory Therapy"
+                        PPOInsurances: "Aetna, Beechstreet (Viant), Blue Cross Blue Shield, Cigna, Coventry Health Care, Global Excel - PPO, Galaxy Health Network PPO, Health Alliance, HealthLink, HFN, Humana, Imagine Health, Interplan (Chandler/Preferred Plan/ HealthSmart), LifeSynch, MultiPlan/PHCS, Prime Health Services PPO, The Alliance, Three Rivers Provider Network PPO, United Healthcare, Imagine Health, Interplan (Chandler/Preferred Plan/ HealthSmart), LifeSynch, MultiPlan/PHCS, Prime Health Services PPO, The Alliance, Three Rivers Provider Network PPO, United Healthcare",
+                        HMOInsurances: "AETNA, BCBS, CIGNA, Coventry Health Care, Health Alliance, HealthLink, Humana, United Healthcare",
+                        Transportation: "Yes",
+                        Portal: "Yes",
+                        Services: "Lanuage services, Wheelchair access",                        FaxNumber: "(916) 641-6850",
+                        Type: "Respiratory Therapy",
+                        Badge: ["Professional"]
                     },
                 ]
             },
@@ -644,8 +841,13 @@ function Recommendations() {
                         Phone: "(916) 645-9211",
                         Website: "https://www.ucsfhealth.org/",
                         Providers: ["Raye Bellinger, M.D., MBA (In the network), Mark H. Eaton, M.D, FACC (preferred provider)", "Philip Morris Bach, M.D., FACC Georg Emlein , M.D., FACC Daniel Dale Vanhamersveld, M.D., FACC Michael David Fugit, M.D., FACC Kyle J. Michaelis, M.D., FACC Richard A. Clark, M.D."],
-                        FaxNumber: "(916) 830-2001",
-                        Type: "Sleep Medicine"
+                        PPOInsurances: "Aetna, Beechstreet (Viant), Blue Cross Blue Shield, Cigna, Coventry Health Care, Global Excel - PPO, Galaxy Health Network PPO, Health Alliance, HealthLink, HFN, Humana, Imagine Health, Interplan (Chandler/Preferred Plan/ HealthSmart), LifeSynch, MultiPlan/PHCS, Prime Health Services PPO, The Alliance, Three Rivers Provider Network PPO, United Healthcare, Imagine Health, Interplan (Chandler/Preferred Plan/ HealthSmart), LifeSynch, MultiPlan/PHCS, Prime Health Services PPO, The Alliance, Three Rivers Provider Network PPO, United Healthcare",
+                        HMOInsurances: "AETNA, BCBS, CIGNA, Coventry Health Care, Health Alliance, HealthLink, Humana, United Healthcare",
+                        Transportation: "Yes",
+                        Portal: "Yes",
+                        Services: "Lanuage services, Wheelchair access",                        FaxNumber: "(916) 830-2001",
+                        Type: "Sleep Medicine",
+                        Badge: ["Professional"]
                     },
                     {
                         Name: `Sleep Well Medical Clinic`,
@@ -655,8 +857,13 @@ function Recommendations() {
                         Phone: "(916) 993-1500",
                         Website: "https://www.ucsfhealth.org/",
                         Providers: ["Raye Bellinger, M.D., MBA (In the network), Mark H. Eaton, M.D, FACC (preferred provider)", "Philip Morris Bach, M.D., FACC Georg Emlein , M.D., FACC Daniel Dale Vanhamersveld, M.D., FACC Michael David Fugit, M.D., FACC Kyle J. Michaelis, M.D., FACC Richard A. Clark, M.D."],
-                        FaxNumber: "(916) 993-1500",
-                        Type: "Sleep Medicine"
+                        PPOInsurances: "Aetna, Beechstreet (Viant), Blue Cross Blue Shield, Cigna, Coventry Health Care, Global Excel - PPO, Galaxy Health Network PPO, Health Alliance, HealthLink, HFN, Humana, Imagine Health, Interplan (Chandler/Preferred Plan/ HealthSmart), LifeSynch, MultiPlan/PHCS, Prime Health Services PPO, The Alliance, Three Rivers Provider Network PPO, United Healthcare, Imagine Health, Interplan (Chandler/Preferred Plan/ HealthSmart), LifeSynch, MultiPlan/PHCS, Prime Health Services PPO, The Alliance, Three Rivers Provider Network PPO, United Healthcare",
+                        HMOInsurances: "AETNA, BCBS, CIGNA, Coventry Health Care, Health Alliance, HealthLink, Humana, United Healthcare",
+                        Transportation: "Yes",
+                        Portal: "Yes",
+                        Services: "Lanuage services, Wheelchair access",                        FaxNumber: "(916) 993-1500",
+                        Type: "Sleep Medicine",
+                        Badge: ["Patient"]
                     },
                 ]
             },
@@ -764,17 +971,17 @@ function Recommendations() {
             console.log(listOfDataToChange);
             let locationsListToPickFrom = listOfDataToChange.Locations;
             console.log(locationsListToPickFrom)
-            if(locationsListToPickFrom.length > 1){
-                let currentItemInArrayIndex= locationsListToPickFrom.indexOf(currentValue);
-                while (true){
-                    let randomIndex = randomNumber(0, locationsListToPickFrom.length-1)
-                    if (randomIndex != currentItemInArrayIndex){
+            if (locationsListToPickFrom.length > 1) {
+                let currentItemInArrayIndex = locationsListToPickFrom.indexOf(currentValue);
+                while (true) {
+                    let randomIndex = randomNumber(0, locationsListToPickFrom.length - 1)
+                    if (randomIndex != currentItemInArrayIndex) {
                         let copyIndex = copyOfCurrentFilters.indexOf(currentValue);
                         copyOfCurrentFilters[copyIndex] = locationsListToPickFrom[randomIndex];
                         break;
                     }
                 }
-                
+
             }
             setFilterItemsToShow(copyOfCurrentFilters);
             // let indexOfCurrent = locationsListToPickFrom.indexOf
@@ -926,6 +1133,9 @@ function Recommendations() {
                     </div>
                 </div>
                 <div className='Rec-Scroll-Area'>
+                    <a className='Back-to-og' href="https://navigate.searchful.care/" target='_blank'>
+                        Go back to traditional Searchful
+                    </a>
                     <div className='LocationAndDiagnosis'>
                         We recommend the following resources in <b>{location}</b> for <b>{diagnosis}</b>
                     </div>
@@ -980,20 +1190,20 @@ function Recommendations() {
 
                         <div className='categoty-Popups'>
                             <div className='categoty-Popups'>
-                                Cardiology
+                                {diagnosis}
                             </div>
                             <div className='categoty-Popups'>
                                 •
                             </div>
                             <div className='categoty-Popups'>
-                                Dental Care
+                            {popUpInfo.Type}
                             </div>
-                            <div className='categoty-Popups'>
+                            {/* <div className='categoty-Popups'>
                                 •
                             </div>
                             <div className='categoty-Popups'>
                                 Category 3
-                            </div>
+                            </div> */}
                         </div>
                         <div className='popUpHeaderText'>
                             {popUpInfo.FullName}
@@ -1061,6 +1271,26 @@ function Recommendations() {
                         </div>
                         <div className='popup-providers'>{popUpInfo.Providers[0]}</div>
                         <div className='popup-providers'>{popUpInfo.Providers[1]}</div>
+                        <div className='add-details-header'>
+                            PPO Insurances Accepted
+                        </div>
+                        <div className='popup-providers'>{popUpInfo.PPOInsurances}</div>
+                        <div className='add-details-header'>
+                            HMO Insurances Accepted
+                        </div>
+                        <div className='popup-providers'>{popUpInfo.HMOInsurances}</div>
+                        <div className='add-details-header'>
+                            Transportation Assistance
+                        </div>
+                        <div className='popup-providers'>{popUpInfo.Transportation}</div>
+                        <div className='add-details-header'>
+                            Patient Portal
+                        </div>
+                        <div className='popup-providers'>{popUpInfo.Portal}</div>
+                        <div className='add-details-header'>
+                            Services
+                        </div>
+                        <div className='popup-providers'>{popUpInfo.Services}</div>
                     </div>
                 </div>
                 :
