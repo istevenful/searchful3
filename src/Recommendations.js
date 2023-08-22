@@ -1107,22 +1107,68 @@ function Recommendations() {
                             disablePortal
                             id="combo-box-demo"
                             options={listOfCities}
-                            sx={{ width: '40%', background: "white", border: "1px solid #DFDFDF", borderRadius: "7px" }}
+                            sx={{ width: '40%', borderRadius: "300px" }}
                             defaultValue={location}
-                            renderInput={(params) => <TextField {...params} label="" sx={{ width: '100%', background: "white", border: "none", borderRadius: "7px", }} />}
+                            renderInput={(params) => <TextField {...params} label="" sx={{
+                                width: '100%', background: "white", border: "none", borderRadius: "300px",
+                                "& .MuiOutlinedInput-root": {
+                                    borderRadius: "50px",
+
+                                    legend: {
+                                        marginLeft: "30px"
+                                    }
+                                },
+                                "& .MuiAutocomplete-inputRoot": {
+                                    paddingLeft: "20px !important",
+                                    borderRadius: "50px"
+                                },
+                                "& .MuiInputLabel-outlined": {
+                                    paddingLeft: "20px"
+                                },
+                                "& .MuiInputLabel-shrink": {
+                                    marginLeft: "20px",
+                                    paddingLeft: "10px",
+                                    paddingRight: 0,
+                                    background: "white"
+                                },
+
+                            }} />}
                             onChange={handleLocationChange}
                         />
                         <Autocomplete
                             disablePortal
                             id="combo-box-demo"
                             options={listOfDiagnosis}
-                            sx={{ width: '40%' }}
+                            sx={{ width: '40%', borderRadius: "300px", }}
                             defaultValue={diagnosis}
-                            renderInput={(params) => <TextField {...params} label="" sx={{ width: '100%', background: "white", border: "none", borderRadius: "7px", }} />}
+                            renderInput={(params) => <TextField {...params} label="" sx={{
+                                width: '100%', background: "white", border: "none", borderRadius: "300px",
+                                "& .MuiOutlinedInput-root": {
+                                    borderRadius: "50px",
+
+                                    legend: {
+                                        marginLeft: "30px"
+                                    }
+                                },
+                                "& .MuiAutocomplete-inputRoot": {
+                                    paddingLeft: "20px !important",
+                                    borderRadius: "50px"
+                                },
+                                "& .MuiInputLabel-outlined": {
+                                    paddingLeft: "20px"
+                                },
+                                "& .MuiInputLabel-shrink": {
+                                    marginLeft: "20px",
+                                    paddingLeft: "10px",
+                                    paddingRight: 0,
+                                    background: "white"
+                                }
+                            }} />}
                             onChange={handleDiagnosisChange}
                         />
                         <Button variant="contained"
                             sx={{
+
                                 paddingTop: "18px",
                                 paddingBottom: "18px",
                                 paddingLeft: "5%",

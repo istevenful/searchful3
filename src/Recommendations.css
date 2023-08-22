@@ -1,42 +1,47 @@
-.Rec-Page{
+.Rec-Page {
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.Nav-Bar{
+
+.Nav-Bar {
     width: 100%;
     height: 10vh;
     min-height: 64px;
     background: linear-gradient(to right, #FFD3DD 0%, #FFCBCD 20%, #FFD8E6 50%, #FFE7FF 75%, #FFF6E9 100%);
     position: relative;
     border-radius: 15px;
-    padding-left:25px;
-    padding-right:25px;
+    padding-left: 25px;
+    padding-right: 25px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    margin-bottom:5vh;
+    margin-bottom: 5vh;
 }
-.Nav-Logo{
+
+.Nav-Logo {
     height: 30%;
     cursor: pointer;
 }
-.Logo-img{
+
+.Logo-img {
     height: 100%;
-    
+
 }
-.item-box-click-box{
+
+.item-box-click-box {
     width: 100%;
     height: 100%;
     position: absolute;
-    top:0;
+    top: 0;
     left: 0;
     z-index: 0;
 }
-.Nav-Bar-Search{
+
+.Nav-Bar-Search {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -44,7 +49,8 @@
     height: 100%;
     width: 60%;
 }
-.New-Search-Button{
+
+.New-Search-Button {
     cursor: pointer;
     text-align: center;
     display: flex;
@@ -52,35 +58,40 @@
     background-color: #FF756D;
     padding: 18px 5% 18px 5%;
     border-radius: 7px;
-    color:white;
+    color: white;
 }
-.Rec-Scroll-Area{
+
+.Rec-Scroll-Area {
     display: flex;
     flex-direction: column;
     width: 50%;
 }
 
-.LocationAndDiagnosis{
+.LocationAndDiagnosis {
     font-family: "Euclid Circular B SemiBold";
     font-size: 1.75vw;
     width: 75%;
 }
+
 b {
-    color:#FF756D;
+    color: #FF756D;
 }
-.Rec-Sub-Text{
+
+.Rec-Sub-Text {
     padding-top: 20px;
     font-family: "Euclid Circular B";
     font-size: .8vw;
     padding-bottom: 15px;
 }
-.Filter-List{
+
+.Filter-List {
     display: flex;
     width: 100%;
     flex-wrap: wrap;
 }
-.filter-buttons{
-    
+
+.filter-buttons {
+
     display: flex;
     flex-direction: row;
     border: 1px solid #DFDFDF;
@@ -91,30 +102,33 @@ b {
     color: black;
     margin-right: 20px;
     align-items: center;
-    margin-bottom:15px;
+    margin-bottom: 15px;
 }
-.Delete-Icon{
+
+.Delete-Icon {
     width: .8vw;
     margin-left: 25px;
     cursor: pointer;
 }
-.Filter-Add{
+
+.Filter-Add {
     font-size: .8vw;
     color: #FF756D;
     align-self: center;
     cursor: pointer;
-    margin-bottom:15px;
+    margin-bottom: 15px;
     display: flex;
     flex-direction: column;
     position: relative;
 }
 
-.Filter-Item-List{
+.Filter-Item-List {
     display: flex;
     flex-direction: column;
     padding-bottom: 15px;
 }
-.item-container{
+
+.item-container {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -122,9 +136,10 @@ b {
     background-color: #FFF1F2;
     border-radius: 15px;
     margin-bottom: 25px;
-    
+
 }
-.item-Box{
+
+.item-Box {
     align-self: center;
     display: flex;
     flex-direction: row;
@@ -140,73 +155,86 @@ b {
     padding-bottom: 35px;
     padding-top: 35px;
 }
-.item-box-left{
+
+.item-box-left {
     display: flex;
     flex-direction: column;
     position: relative;
     width: 90%;
     height: fit-content;
 }
-.item-Header{
+
+.item-Header {
     font-size: 1.2vw;
     font-family: "Euclid Circular B SemiBold";
-    display: flex;;
+    display: flex;
+    ;
     flex-direction: row;
     align-items: center;
 }
-.item-badges{
+
+.item-badges {
     height: 1.3vw;
     padding-left: 5px;
     cursor: pointer;
     z-index: 10;
 }
-.item-row-1{
+
+.item-row-1 {
     display: flex;
     flex-direction: row;
     margin-top: 25px;
-    margin-bottom:25px;
+    margin-bottom: 25px;
 
 }
-.item-row-2{
+
+.item-row-2 {
     display: flex;
     flex-direction: row;
 
 }
-.item-info-1{
+
+.item-info-1 {
     display: flex;
     align-items: center;
     font-size: .8vw;
     width: 30%;
     color: #7F7F7F;
 }
-.item-info{
+
+.item-info {
     display: flex;
     align-items: center;
     font-size: .8vw;
     color: #7F7F7F;
 }
-.item-image{
+
+.item-image {
     margin-right: 15px;
     width: .8vw;
     height: 0.8vw;
 }
-.item-image-wide{
+
+.item-image-wide {
     margin-right: 15px;
     width: 1vw;
-    
+
 }
-.item-image-tall{
+
+.item-image-tall {
     margin-right: 15px;
     height: 1vw;
-    
+
 }
-.item-Category{
+
+.item-Category {
     font-family: "Euclid Circular B SemiBold";
     font-size: 1.2vw;
     padding-bottom: 20px;
     color: black;
 }
-.item-box-buttons{
+
+.item-box-buttons {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -214,11 +242,12 @@ b {
 
 }
 
-.item-img-button{
+.item-img-button {
     width: 1vw;
     height: 1vw;
 }
-.item-box{
+
+.item-box {
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -227,7 +256,8 @@ b {
     padding: 15px;
     border-radius: 10px;
 }
-.item-box-active{
+
+.item-box-active {
     border: 1px solid #FF756D;
     background-color: #FFF0F0;
     cursor: pointer;
@@ -237,59 +267,65 @@ b {
     padding: 15px;
     border-radius: 10px;
 }
-.item-website{
+
+.item-website {
     color: #FF756D;
     font-family: "Euclid Circular B SemiBold";
     z-index: 10;
 }
 
-.Magic-Search{
+.Magic-Search {
     width: 100%;
     padding: 40px;
-    background: linear-gradient(to right, #FFD0D9 0%,#FFC8CA 30%,#FFD4E0 50%,#FFE3FA 70%,#FFEAFA 100%);
+    background: linear-gradient(to right, #FFD0D9 0%, #FFC8CA 30%, #FFD4E0 50%, #FFE3FA 70%, #FFEAFA 100%);
     display: flex;
     flex-direction: column;
 
     border-radius: 15px;
     margin-bottom: 25px;
 }
-.MagicStars{
+
+.MagicStars {
     height: 40px;
 }
-.MagicHeader{
+
+.MagicHeader {
     font-size: 1.2vw;
     font-family: "Euclid Circular B SemiBold";
     padding-bottom: 15px;
 }
-.MagicText{
-    font-size:.9vw;
+
+.MagicText {
+    font-size: .9vw;
     font-family: "Euclid Circular B";
-    padding-bottom: 15px;   
+    padding-bottom: 15px;
 }
 
-.MagicButton{
+.MagicButton {
     font-size: .9vw;
-    border:1px solid #FFB2C3;
+    border: 1px solid #FFB2C3;
     border-radius: 100px;
     background-color: white;
-    color:#FF756D;
+    color: #FF756D;
     font-family: "Euclid Circular B SemiBold";
     padding: 10px 20px 10px 20px;
     align-self: center;
 }
 
-.popup{
+.popup {
     width: 100vw;
-    height: 100vh;;
+    height: 100vh;
+    ;
     display: flex;
     position: fixed;
-    background-color: rgba(1,1,1,0.5);
+    background-color: rgba(1, 1, 1, 0.5);
     top: 0;
     left: 0;
     justify-content: center;
     z-index: 1000;
 }
-.popupContainer{
+
+.popupContainer {
     width: 60%;
     margin-top: 2.5vh;
     margin-bottom: 2.5vh;
@@ -299,7 +335,7 @@ b {
     border-radius: 15px 5px 5px 15px;
     overflow-y: scroll;
 }
-        
+
 .popupContainer::-webkit-scrollbar {
     width: 10px;
     padding-top: 10px;
@@ -315,12 +351,14 @@ b {
     border-radius: 8px;
     background-color: #FF756D;
 }
-.popup-filter{
+
+.popup-filter {
     width: 100vw;
-    height: 100vh;;
+    height: 100vh;
+    ;
     display: flex;
     position: fixed;
-    background-color: rgba(1,1,1,0.5);
+    background-color: rgba(1, 1, 1, 0.5);
     top: 0;
     left: 0;
     justify-content: center;
@@ -328,7 +366,8 @@ b {
     justify-content: center;
     align-items: center;
 }
-.popupContainer-filters{
+
+.popupContainer-filters {
     display: flex;
     flex-direction: column;
     width: fit-content;
@@ -341,47 +380,52 @@ b {
     justify-content: center;
 
 }
-.BackPopup{
+
+.BackPopup {
     display: flex;
     cursor: pointer;
     font-size: .8vw;
     border: 1px solid #DFDFDF;
-    color:#FF756D;
+    color: #FF756D;
     border-radius: 7px;
     width: fit-content;
     padding-left: 25px;
-    padding-top:15px;
+    padding-top: 15px;
     padding-bottom: 15px;
     font-family: "Euclid Circular B SemiBold";
-    padding-right:25px;
+    padding-right: 25px;
 }
-.BackPopup-Filters{
+
+.BackPopup-Filters {
     display: flex;
     cursor: pointer;
     font-size: .8vw;
     border: 1px solid #DFDFDF;
-    color:#FF756D;
+    color: #FF756D;
     border-radius: 7px;
     width: fit-content;
     padding-left: 25px;
-    padding-top:15px;
+    padding-top: 15px;
     padding-bottom: 15px;
     font-family: "Euclid Circular B SemiBold";
-    padding-right:25px;
+    padding-right: 25px;
     align-self: center;
-    margin-top:15px;
+    margin-top: 15px;
 }
-.popupButtons-Top{
+
+.popupButtons-Top {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: 30px;
 }
-.fourButtons{
+
+.fourButtons {
     display: flex;
     flex-direction: row;
 }
-.popUpClickableButtons{
+
+.popUpClickableButtons {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -391,83 +435,97 @@ b {
     margin-left: 15px;
     cursor: pointer;
 }
-.popUpClickableButtonsActive{
+
+.popUpClickableButtonsActive {
     background-color: #FFF0F0;
 }
-.categoty-Popups{
+
+.categoty-Popups {
     display: flex;
     flex-direction: row;
     align-items: center;
     padding-bottom: 5px;
 }
-.categoty-Popups{
+
+.categoty-Popups {
     color: #FF756D;
     font-size: .8vw;
     padding-right: 10px;
     font-family: "Euclid Circular B SemiBold";
-    
+
 }
-.popUpHeaderText{
+
+.popUpHeaderText {
     font-size: 2vw;
     font-family: "Euclid Circular B SemiBold";
-    padding-bottom:10px;
+    padding-bottom: 10px;
 }
-.divider{
+
+.divider {
     width: 100%;
     border: 1px solid #DFDFDF;
 }
-.popup-info-1{
+
+.popup-info-1 {
     display: flex;
     align-items: center;
     font-size: .8vw;
     width: 20%;
 }
-.popup-info{
+
+.popup-info {
     display: flex;
     align-items: center;
     font-size: .8vw;
 }
-.popup-Times{
+
+.popup-Times {
     display: flex;
     flex-direction: row;
     margin-top: 20px;
     margin-bottom: 20px;
 }
-.time-slots{
+
+.time-slots {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
 }
-.time-slot{
+
+.time-slot {
     font-size: .8vw;
     margin-bottom: 5px;
 }
-.Search-additional-features{
+
+.Search-additional-features {
     width: 100%;
-    color:#7E7E7E;
+    color: #7E7E7E;
     border: 1px solid #DFDFDF;
     border-radius: 7px;
     margin-top: 15px;
     margin-bottom: 15px;
     font-size: .8vw;
-    padding-left:15px;
-    padding-top:15px;
-    padding-bottom:15px;
+    padding-left: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
-.add-details-header{
+
+.add-details-header {
     font-size: .8vw;
-    color:#7E7E7E;
+    color: #7E7E7E;
     font-family: "Euclid Circular B SemiBold";
-    padding-bottom:8px;
+    padding-bottom: 8px;
 }
-.popup-providers{
+
+.popup-providers {
     font-size: .8vw;
-    padding-bottom:15px;
+    padding-bottom: 15px;
 }
-.Back-to-og{
+
+.Back-to-og {
     width: fit-content;
     align-self: center;
-    color:#FF756D;
+    color: #FF756D;
     font-size: .9vw;
     padding-bottom: 25px;
     font-family: "Euclid Circular B SemiBold";
@@ -475,12 +533,13 @@ b {
     text-decoration: none;
     margin-bottom: 10vh;
 }
-.MagicToggleButton{
+
+.MagicToggleButton {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    border:1px solid #FFE6FE;
+    border: 1px solid #FFE6FE;
     border-radius: 100px;
     padding: 18px 25px 18px 25px;
     width: fit-content;
@@ -488,7 +547,8 @@ b {
     box-shadow: #ffeffe 0px 5px 8px 0px;
     margin-bottom: 25px;
 }
-.MagicButtonText{
+
+.MagicButtonText {
     width: fit-content;
     background-image: linear-gradient(to right, #FD618A 0%, #F369A0 25%, #E379C4 50%, #D47ADA 75%, #CD7EE7 100%);
     background-clip: text;
@@ -498,8 +558,16 @@ b {
 
 
 }
-.MagicStarsToggle{
-    height:  1.2vw;
+
+.MagicStarsToggle {
+    height: 1.2vw;
     padding-right: 5px;
 }
 
+.MuiAutocomplete-popper {
+    &>* {
+        border:1px solid #dfdfdf !important;
+        margin-top: 5px !important;
+        border-radius: 15px !important;
+    }
+}
