@@ -130,7 +130,7 @@ function Recommendations() {
                         HMOInsurances: "AETNA, BCBS, CIGNA, Coventry Health Care, Health Alliance, HealthLink, Humana, United Healthcare",
                         Transportation: "Yes",
                         Portal: "Yes",
-                        Services: "Lanuage services, Wheelchair access",                        FaxNumber: "(916) 830-2001",
+                        Services: "Lanuage services, Wheelchair access", FaxNumber: "(916) 830-2001",
                         Type: "Pharmacy",
                         Badge: ["Patient", "Professional"]
                     },
@@ -146,7 +146,7 @@ function Recommendations() {
                         HMOInsurances: "AETNA, BCBS, CIGNA, Coventry Health Care, Health Alliance, HealthLink, Humana, United Healthcare",
                         Transportation: "Yes",
                         Portal: "Yes",
-                        Services: "Lanuage services, Wheelchair access",                        FaxNumber: "(916) 830-2001",
+                        Services: "Lanuage services, Wheelchair access", FaxNumber: "(916) 830-2001",
                         Type: "Pharmacy",
                         Badge: ["Professional"]
                     },
@@ -162,7 +162,7 @@ function Recommendations() {
                         HMOInsurances: "AETNA, BCBS, CIGNA, Coventry Health Care, Health Alliance, HealthLink, Humana, United Healthcare",
                         Transportation: "Yes",
                         Portal: "Yes",
-                        Services: "Lanuage services, Wheelchair access",                        FaxNumber: "(916) 830-2001",
+                        Services: "Lanuage services, Wheelchair access", FaxNumber: "(916) 830-2001",
                         Type: "Pharmacy",
                         Badge: ["Professional"]
 
@@ -184,7 +184,7 @@ function Recommendations() {
                         HMOInsurances: "AETNA, BCBS, CIGNA, Coventry Health Care, Health Alliance, HealthLink, Humana, United Healthcare",
                         Transportation: "Yes",
                         Portal: "Yes",
-                        Services: "Lanuage services, Wheelchair access",                        FaxNumber: "(916) 830-2001",
+                        Services: "Lanuage services, Wheelchair access", FaxNumber: "(916) 830-2001",
                         Type: "ENT",
                         Badge: ["Patient"]
                     },
@@ -200,7 +200,7 @@ function Recommendations() {
                         HMOInsurances: "AETNA, BCBS, CIGNA, Coventry Health Care, Health Alliance, HealthLink, Humana, United Healthcare",
                         Transportation: "Yes",
                         Portal: "Yes",
-                        Services: "Lanuage services, Wheelchair access",                        FaxNumber: "(916) 333-3211",
+                        Services: "Lanuage services, Wheelchair access", FaxNumber: "(916) 333-3211",
                         Type: "ENT",
                         Badge: ["Professional"]
                     },
@@ -221,7 +221,7 @@ function Recommendations() {
                         HMOInsurances: "AETNA, BCBS, CIGNA, Coventry Health Care, Health Alliance, HealthLink, Humana, United Healthcare",
                         Transportation: "Yes",
                         Portal: "Yes",
-                        Services: "Lanuage services, Wheelchair access",                        FaxNumber: "(916) 830-2001",
+                        Services: "Lanuage services, Wheelchair access", FaxNumber: "(916) 830-2001",
                         Type: "Hepatologist",
                         Badge: ["Professional"]
                     },
@@ -237,7 +237,7 @@ function Recommendations() {
                         HMOInsurances: "AETNA, BCBS, CIGNA, Coventry Health Care, Health Alliance, HealthLink, Humana, United Healthcare",
                         Transportation: "Yes",
                         Portal: "Yes",
-                        Services: "Lanuage services, Wheelchair access",                        FaxNumber: "(916) 543-3426",
+                        Services: "Lanuage services, Wheelchair access", FaxNumber: "(916) 543-3426",
                         Type: "Hepatologist"
                     },
                 ]
@@ -257,7 +257,7 @@ function Recommendations() {
                         HMOInsurances: "AETNA, BCBS, CIGNA, Coventry Health Care, Health Alliance, HealthLink, Humana, United Healthcare",
                         Transportation: "Yes",
                         Portal: "Yes",
-                        Services: "Lanuage services, Wheelchair access",                        FaxNumber: "(916) 830-2001",
+                        Services: "Lanuage services, Wheelchair access", FaxNumber: "(916) 830-2001",
                         Type: "Gastroenterologist",
                         Badge: ["Patient", "Professional"]
                     },
@@ -273,7 +273,7 @@ function Recommendations() {
                         HMOInsurances: "AETNA, BCBS, CIGNA, Coventry Health Care, Health Alliance, HealthLink, Humana, United Healthcare",
                         Transportation: "Yes",
                         Portal: "Yes",
-                        Services: "Lanuage services, Wheelchair access",                        FaxNumber: "(916) 123-3214",
+                        Services: "Lanuage services, Wheelchair access", FaxNumber: "(916) 123-3214",
                         Type: "Gastroenterologist",
                         Badge: ["Professional"]
                     },
@@ -294,7 +294,7 @@ function Recommendations() {
                         HMOInsurances: "AETNA, BCBS, CIGNA, Coventry Health Care, Health Alliance, HealthLink, Humana, United Healthcare",
                         Transportation: "Yes",
                         Portal: "Yes",
-                        Services: "Lanuage services, Wheelchair access",                        FaxNumber: "(916) 830-2001",
+                        Services: "Lanuage services, Wheelchair access", FaxNumber: "(916) 830-2001",
                         Type: "Gym",
                         Badge: ["Patient"]
                     },
@@ -310,7 +310,7 @@ function Recommendations() {
                         HMOInsurances: "AETNA, BCBS, CIGNA, Coventry Health Care, Health Alliance, HealthLink, Humana, United Healthcare",
                         Transportation: "Yes",
                         Portal: "Yes",
-                        Services: "Lanuage services, Wheelchair access",                        FaxNumber: "(916) 830-2001",
+                        Services: "Lanuage services, Wheelchair access", FaxNumber: "(916) 830-2001",
                         Type: "Gym",
                         Badge: ["Professional"]
                     },
@@ -326,7 +326,7 @@ function Recommendations() {
                         HMOInsurances: "AETNA, BCBS, CIGNA, Coventry Health Care, Health Alliance, HealthLink, Humana, United Healthcare",
                         Transportation: "Yes",
                         Portal: "Yes",
-                        Services: "Lanuage services, Wheelchair access",                        FaxNumber: "(916) 830-2001",
+                        Services: "Lanuage services, Wheelchair access", FaxNumber: "(916) 830-2001",
                         Type: "Gym",
                         Badge: ["Patient"]
                     },
@@ -364,7 +364,7 @@ function Recommendations() {
                         HMOInsurances: "AETNA, BCBS, CIGNA, Coventry Health Care, Health Alliance, HealthLink, Humana, United Healthcare",
                         Transportation: "Yes",
                         Portal: "Yes",
-                        Services: "Lanuage services, Wheelchair access",                        FaxNumber: "(916) 830-2001",
+                        Services: "Lanuage services, Wheelchair access", FaxNumber: "(916) 830-2001",
                         Type: "Nutritionist",
                         Badge: ["Patient"]
                     },
@@ -380,7 +380,7 @@ function Recommendations() {
                         HMOInsurances: "AETNA, BCBS, CIGNA, Coventry Health Care, Health Alliance, HealthLink, Humana, United Healthcare",
                         Transportation: "Yes",
                         Portal: "Yes",
-                        Services: "Lanuage services, Wheelchair access",                        FaxNumber: "(916) 830-2001",
+                        Services: "Lanuage services, Wheelchair access", FaxNumber: "(916) 830-2001",
                         Type: "Nutritionist",
                         Badge: []
                     },
@@ -401,7 +401,7 @@ function Recommendations() {
                         HMOInsurances: "AETNA, BCBS, CIGNA, Coventry Health Care, Health Alliance, HealthLink, Humana, United Healthcare",
                         Transportation: "Yes",
                         Portal: "Yes",
-                        Services: "Lanuage services, Wheelchair access",                        FaxNumber: "(916) 830-2001",
+                        Services: "Lanuage services, Wheelchair access", FaxNumber: "(916) 830-2001",
                         Type: "Ophthalmologist",
                         Badge: ["Patient"]
 
@@ -418,7 +418,7 @@ function Recommendations() {
                         HMOInsurances: "AETNA, BCBS, CIGNA, Coventry Health Care, Health Alliance, HealthLink, Humana, United Healthcare",
                         Transportation: "Yes",
                         Portal: "Yes",
-                        Services: "Lanuage services, Wheelchair access",                        FaxNumber: "(916) 830-2001",
+                        Services: "Lanuage services, Wheelchair access", FaxNumber: "(916) 830-2001",
                         Type: "Ophthalmologist",
                         Badge: ["Professional"]
                     },
@@ -439,7 +439,7 @@ function Recommendations() {
                         HMOInsurances: "AETNA, BCBS, CIGNA, Coventry Health Care, Health Alliance, HealthLink, Humana, United Healthcare",
                         Transportation: "Yes",
                         Portal: "Yes",
-                        Services: "Lanuage services, Wheelchair access",                        FaxNumber: "(916) 830-2001",
+                        Services: "Lanuage services, Wheelchair access", FaxNumber: "(916) 830-2001",
                         Type: "Podiatrist",
                         Badge: ["Patient"]
                     },
@@ -455,7 +455,7 @@ function Recommendations() {
                         HMOInsurances: "AETNA, BCBS, CIGNA, Coventry Health Care, Health Alliance, HealthLink, Humana, United Healthcare",
                         Transportation: "Yes",
                         Portal: "Yes",
-                        Services: "Lanuage services, Wheelchair access",                        FaxNumber: "(916) 830-2001",
+                        Services: "Lanuage services, Wheelchair access", FaxNumber: "(916) 830-2001",
                         Type: "Podiatrist",
                         Badge: ["Patient", "Professional"]
                     },
@@ -476,7 +476,7 @@ function Recommendations() {
                         HMOInsurances: "AETNA, BCBS, CIGNA, Coventry Health Care, Health Alliance, HealthLink, Humana, United Healthcare",
                         Transportation: "Yes",
                         Portal: "Yes",
-                        Services: "Lanuage services, Wheelchair access",                        FaxNumber: "(916) 830-2001",
+                        Services: "Lanuage services, Wheelchair access", FaxNumber: "(916) 830-2001",
                         Type: "Primary care provider (PCP)",
                         Badge: ["Professional"]
                     },
@@ -492,7 +492,7 @@ function Recommendations() {
                         HMOInsurances: "AETNA, BCBS, CIGNA, Coventry Health Care, Health Alliance, HealthLink, Humana, United Healthcare",
                         Transportation: "Yes",
                         Portal: "Yes",
-                        Services: "Lanuage services, Wheelchair access",                        FaxNumber: "(916) 830-2001",
+                        Services: "Lanuage services, Wheelchair access", FaxNumber: "(916) 830-2001",
                         Type: "Primary care provider (PCP)",
                         Badge: ["Professional"]
                     },
@@ -513,7 +513,7 @@ function Recommendations() {
                         HMOInsurances: "AETNA, BCBS, CIGNA, Coventry Health Care, Health Alliance, HealthLink, Humana, United Healthcare",
                         Transportation: "Yes",
                         Portal: "Yes",
-                        Services: "Lanuage services, Wheelchair access",                        FaxNumber: "(916) 830-2001",
+                        Services: "Lanuage services, Wheelchair access", FaxNumber: "(916) 830-2001",
                         Type: "OBGYN",
                         Badge: ["Professional"]
                     },
@@ -529,7 +529,7 @@ function Recommendations() {
                         HMOInsurances: "AETNA, BCBS, CIGNA, Coventry Health Care, Health Alliance, HealthLink, Humana, United Healthcare",
                         Transportation: "Yes",
                         Portal: "Yes",
-                        Services: "Lanuage services, Wheelchair access",                        FaxNumber: "(916) 830-2001",
+                        Services: "Lanuage services, Wheelchair access", FaxNumber: "(916) 830-2001",
                         Type: "OBGYN"
                     },
                 ]
@@ -549,7 +549,7 @@ function Recommendations() {
                         HMOInsurances: "AETNA, BCBS, CIGNA, Coventry Health Care, Health Alliance, HealthLink, Humana, United Healthcare",
                         Transportation: "Yes",
                         Portal: "Yes",
-                        Services: "Lanuage services, Wheelchair access",                        FaxNumber: "(916) 830-2001",
+                        Services: "Lanuage services, Wheelchair access", FaxNumber: "(916) 830-2001",
                         Type: "Occupational Therapy",
                         Badge: ["Patient", "Professional"]
                     },
@@ -565,7 +565,7 @@ function Recommendations() {
                         HMOInsurances: "AETNA, BCBS, CIGNA, Coventry Health Care, Health Alliance, HealthLink, Humana, United Healthcare",
                         Transportation: "Yes",
                         Portal: "Yes",
-                        Services: "Lanuage services, Wheelchair access",                        FaxNumber: "(916) 888-3636",
+                        Services: "Lanuage services, Wheelchair access", FaxNumber: "(916) 888-3636",
                         Type: "Occupational Therapy",
                         Badge: ["Patient"]
                     },
@@ -586,7 +586,7 @@ function Recommendations() {
                         HMOInsurances: "AETNA, BCBS, CIGNA, Coventry Health Care, Health Alliance, HealthLink, Humana, United Healthcare",
                         Transportation: "Yes",
                         Portal: "Yes",
-                        Services: "Lanuage services, Wheelchair access",                        FaxNumber: "(916) 830-2001",
+                        Services: "Lanuage services, Wheelchair access", FaxNumber: "(916) 830-2001",
                         Type: "Physical Therapy",
                         Badge: ["Professional"]
                     },
@@ -602,7 +602,7 @@ function Recommendations() {
                         HMOInsurances: "AETNA, BCBS, CIGNA, Coventry Health Care, Health Alliance, HealthLink, Humana, United Healthcare",
                         Transportation: "Yes",
                         Portal: "Yes",
-                        Services: "Lanuage services, Wheelchair access",                        FaxNumber: "(916) 745-7700",
+                        Services: "Lanuage services, Wheelchair access", FaxNumber: "(916) 745-7700",
                         Type: "Physical Therapy",
                         Badge: ["Patient"]
                     },
@@ -623,7 +623,7 @@ function Recommendations() {
                         HMOInsurances: "AETNA, BCBS, CIGNA, Coventry Health Care, Health Alliance, HealthLink, Humana, United Healthcare",
                         Transportation: "Yes",
                         Portal: "Yes",
-                        Services: "Lanuage services, Wheelchair access",                        FaxNumber: "(916) 830-2001",
+                        Services: "Lanuage services, Wheelchair access", FaxNumber: "(916) 830-2001",
                         Type: "Endocrinology",
                         Badge: ["Patient", "Professional"]
                     },
@@ -639,7 +639,7 @@ function Recommendations() {
                         HMOInsurances: "AETNA, BCBS, CIGNA, Coventry Health Care, Health Alliance, HealthLink, Humana, United Healthcare",
                         Transportation: "Yes",
                         Portal: "Yes",
-                        Services: "Lanuage services, Wheelchair access",                        FaxNumber: "(916) 967-8841",
+                        Services: "Lanuage services, Wheelchair access", FaxNumber: "(916) 967-8841",
                         Type: "Endocrinology",
                         Badge: ["Professional"]
                     },
@@ -660,7 +660,7 @@ function Recommendations() {
                         HMOInsurances: "AETNA, BCBS, CIGNA, Coventry Health Care, Health Alliance, HealthLink, Humana, United Healthcare",
                         Transportation: "Yes",
                         Portal: "Yes",
-                        Services: "Lanuage services, Wheelchair access",                        FaxNumber: "(916) 830-2001",
+                        Services: "Lanuage services, Wheelchair access", FaxNumber: "(916) 830-2001",
                         Type: "Rheumatology",
                         Badge: ["Patient", "Professional"]
                     },
@@ -676,7 +676,7 @@ function Recommendations() {
                         HMOInsurances: "AETNA, BCBS, CIGNA, Coventry Health Care, Health Alliance, HealthLink, Humana, United Healthcare",
                         Transportation: "Yes",
                         Portal: "Yes",
-                        Services: "Lanuage services, Wheelchair access",                        FaxNumber: "(916) 792-3786",
+                        Services: "Lanuage services, Wheelchair access", FaxNumber: "(916) 792-3786",
                         Type: "Rheumatology",
                         Badge: ["Patient"]
                     },
@@ -697,7 +697,7 @@ function Recommendations() {
                         HMOInsurances: "AETNA, BCBS, CIGNA, Coventry Health Care, Health Alliance, HealthLink, Humana, United Healthcare",
                         Transportation: "Yes",
                         Portal: "Yes",
-                        Services: "Lanuage services, Wheelchair access",                        FaxNumber: "(916) 830-2001",
+                        Services: "Lanuage services, Wheelchair access", FaxNumber: "(916) 830-2001",
                         Type: "Nephrology",
                         Badge: ["Patient", "Professional"]
                     },
@@ -713,7 +713,7 @@ function Recommendations() {
                         HMOInsurances: "AETNA, BCBS, CIGNA, Coventry Health Care, Health Alliance, HealthLink, Humana, United Healthcare",
                         Transportation: "Yes",
                         Portal: "Yes",
-                        Services: "Lanuage services, Wheelchair access",                        FaxNumber: "(916) 795-8186",
+                        Services: "Lanuage services, Wheelchair access", FaxNumber: "(916) 795-8186",
                         Type: "Nephrology",
                         Badge: ["Professional"]
                     },
@@ -734,7 +734,7 @@ function Recommendations() {
                         HMOInsurances: "AETNA, BCBS, CIGNA, Coventry Health Care, Health Alliance, HealthLink, Humana, United Healthcare",
                         Transportation: "Yes",
                         Portal: "Yes",
-                        Services: "Lanuage services, Wheelchair access",                        FaxNumber: "(916) 830-2001",
+                        Services: "Lanuage services, Wheelchair access", FaxNumber: "(916) 830-2001",
                         Type: "Urology",
                         Badge: ["Professional"]
                     },
@@ -750,7 +750,7 @@ function Recommendations() {
                         HMOInsurances: "AETNA, BCBS, CIGNA, Coventry Health Care, Health Alliance, HealthLink, Humana, United Healthcare",
                         Transportation: "Yes",
                         Portal: "Yes",
-                        Services: "Lanuage services, Wheelchair access",                        FaxNumber: "(916) 871-8222",
+                        Services: "Lanuage services, Wheelchair access", FaxNumber: "(916) 871-8222",
                         Type: "Urology",
                         Badge: ["Professional"]
                     },
@@ -771,7 +771,7 @@ function Recommendations() {
                         HMOInsurances: "AETNA, BCBS, CIGNA, Coventry Health Care, Health Alliance, HealthLink, Humana, United Healthcare",
                         Transportation: "Yes",
                         Portal: "Yes",
-                        Services: "Lanuage services, Wheelchair access",                        FaxNumber: "(916) 830-2001",
+                        Services: "Lanuage services, Wheelchair access", FaxNumber: "(916) 830-2001",
                         Type: "Pulmonologist",
                         Badge: ["Patient"]
                     },
@@ -787,7 +787,7 @@ function Recommendations() {
                         HMOInsurances: "AETNA, BCBS, CIGNA, Coventry Health Care, Health Alliance, HealthLink, Humana, United Healthcare",
                         Transportation: "Yes",
                         Portal: "Yes",
-                        Services: "Lanuage services, Wheelchair access",                        FaxNumber: "(916) 248-1550",
+                        Services: "Lanuage services, Wheelchair access", FaxNumber: "(916) 248-1550",
                         Type: "Pulmonologist",
                         Badge: ["Professional"]
                     },
@@ -808,7 +808,7 @@ function Recommendations() {
                         HMOInsurances: "AETNA, BCBS, CIGNA, Coventry Health Care, Health Alliance, HealthLink, Humana, United Healthcare",
                         Transportation: "Yes",
                         Portal: "Yes",
-                        Services: "Lanuage services, Wheelchair access",                        FaxNumber: "(916) 830-2001",
+                        Services: "Lanuage services, Wheelchair access", FaxNumber: "(916) 830-2001",
                         Type: "Respiratory Therapy",
                         Badge: ["Patient"]
                     },
@@ -824,7 +824,7 @@ function Recommendations() {
                         HMOInsurances: "AETNA, BCBS, CIGNA, Coventry Health Care, Health Alliance, HealthLink, Humana, United Healthcare",
                         Transportation: "Yes",
                         Portal: "Yes",
-                        Services: "Lanuage services, Wheelchair access",                        FaxNumber: "(916) 641-6850",
+                        Services: "Lanuage services, Wheelchair access", FaxNumber: "(916) 641-6850",
                         Type: "Respiratory Therapy",
                         Badge: ["Professional"]
                     },
@@ -845,7 +845,7 @@ function Recommendations() {
                         HMOInsurances: "AETNA, BCBS, CIGNA, Coventry Health Care, Health Alliance, HealthLink, Humana, United Healthcare",
                         Transportation: "Yes",
                         Portal: "Yes",
-                        Services: "Lanuage services, Wheelchair access",                        FaxNumber: "(916) 830-2001",
+                        Services: "Lanuage services, Wheelchair access", FaxNumber: "(916) 830-2001",
                         Type: "Sleep Medicine",
                         Badge: ["Professional"]
                     },
@@ -861,7 +861,7 @@ function Recommendations() {
                         HMOInsurances: "AETNA, BCBS, CIGNA, Coventry Health Care, Health Alliance, HealthLink, Humana, United Healthcare",
                         Transportation: "Yes",
                         Portal: "Yes",
-                        Services: "Lanuage services, Wheelchair access",                        FaxNumber: "(916) 993-1500",
+                        Services: "Lanuage services, Wheelchair access", FaxNumber: "(916) 993-1500",
                         Type: "Sleep Medicine",
                         Badge: ["Patient"]
                     },
@@ -994,41 +994,44 @@ function Recommendations() {
             let itemData = filterItemData[filters];
             categoriesUsed.push(filterItemData[filters].Type)
             filterItemsCards.push(
-                <div className='item-Box' >
-                    <div className='item-box-left'>
-                        <div className='item-Category'>{itemData.Type} </div>
-                        <div className='item-Header'>{itemData.Name} <CreateBadges data={itemData.Badge}></CreateBadges></div>
-                        <div className='item-row-1'>
-                            <div className='item-info-1'>
-                                <img src='/Distance.png' alt='Distance' className='item-image-wide'></img>
-                                {itemData.Distance}
-                            </div>
-                            <div className='item-info'>
-                                <img src='/LocationPin.png' alt='Pin' className='item-image-tall'></img>
-                                {itemData.Address}
-                            </div>
-                        </div>
-                        <div className='item-row-2'>
-                            <div className='item-info-1'>
-                                <img src='/Phone.png' alt='Phone' className='item-image'></img>
-                                {itemData.Phone}
-                            </div>
-                            <div className='item-info'>
-                                <img src='/WWW.png' alt='Web Globe' className='item-image'></img>
-                                <a href={itemData.Website} className='item-website' target='_blank'>Website</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div className='item-box-buttons'>
-                        <div className='item-box' onClick={(e) => { ChangeButtonColor(e.target) }}>
-                            <img src='/AddFile.png' alt='Add' className='item-img-button unselectable' onClick={(e) => { ChangeButtonColor(e.target.parentElement) }}></img>
-                        </div>
-                        <div className='item-box ' onClick={(e) => { ChangeBoxValues(itemData) }}>
-                            <img src='/Refresh.png' alt='Refresh' className='item-img-button unselectable' onClick={(e) => { ChangeBoxValues(itemData) }}></img>
-                        </div>
-                    </div>
-                    <div className='item-box-click-box' onClick={() => { handleItemBoxWasClicked(itemData) }}>
+                <div className='item-container'>
+                    <div className='item-Category'>{itemData.Type} </div>
+                    <div className='item-Box' >
+                        <div className='item-box-left'>
 
+                            <div className='item-Header'>{itemData.Name} <CreateBadges data={itemData.Badge}></CreateBadges></div>
+                            <div className='item-row-1'>
+                                <div className='item-info-1'>
+                                    <img src='/Distance.png' alt='Distance' className='item-image-wide'></img>
+                                    {itemData.Distance}
+                                </div>
+                                <div className='item-info'>
+                                    <img src='/LocationPin.png' alt='Pin' className='item-image-tall'></img>
+                                    {itemData.Address}
+                                </div>
+                            </div>
+                            <div className='item-row-2'>
+                                <div className='item-info-1'>
+                                    <img src='/Phone.png' alt='Phone' className='item-image'></img>
+                                    {itemData.Phone}
+                                </div>
+                                <div className='item-info'>
+                                    <img src='/WWW.png' alt='Web Globe' className='item-image'></img>
+                                    <a href={itemData.Website} className='item-website' target='_blank'>Website</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div className='item-box-buttons'>
+                            <div className='item-box' onClick={(e) => { ChangeButtonColor(e.target) }}>
+                                <img src='/AddFile.png' alt='Add' className='item-img-button unselectable' onClick={(e) => { ChangeButtonColor(e.target.parentElement) }}></img>
+                            </div>
+                            <div className='item-box ' onClick={(e) => { ChangeBoxValues(itemData) }}>
+                                <img src='/Refresh.png' alt='Refresh' className='item-img-button unselectable' onClick={(e) => { ChangeBoxValues(itemData) }}></img>
+                            </div>
+                        </div>
+                        <div className='item-box-click-box' onClick={() => { handleItemBoxWasClicked(itemData) }}>
+
+                        </div>
                     </div>
                 </div>
             )
@@ -1052,8 +1055,11 @@ function Recommendations() {
             document.getElementById(id).classList = ["popUpClickableButtons"]
         }
     }
+    const [magicOn, setMagicOn] = useState(false)
+    let toggleMagic = () => {
+        setMagicOn(!magicOn)
 
-
+    }
     const [showFilterChange, setShowFilterChange] = useState(false)
 
     function DiagnosisToggleList() {
@@ -1133,9 +1139,7 @@ function Recommendations() {
                     </div>
                 </div>
                 <div className='Rec-Scroll-Area'>
-                    <a className='Back-to-og' href="https://navigate.searchful.care/" target='_blank'>
-                        Go back to traditional Searchful
-                    </a>
+
                     <div className='LocationAndDiagnosis'>
                         We recommend the following resources in <b>{location}</b> for <b>{diagnosis}</b>
                     </div>
@@ -1148,21 +1152,34 @@ function Recommendations() {
                             + Add more
                         </div>
                     </div> */}
+                    <div className='MagicToggleButton' onClick={toggleMagic}>
+                        <img src='/PinkStars.png' alt='Pink Stars' className='MagicStarsToggle'></img>
+                        <div className='MagicButtonText'>
+                            Add more magic
+                        </div>
+                    </div>
+                    {magicOn == true ?
+                        <div className='Magic-Search'>
+                            <div className='MagicHeader'>
+                                Go Beyond Magical!
+                            </div>
+                            <div className='MagicText'>
+                                With insurance data and biographical data of the patient we are able to give an even better recommendation!
+                            </div>
+                            <div className='MagicButton'>
+                                Make Magic
+                            </div>
+                        </div> : <></>
+                    }
+
+
                     <div className='Filter-Item-List'>
                         <FilterItemList></FilterItemList>
                     </div>
-                    <div className='Magic-Search'>
-                        <img className='MagicStars' src='/MagicStars.png' alt='Stars'></img>
-                        <div className='MagicHeader'>
-                            Unlock Advance Search Features For This Query
-                        </div>
-                        <div className='MagicText'>
-                            With insurance data and biographical data of the patient we are able to give an even better recommendation!
-                        </div>
-                        <div className='MagicButton'>
-                            Make Magic
-                        </div>
-                    </div>
+
+                    <a className='Back-to-og' href="https://navigate.searchful.care/" target='_blank'>
+                        Go back to traditional Search
+                    </a>
                 </div>
             </div>
             {showPopUp == true ?
@@ -1196,7 +1213,7 @@ function Recommendations() {
                                 •
                             </div>
                             <div className='categoty-Popups'>
-                            {popUpInfo.Type}
+                                {popUpInfo.Type}
                             </div>
                             {/* <div className='categoty-Popups'>
                                 •

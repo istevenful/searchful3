@@ -114,19 +114,31 @@ b {
     flex-direction: column;
     padding-bottom: 15px;
 }
-
+.item-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 30px;
+    background-color: #FFF1F2;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    
+}
 .item-Box{
+    align-self: center;
     display: flex;
     flex-direction: row;
     position: relative;
     width: 100%;
     height: fit-content;
-    border: 1px solid #DFDFDF;
+    border: 1px solid #E8E8E8;
     padding: 30px;
-    margin-bottom: 15px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     border-radius: 15px;
     justify-content: space-between;
+    background-color: white;
+    padding-bottom: 35px;
+    padding-top: 35px;
 }
 .item-box-left{
     display: flex;
@@ -151,8 +163,8 @@ b {
 .item-row-1{
     display: flex;
     flex-direction: row;
-    margin-top: 20px;
-    margin-bottom:20px;
+    margin-top: 25px;
+    margin-bottom:25px;
 
 }
 .item-row-2{
@@ -165,11 +177,13 @@ b {
     align-items: center;
     font-size: .8vw;
     width: 30%;
+    color: #7F7F7F;
 }
 .item-info{
     display: flex;
     align-items: center;
     font-size: .8vw;
+    color: #7F7F7F;
 }
 .item-image{
     margin-right: 15px;
@@ -188,14 +202,14 @@ b {
 }
 .item-Category{
     font-family: "Euclid Circular B SemiBold";
-    font-size: 1vw;
-    padding-bottom: 10px;
-    color: #FF756D;
+    font-size: 1.2vw;
+    padding-bottom: 20px;
+    color: black;
 }
 .item-box-buttons{
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
     z-index: 10;
 
 }
@@ -235,8 +249,9 @@ b {
     background: linear-gradient(to right, #FFD0D9 0%,#FFC8CA 30%,#FFD4E0 50%,#FFE3FA 70%,#FFEAFA 100%);
     display: flex;
     flex-direction: column;
-    align-items: center;
-    border-radius: 15px;;
+
+    border-radius: 15px;
+    margin-bottom: 25px;
 }
 .MagicStars{
     height: 40px;
@@ -244,14 +259,12 @@ b {
 .MagicHeader{
     font-size: 1.2vw;
     font-family: "Euclid Circular B SemiBold";
-    padding-top: 25px;
-    padding-bottom: 20px;
+    padding-bottom: 15px;
 }
 .MagicText{
     font-size:.9vw;
     font-family: "Euclid Circular B";
-    padding-bottom: 20px;   
-    text-align: center;
+    padding-bottom: 15px;   
 }
 
 .MagicButton{
@@ -262,6 +275,7 @@ b {
     color:#FF756D;
     font-family: "Euclid Circular B SemiBold";
     padding: 10px 20px 10px 20px;
+    align-self: center;
 }
 
 .popup{
@@ -451,10 +465,41 @@ b {
     padding-bottom:15px;
 }
 .Back-to-og{
+    width: fit-content;
+    align-self: center;
     color:#FF756D;
-    font-size: .8vw;
+    font-size: .9vw;
     padding-bottom: 25px;
     font-family: "Euclid Circular B SemiBold";
     cursor: pointer;
     text-decoration: none;
+    margin-bottom: 10vh;
 }
+.MagicToggleButton{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border:1px solid #FFE6FE;
+    border-radius: 100px;
+    padding: 18px 25px 18px 25px;
+    width: fit-content;
+    cursor: pointer;
+    box-shadow: #ffeffe 0px 5px 8px 0px;
+    margin-bottom: 25px;
+}
+.MagicButtonText{
+    width: fit-content;
+    background-image: linear-gradient(to right, #FD618A 0%, #F369A0 25%, #E379C4 50%, #D47ADA 75%, #CD7EE7 100%);
+    background-clip: text;
+    color: transparent;
+    font-family: "Euclid Circular B SemiBold";
+    font-size: .9vw;
+
+
+}
+.MagicStarsToggle{
+    height:  1.2vw;
+    padding-right: 5px;
+}
+
