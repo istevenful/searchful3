@@ -995,7 +995,7 @@ function Recommendations() {
             categoriesUsed.push(filterItemData[filters].Type)
             filterItemsCards.push(
                 <div className='item-container'>
-                    <div className='item-Category'>{itemData.Type} </div>
+                    <div className='item-container-titles'><div className='item-Category'>{itemData.Type} </div> <div className='Remove-Item' onClick={() => { deleteFilter(itemData.Type) }}>Remove</div> </div>
                     <div className='item-Box' >
                         <div className='item-box-left'>
 
@@ -1212,9 +1212,79 @@ function Recommendations() {
                             <div className='MagicText'>
                                 With insurance data and biographical data of the patient we are able to give an even better recommendation!
                             </div>
-                            <div className='MagicButton'>
-                                Make Magic
+                            <Button variant="contained"
+                                sx={{
+                                    width: "100%",
+                                    paddingTop: "18px",
+                                    paddingBottom: "18px",
+                                    paddingLeft: "3%",
+                                    backgroundColor: "white",
+                                    color: "#BDBDBD",
+                                    justifyContent: "flex-start",
+                                    border: "1px solid #DFDEDE",
+                                    boxShadow: "none",
+                                    borderRadius: "300px",
+                                    ':hover': {
+                                        bgcolor: 'white', // theme.palette.primary.main
+                                        color: '#BDBDBD',
+                                        boxShadow: "none",
+                                    },
+
+                                }}
+
+                            >Insurance</Button>
+                            <div className='two-button-magic'>
+                                <Button variant="contained"
+                                    sx={{
+                                        width: "48%",
+                                        paddingTop: "18px",
+                                        paddingBottom: "18px",
+                                        paddingLeft: "3%",
+                                        backgroundColor: "white",
+                                        color: "#BDBDBD",
+                                        justifyContent: "flex-start",
+                                        border: "1px solid #DFDEDE",
+                                        boxShadow: "none",
+                                        borderRadius: "300px",
+                                        ':hover': {
+                                            bgcolor: 'white', // theme.palette.primary.main
+                                            color: '#BDBDBD',
+                                            boxShadow: "none",
+                                        },
+
+                                    }}
+
+                                >Age</Button>
+                                <Button variant="contained"
+                                    sx={{
+                                        width: "48%",
+                                        paddingTop: "18px",
+                                        paddingBottom: "18px",
+                                        paddingLeft: "3%",
+                                        backgroundColor: "white",
+                                        color: "#BDBDBD",
+                                        justifyContent: "flex-start",
+                                        border: "1px solid #DFDEDE",
+                                        boxShadow: "none",
+                                        borderRadius: "300px",
+                                        ':hover': {
+                                            bgcolor: 'white', // theme.palette.primary.main
+                                            color: '#BDBDBD',
+                                            boxShadow: "none",
+                                        },
+
+                                    }}
+
+                                >Sex</Button>
                             </div>
+
+                            <div className='MagicButtonInner' onClick={toggleMagic}>
+                                <img src='/PinkStars.png' alt='Pink Stars' className='MagicStarsToggle'></img>
+                                <div className='MagicButtonText'>
+                                    Make Magic
+                                </div>
+                            </div>
+
                         </div> : <></>
                     }
 

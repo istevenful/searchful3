@@ -230,7 +230,6 @@ b {
 .item-Category {
     font-family: "Euclid Circular B SemiBold";
     font-size: 1.2vw;
-    padding-bottom: 20px;
     color: black;
 }
 
@@ -298,7 +297,7 @@ b {
 .MagicText {
     font-size: .9vw;
     font-family: "Euclid Circular B";
-    padding-bottom: 15px;
+    padding-bottom: 25px;
 }
 
 .MagicButton {
@@ -547,7 +546,26 @@ b {
     box-shadow: #ffeffe 0px 5px 8px 0px;
     margin-bottom: 25px;
 }
-
+.MagicButtonInner {
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    padding: 18px 25px 18px 25px;
+    width: fit-content;
+    cursor: pointer;
+    background-color: white;
+}
+.two-button-magic{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
 .MagicButtonText {
     width: fit-content;
     background-image: linear-gradient(to right, #FD618A 0%, #F369A0 25%, #E379C4 50%, #D47ADA 75%, #CD7EE7 100%);
@@ -570,4 +588,18 @@ b {
         margin-top: 5px !important;
         border-radius: 15px !important;
     }
+}
+
+.item-container-titles{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom:20px;
+}
+.Remove-Item{
+    font-size: .9vw;
+    color:#FF756D;;
+    font-family:"Euclid Circular B SemiBold";
+    cursor: pointer;
 }
