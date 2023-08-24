@@ -108,6 +108,7 @@
     font-family: "Euclid Circular B SemiBold";
     font-size: .8vw;
     padding-bottom:10px;
+    padding-bottom: 15px;
 }
 .Diagnosis-Logo{
     padding-right:5px;
@@ -193,4 +194,40 @@
     align-items: center;
     color: white;
     text-decoration: none;
+}
+
+.googleAuto{
+    width: 100%;
+    height: 57px !important;
+    padding: 9px 39px 9px 12px;
+    border: 1px solid #c4c4c4;
+    border-radius: 4px;
+    outline: none;
+    font-weight: 400;
+    font-size: 1rem;
+}
+.googleAuto:hover{
+    border: 1px solid black;
+    outline: none;
+}
+.googleAuto:focus{
+    border: 2px solid #1976D2;
+    outline: none;
+}
+.google-container{
+    width: 100%;
+    position: relative;
+}
+.suggestion-container{
+    background-color: white;
+    position: absolute;
+    outline: none;
+    border: 2px solid #DFDFDF;
+    border-radius: 15px;
+    z-index: 100;
+    width: 100%;
+    margin-top: 5px;
+    padding-top:7px;
+    padding-bottom:7px;
+    
 }

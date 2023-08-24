@@ -1,34 +1,41 @@
-import React ,{useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import TextField from '@mui/material/TextField';
 import Stack from '@mui/material/Stack';
 import Autocomplete from '@mui/material/Autocomplete';
 import Button from '@mui/material/Button';
 import "./Search.css"
 import { Link } from 'react-router-dom'
-
+import PlacesAutocomplete from 'react-places-autocomplete';
+import {
+    geocodeByAddress,
+    geocodeByPlaceId,
+    getLatLng,
+} from 'react-places-autocomplete';
 function Search() {
-
-    const [searchData, setSearchData] = useState(["San Francisco, CA", "Osteoporosis"])
-    let handleLocationChange = (event, value) => {
+    const [address, setAddress] = useState("")
+    const [searchData, setSearchData] = useState(["San Francisco, CA, USA", "Osteoporosis"])
+    let handleLocationChange = (value) => {
+        console.log(value)
         let bufferData = searchData;
-        if(value==null){
+        if (value == null) {
             bufferData[0] = "San Francisco, CA";
             console.log(bufferData);
             setSearchData(bufferData)
         }
-        else{
-            bufferData[0] = value.label;
+        else {
+            bufferData[0] = value;
             console.log(bufferData);
             setSearchData(bufferData)
+            setAddress(value)
         }
     };
     let handleDiagnosisChange = (event, value) => {
         let bufferData = searchData;
-        if(value==null){
+        if (value == null) {
             bufferData[1] = "Osteoporosis";
             setSearchData(bufferData)
         }
-        else{
+        else {
             bufferData[1] = value.label;
             setSearchData(bufferData)
         }
@@ -55,14 +62,40 @@ function Search() {
 
                                 Location
                             </div>
-                            <Autocomplete
-                                disablePortal
-                                id="combo-box-demo"
-                                options={listOfCities}
-                                sx={{ width: '100%' }}
-                                renderInput={(params) => <TextField {...params} label="" placeholder="San Francisco, CA" />}
-                                onChange= {handleLocationChange}
-                            />
+                            <PlacesAutocomplete value={address} onChange={setAddress} onSelect={handleLocationChange}>
+                                {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
+                                    <div className='google-container'>
+                                        <input {...getInputProps({ placeholder: "Type address" })} className="googleAuto"/>
+                                        {suggestions.length != 0 ?
+                                            <div className='suggestion-container'>
+                                                {suggestions.map((suggestion) => {
+                                                    const style = {
+                                                        backgroundColor: suggestion.active ? "#F5F5F5" : "#fff",
+                                                        paddingLeft: "20px",
+                                                        paddingTop: "7px",
+                                                        paddingBottom: "7px",
+                                                        fontSize: "1rem"
+                                                    }
+                                                    return (
+                                                        <div>
+                                                            <div {...getSuggestionItemProps(suggestion, { style })}>
+                                                                {suggestion.description}
+                                                            </div>
+                                                        </div>
+                                                    );
+                                                })}
+                                            </div>
+                                            :
+                                            <>
+                                            </>
+                                    
+                                    
+                                        }
+
+                                    </div>
+                                )}
+
+                            </PlacesAutocomplete>
                         </div>
                         <div className='Diagnosis-Search'>
                             <div className='Diagnosis-Text'>
@@ -76,7 +109,7 @@ function Search() {
                                 options={listOfDiagnosis}
                                 sx={{ width: '100%' }}
                                 renderInput={(params) => <TextField {...params} label="" placeholder="Osteoporosis" />}
-                                onChange= {handleDiagnosisChange}
+                                onChange={handleDiagnosisChange}
                             />
                         </div>
                     </div>
@@ -91,9 +124,9 @@ function Search() {
                             },
 
                         }}
-                    ><Link to={`/recommendations`}  className="Home-Search-Button" state={{ from: { searchData } }}>Search</Link></Button>
+                    ><Link to={`/recommendations`} className="Home-Search-Button" state={{ from: { searchData } }}>Search</Link></Button>
                 </div>
-                <div className='Discover-Home'>
+                <div className='Discover-Home' onClick={() => {console.log(searchData)}}>
                     <div className='Discover-Header'>
                         Discover Searchful Cities all across the USA
                     </div>
@@ -107,7 +140,7 @@ function Search() {
                             </img>
                             <div className='CityHeader'>
                                 <div className='cityName'>
-                                Chicago
+                                    Chicago
                                 </div>
                                 <div className='cityRes'>
                                     5,231 Resources
@@ -121,7 +154,7 @@ function Search() {
                             </img>
                             <div className='CityHeader'>
                                 <div className='cityName'>
-                                San Francisco
+                                    San Francisco
                                 </div>
                                 <div className='cityRes'>
                                     1,871 Resources
@@ -135,7 +168,7 @@ function Search() {
                             </img>
                             <div className='CityHeader'>
                                 <div className='cityName'>
-                                Dallas
+                                    Dallas
                                 </div>
                                 <div className='cityRes'>
                                     2,421 Resources

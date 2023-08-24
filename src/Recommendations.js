@@ -10,8 +10,16 @@ import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
 import Tooltip from '@mui/material/Tooltip';
+import PlacesAutocomplete from 'react-places-autocomplete';
+import {
+    geocodeByAddress,
+    geocodeByPlaceId,
+    getLatLng,
+} from 'react-places-autocomplete';
 function Recommendations() {
-    const [location, setLocation] = useState(useLocation().state.from.searchData[0]);
+    const [fullLocation, setFullLocation] = useState(useLocation().state.from.searchData[0])
+    const [bufferFullLocation, setBufferFullLocation] = useState(useLocation().state.from.searchData[0])
+    const [location, setLocation] = useState("");
     const [diagnosis, setDiagnosis] = useState(useLocation().state.from.searchData[1]);
     const [currentFilters, setCurrentFilters] = useState([])
 
@@ -23,14 +31,22 @@ function Recommendations() {
         setCurrentFilters(diagnosisList)
     }, [diagnosis])
     const [searchData, setSearchData] = useState([useLocation().state.from.searchData[0], useLocation().state.from.searchData[1]])
-    let handleLocationChange = (event, value) => {
+    useEffect(() => {
+        let separatedArray = fullLocation.split(', ')
+        setBufferFullLocation(fullLocation);
+        setLocation(separatedArray[separatedArray.length - 3])
+    }, [fullLocation])
+    let handleLocationChange = (value) => {
+        console.log(value)
         let bufferData = searchData;
-        if (value == null) {
-            bufferData[0] = location;
+        if (value == null || value == "") {
+            bufferData[0] = fullLocation;
             setSearchData(bufferData)
+            console.log(bufferData)
         }
         else {
-            bufferData[0] = value.label;
+            bufferData[0] = value;
+            setBufferFullLocation(value);
             setSearchData(bufferData)
         }
     };
@@ -47,7 +63,7 @@ function Recommendations() {
         }
     };
     let handleLDChange = () => {
-        setLocation(searchData[0]);
+        setFullLocation(searchData[0]);
         setDiagnosis(searchData[1]);
     }
     let deleteFilter = (name) => {
@@ -1103,38 +1119,40 @@ function Recommendations() {
                 <div className='Nav-Bar'>
                     <a href='/' className='Nav-Logo'><img src="/SearchfulLogo.png" alt="Logo" className='Logo-img'></img></a>
                     <div className='Nav-Bar-Search'>
-                        <Autocomplete
-                            disablePortal
-                            id="combo-box-demo"
-                            options={listOfCities}
-                            sx={{ width: '40%', borderRadius: "300px" }}
-                            defaultValue={location}
-                            renderInput={(params) => <TextField {...params} label="" sx={{
-                                width: '100%', background: "white", border: "none", borderRadius: "300px",
-                                "& .MuiOutlinedInput-root": {
-                                    borderRadius: "50px",
+                        <PlacesAutocomplete value={bufferFullLocation} onChange={setBufferFullLocation} onSelect={handleLocationChange}>
+                            {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
+                                <div className='google-container-rec'>
+                                    <input {...getInputProps({ placeholder: "Type address" })} className="googleAuto-rec" />
+                                    {suggestions.length != 0 ?
+                                        <div className='suggestion-container-rec'>
+                                            {suggestions.map((suggestion) => {
+                                                const style = {
+                                                    backgroundColor: suggestion.active ? "#F5F5F5" : "#fff",
+                                                    paddingLeft: "20px",
+                                                    paddingTop: "7px",
+                                                    paddingBottom: "7px",
+                                                    fontSize: "1rem"
+                                                }
+                                                return (
+                                                    <div>
+                                                        <div {...getSuggestionItemProps(suggestion, { style })}>
+                                                            {suggestion.description}
+                                                        </div>
+                                                    </div>
+                                                );
+                                            })}
+                                        </div>
+                                        :
+                                        <>
+                                        </>
 
-                                    legend: {
-                                        marginLeft: "30px"
+
                                     }
-                                },
-                                "& .MuiAutocomplete-inputRoot": {
-                                    paddingLeft: "20px !important",
-                                    borderRadius: "50px"
-                                },
-                                "& .MuiInputLabel-outlined": {
-                                    paddingLeft: "20px"
-                                },
-                                "& .MuiInputLabel-shrink": {
-                                    marginLeft: "20px",
-                                    paddingLeft: "10px",
-                                    paddingRight: 0,
-                                    background: "white"
-                                },
 
-                            }} />}
-                            onChange={handleLocationChange}
-                        />
+                                </div>
+                            )}
+
+                        </PlacesAutocomplete>
                         <Autocomplete
                             disablePortal
                             id="combo-box-demo"
@@ -1187,7 +1205,7 @@ function Recommendations() {
                 <div className='Rec-Scroll-Area'>
 
                     <div className='LocationAndDiagnosis'>
-                        We recommend the following resources in <b>{location}</b> for <b>{diagnosis}</b>
+                        We recommend the following resources around <b>{fullLocation}</b> for <b>{diagnosis}</b>
                     </div>
                     <div className='Rec-Sub-Text'>
                         We selected the best resource from each category below

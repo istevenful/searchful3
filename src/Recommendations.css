@@ -70,7 +70,7 @@
 .LocationAndDiagnosis {
     font-family: "Euclid Circular B SemiBold";
     font-size: 1.75vw;
-    width: 75%;
+    width: 85%;
 }
 
 b {
@@ -174,7 +174,7 @@ b {
 }
 
 .item-badges {
-    height: 1.3vw;
+    height: 1.2vw;
     padding-left: 5px;
     cursor: pointer;
     z-index: 10;
@@ -602,4 +602,43 @@ b {
     color:#FF756D;;
     font-family:"Euclid Circular B SemiBold";
     cursor: pointer;
+}
+.googleAuto-rec{
+    width: 100%;
+    height: 57px !important;
+    padding: 9px 39px 9px 25px;
+    border: 1px solid #c4c4c4;
+    border-radius: 100px;
+    outline: none;
+    font-weight: 400;
+    font-size: 1rem;
+}
+.googleAuto-rec:hover{
+    border: 1px solid black;
+    outline: none;
+}
+.googleAuto-rec:focus{
+    border: 2px solid #1976D2;
+    outline: none;
+}
+.google-container-rec{
+    width: 100%;
+    position: relative;
+}
+.suggestion-container-rec{
+    background-color: white;
+    position: absolute;
+    outline: none;
+    border: 2px solid #DFDFDF;
+    border-radius: 15px;
+    z-index: 100;
+    width: 100%;
+    margin-top: 5px;
+    padding-top:7px;
+    padding-bottom:7px;
+    
+}
+.google-container-rec{
+    width: 40%;
+    position: relative;
 }
