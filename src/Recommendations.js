@@ -79,7 +79,7 @@ function Recommendations() {
                 Locations: [
                     {
                         Name: "Walgreens Pharmacy",
-                        FullName: `Walgreens Pharmacy, ${location.substring(0, location.length - 4)} West Street Location`,
+                        FullName: `Walgreens Pharmacy, ${location} West Street Location`,
                         Distance: "3.36 miles",
                         Address: `500 University Avenue, ${location} 60609`,
                         Phone: "(916) 830-2000",
@@ -90,7 +90,7 @@ function Recommendations() {
                     },
                     {
                         Name: "Lucky Pharmacy",
-                        FullName: `Lucky Pharmacy, ${location.substring(0, location.length - 4)} Van Buren Area`,
+                        FullName: `Lucky Pharmacy, ${location} Van Buren Area`,
                         Distance: "4.12 miles",
                         Address: `310 S Michigan Ave, ${location} 60604`,
                         Phone: "(916) 120-2300",
@@ -101,7 +101,7 @@ function Recommendations() {
                     },
                     {
                         Name: "CVS Pharmacy",
-                        FullName: `CVS Pharmacy, ${location.substring(0, location.length - 4)} Daley Park`,
+                        FullName: `CVS Pharmacy, ${location} Daley Park`,
                         Distance: "4.87 miles",
                         Address: `310 S Michigan Ave, ${location} 60604`,
                         Phone: "(916) 433-1454",
@@ -116,8 +116,8 @@ function Recommendations() {
                 Category: "General Physician",
                 Locations: [
                     {
-                        Name: `${location.substring(0, location.length - 4)} Clinic for ${diagnosis}s`,
-                        FullName: `${location.substring(0, location.length - 4)} ${diagnosis} Center and Research Institute`,
+                        Name: `${location} Clinic for ${diagnosis}s`,
+                        FullName: `${location} ${diagnosis} Center and Research Institute`,
                         Distance: "3.90 miles",
                         Address: `3000 N Halsted St #711, ${location} 60657`,
                         Phone: "(916) 834-2002",
@@ -136,7 +136,7 @@ function Recommendations() {
                 Locations: [
                     {
                         Name: "Walgreens Pharmacy",
-                        FullName: `Walgreens Pharmacy, ${location.substring(0, location.length - 4)} West Street Location`,
+                        FullName: `Walgreens Pharmacy, ${location} West Street Location`,
                         Distance: "3.36 miles",
                         Address: `500 University Avenue, ${location} 60609`,
                         Phone: "(916) 999-2020",
@@ -152,7 +152,7 @@ function Recommendations() {
                     },
                     {
                         Name: "Lucky Pharmacy",
-                        FullName: `Lucky Pharmacy, ${location.substring(0, location.length - 4)} Van Buren Area`,
+                        FullName: `Lucky Pharmacy, ${location} Van Buren Area`,
                         Distance: "4.12 miles",
                         Address: `310 S Michigan Ave, ${location} 60604`,
                         Phone: "(916) 800-2031",
@@ -168,7 +168,7 @@ function Recommendations() {
                     },
                     {
                         Name: "CVS Pharmacy",
-                        FullName: `CVS Pharmacy, ${location.substring(0, location.length - 4)} Daley Park`,
+                        FullName: `CVS Pharmacy, ${location} Daley Park`,
                         Distance: "4.87 miles",
                         Address: `310 S Michigan Ave, ${location} 60604`,
                         Phone: "(916) 120-2222",
@@ -189,8 +189,8 @@ function Recommendations() {
                 Category: "ENT",
                 Locations: [
                     {
-                        Name: `${location.substring(0, location.length - 4)} ENT Clinic for ${diagnosis}s`,
-                        FullName: `Otolaryngology: ${location.substring(0, location.length - 4)} Medical Foundation `,
+                        Name: `${location} ENT Clinic for ${diagnosis}s`,
+                        FullName: `Otolaryngology: ${location} Medical Foundation `,
                         Distance: "3.22 miles",
                         Address: `900 Blake Wilbur Dr, ${location} 60657`,
                         Phone: "(916) 834-1234",
@@ -206,7 +206,7 @@ function Recommendations() {
                     },
                     {
                         Name: `Sutter Health`,
-                        FullName: `Sutter Health in ${location.substring(0, location.length - 4)}`,
+                        FullName: `Sutter Health in ${location}`,
                         Distance: "2.33 miles",
                         Address: `1337 Sutter Dr, ${location} 60657`,
                         Phone: "(916) 834-1234",
@@ -226,8 +226,8 @@ function Recommendations() {
                 Category: "Hepatologist",
                 Locations: [
                     {
-                        Name: `${location.substring(0, location.length - 4)} Center`,
-                        FullName: `${location.substring(0, location.length - 4)} Medical Foundation`,
+                        Name: `${location} Center`,
+                        FullName: `${location} Medical Foundation`,
                         Distance: "1.90 miles",
                         Address: `795 El Camino Real, ${location} 60657`,
                         Phone: "(916) 980-4132",
@@ -299,8 +299,8 @@ function Recommendations() {
                 Category: "Gym",
                 Locations: [
                     {
-                        Name: `${location.substring(0, location.length - 4)} Fitness`,
-                        FullName: `${location.substring(0, location.length - 4)} Fitness in Downtown`,
+                        Name: `${location} Fitness`,
+                        FullName: `${location} Fitness in Downtown`,
                         Distance: "0.93 miles",
                         Address: `425 Portage Ave, ${location} 60657`,
                         Phone: "(916) 400-4390",
@@ -316,7 +316,7 @@ function Recommendations() {
                     },
                     {
                         Name: `Orangetheory Fitness`,
-                        FullName: `Orangetheory Fitness in ${location.substring(0, location.length - 4)}`,
+                        FullName: `Orangetheory Fitness in ${location}`,
                         Distance: "2.13 miles",
                         Address: `2190 W Bayshore Rd #150, ${location} 60657`,
                         Phone: "(916) 411-3200",
@@ -332,7 +332,7 @@ function Recommendations() {
                     },
                     {
                         Name: `NCFIT`,
-                        FullName: `NCFIT ${location.substring(0, location.length - 4)}`,
+                        FullName: `NCFIT ${location}`,
                         Distance: "5.93 miles",
                         Address: ` 112 N Rengstorff Ave, ${location} 60657`,
                         Phone: "(916) 789-1467",
@@ -369,8 +369,8 @@ function Recommendations() {
                         Badge: ["Patient", "Professional"]
                     },
                     {
-                        Name: `${location.substring(0, location.length - 4)} Nutrition`,
-                        FullName: `${location.substring(0, location.length - 4)} Nutrition`,
+                        Name: `${location} Nutrition`,
+                        FullName: `${location} Nutrition`,
                         Distance: "1.98 miles",
                         Address: `879 Newark St., ${location} 60657`,
                         Phone: "(916) 111-6546",
@@ -406,8 +406,8 @@ function Recommendations() {
                 Category: "Ophthalmologist",
                 Locations: [
                     {
-                        Name: `${location.substring(0, location.length - 4)} Eye Care`,
-                        FullName: `${location.substring(0, location.length - 4)} Eye Care`,
+                        Name: `${location} Eye Care`,
+                        FullName: `${location} Eye Care`,
                         Distance: "1.18 miles",
                         Address: `999 Edgewater Blvd, ${location} 60657`,
                         Phone: "(916) 180-8000",
@@ -423,8 +423,8 @@ function Recommendations() {
 
                     },
                     {
-                        Name: `${location.substring(0, location.length - 4)} Eye Group`,
-                        FullName: `${location.substring(0, location.length - 4)} Eye Group`,
+                        Name: `${location} Eye Group`,
+                        FullName: `${location} Eye Group`,
                         Distance: "2.01 miles",
                         Address: `2452 Watson Ct., ${location} 60657`,
                         Phone: "(916) 670-5422",
@@ -445,7 +445,7 @@ function Recommendations() {
                 Locations: [
                     {
                         Name: `Midtown Podiatry`,
-                        FullName: `Midtown Podiatry in ${location.substring(0, location.length - 4)}`,
+                        FullName: `Midtown Podiatry in ${location}`,
                         Distance: "4.64 miles",
                         Address: `20 Middlefield Rd., ${location} 60657`,
                         Phone: "(916) 312-9348",
@@ -460,8 +460,8 @@ function Recommendations() {
                         Badge: ["Patient"]
                     },
                     {
-                        Name: `${location.substring(0, location.length - 4)} Podiatrists Group`,
-                        FullName: `${location.substring(0, location.length - 4)} Podiatrists Group`,
+                        Name: `${location} Podiatrists Group`,
+                        FullName: `${location} Podiatrists Group`,
                         Distance: "2.44 miles",
                         Address: `5833 Aqua Rd., ${location} 60657`,
                         Phone: "(916) 765-4834",
@@ -534,8 +534,8 @@ function Recommendations() {
                         Badge: ["Professional"]
                     },
                     {
-                        Name: `${location.substring(0, location.length - 4)} Ob-Gyn Medical Group`,
-                        FullName: `${location.substring(0, location.length - 4)} Ob-Gyn Medical Group`,
+                        Name: `${location} Ob-Gyn Medical Group`,
+                        FullName: `${location} Ob-Gyn Medical Group`,
                         Distance: "2.43 miles",
                         Address: `3886 Beacon Ave., ${location} 60657`,
                         Phone: "(916) 259-5000",
@@ -591,8 +591,8 @@ function Recommendations() {
                 Category: "Physical Therapy",
                 Locations: [
                     {
-                        Name: `${location.substring(0, location.length - 4)} Rehabilitation`,
-                        FullName: `${location.substring(0, location.length - 4)} Rehabilitation and Sports Therapy`,
+                        Name: `${location} Rehabilitation`,
+                        FullName: `${location} Rehabilitation and Sports Therapy`,
                         Distance: "2.67 miles",
                         Address: `800 Union Blvd., ${location} 60657`,
                         Phone: "(916) 800-1021",
@@ -703,7 +703,7 @@ function Recommendations() {
                 Locations: [
                     {
                         Name: `Chabot Nephrology`,
-                        FullName: `Chabot Nephrology in ${location.substring(0, location.length - 4)}`,
+                        FullName: `Chabot Nephrology in ${location}`,
                         Distance: "4.76 miles",
                         Address: `6001 Chabot Ave., ${location} 60657`,
                         Phone: "(916) 654-1237",
@@ -718,8 +718,8 @@ function Recommendations() {
                         Badge: ["Patient", "Professional"]
                     },
                     {
-                        Name: `${location.substring(0, location.length - 4)} Nephrology Pro Corporation`,
-                        FullName: `${location.substring(0, location.length - 4)} Nephrology Pro Corporation: Tay David T MD`,
+                        Name: `${location} Nephrology Pro Corporation`,
+                        FullName: `${location} Nephrology Pro Corporation: Tay David T MD`,
                         Distance: "2.45 miles",
                         Address: `39233 Liberty St., ${location} 60657`,
                         Phone: "(916) 795-8186",
@@ -740,7 +740,7 @@ function Recommendations() {
                 Locations: [
                     {
                         Name: `Pacific Urology`,
-                        FullName: `Pacific Urology in ${location.substring(0, location.length - 4)}`,
+                        FullName: `Pacific Urology in ${location}`,
                         Distance: "2.66 miles",
                         Address: `1999 Mowry Ave., ${location} 60657`,
                         Phone: "(916) 198-8752",
@@ -776,8 +776,8 @@ function Recommendations() {
                 Category: "Pulmonologist",
                 Locations: [
                     {
-                        Name: `Pulmonary: ${location.substring(0, location.length - 4)} Center`,
-                        FullName: `Pulmonary: ${location.substring(0, location.length - 4)} Center`,
+                        Name: `Pulmonary: ${location} Center`,
+                        FullName: `Pulmonary: ${location} Center`,
                         Distance: "1.99 miles",
                         Address: `321 El Camino Real, ${location} 60657`,
                         Phone: "(916) 321-1231",
@@ -829,7 +829,7 @@ function Recommendations() {
                         Badge: ["Patient"]
                     },
                     {
-                        Name: `${location.substring(0, location.length - 4)} Pacific Medical Center`,
+                        Name: `${location} Pacific Medical Center`,
                         FullName: `Respiratory Therapy and Diagnostics Program: California Pacific Medical Center`,
                         Distance: "5.61 miles",
                         Address: `3555 Cesar Chavez St, ${location} 60657`,
