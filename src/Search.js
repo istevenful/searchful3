@@ -65,7 +65,7 @@ function Search() {
                             <PlacesAutocomplete value={address} onChange={setAddress} onSelect={handleLocationChange}>
                                 {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
                                     <div className='google-container'>
-                                        <input {...getInputProps({ placeholder: "Type address" })} className="googleAuto"/>
+                                        <input {...getInputProps({ placeholder: "Type address" })} className="googleAuto" />
                                         {suggestions.length != 0 ?
                                             <div className='suggestion-container'>
                                                 {suggestions.map((suggestion) => {
@@ -88,8 +88,8 @@ function Search() {
                                             :
                                             <>
                                             </>
-                                    
-                                    
+
+
                                         }
 
                                     </div>
@@ -126,7 +126,7 @@ function Search() {
                         }}
                     ><Link to={`/recommendations`} className="Home-Search-Button" state={{ from: { searchData } }}>Search</Link></Button>
                 </div>
-                <div className='Discover-Home' onClick={() => {console.log(searchData)}}>
+                <div className='Discover-Home' onClick={() => { console.log(searchData) }}>
                     <div className='Discover-Header'>
                         Discover Searchful Cities all across the USA
                     </div>
@@ -134,7 +134,7 @@ function Search() {
                         Searchful is available across 24 different cities across the country. We have over 20,000 high quality resources across 82 different categories
                     </div>
                     <div className='Discover-Cities'>
-                        <div className='City-Card'>
+                        <Link to={`/recommendations`} className='City-Card' state={{ from: {searchData: ["Chicago, IL, USA", searchData[1]]} }}>
                             <img className='Chicago' src='/Chicago.jpg' alt='Chicago'>
 
                             </img>
@@ -146,9 +146,8 @@ function Search() {
                                     5,231 Resources
                                 </div>
                             </div>
-
-                        </div>
-                        <div className='City-Card'>
+                        </Link>
+                        <Link to={`/recommendations`} className='City-Card' state={{ from: {searchData: ["San Francisco, CA, USA", searchData[1]]} }}>
                             <img className='GoldenGate' src='/GoldenGate.avif' alt='GGB'>
 
                             </img>
@@ -161,8 +160,8 @@ function Search() {
                                 </div>
                             </div>
 
-                        </div>
-                        <div className='City-Card'>
+                        </Link>
+                        <Link to={`/recommendations`} className='City-Card' state={{ from: {searchData: ["Dallas, TX, USA", searchData[1]]} }}>
                             <img className='Dallas' src='/Dallas.jpg' alt='Dallas'>
 
                             </img>
@@ -174,7 +173,7 @@ function Search() {
                                     2,421 Resources
                                 </div>
                             </div>
-                        </div>
+                        </Link>
                     </div>
                 </div>
             </div>

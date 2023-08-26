@@ -153,6 +153,7 @@
     overflow-x: hidden;
     border-radius: 15px;
     position: relative;
+    cursor:pointer;
 }
 
 .Chicago{
