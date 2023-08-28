@@ -13,8 +13,9 @@ import {
 } from 'react-places-autocomplete';
 function Search() {
     const [address, setAddress] = useState("")
-    const [searchData, setSearchData] = useState(["San Francisco, CA, USA", "Osteoporosis"])
-    let handleLocationChange = (value) => {
+    const [searchData, setSearchData] = useState(["San Francisco, CA", "Osteoporosis"])
+    let handleLocationChange = (longvalue) => {
+        let value = longvalue.slice(0,longvalue.length-5)
         console.log(value)
         let bufferData = searchData;
         if (value == null) {
@@ -62,7 +63,7 @@ function Search() {
 
                                 Location
                             </div>
-                            <PlacesAutocomplete value={address} onChange={setAddress} onSelect={handleLocationChange}>
+                            <PlacesAutocomplete value={address} onChange={setAddress} onSelect={handleLocationChange} searchOptions={{ types: ['locality'], componentRestrictions: { country: ['us'] } }}>
                                 {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
                                     <div className='google-container'>
                                         <input {...getInputProps({ placeholder: "Type address" })} className="googleAuto" />
@@ -79,7 +80,7 @@ function Search() {
                                                     return (
                                                         <div>
                                                             <div {...getSuggestionItemProps(suggestion, { style })}>
-                                                                {suggestion.description}
+                                                                {suggestion.description.slice(0,suggestion.description.length-5)}
                                                             </div>
                                                         </div>
                                                     );

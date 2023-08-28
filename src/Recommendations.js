@@ -16,6 +16,20 @@ import {
     geocodeByPlaceId,
     getLatLng,
 } from 'react-places-autocomplete';
+import Modal from '@mui/material/Modal';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+const ModalStyle = {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    width: 400,
+    bgcolor: 'background.paper',
+    border: '2px solid #000',
+    boxShadow: 24,
+    p: 4,
+};
 function Recommendations() {
     const [fullLocation, setFullLocation] = useState(useLocation().state.from.searchData[0])
     const [bufferFullLocation, setBufferFullLocation] = useState(useLocation().state.from.searchData[0])
@@ -24,6 +38,10 @@ function Recommendations() {
     const [currentFilters, setCurrentFilters] = useState([])
 
     const [diagnosisFilters, setDiagnosisFilters] = useState([])
+
+    const [modalOpen, setModalOpen] = useState(false);
+    const handleModalOpen = () => setModalOpen(true);
+    const handleModalClose = () => setModalOpen(false)
     useEffect(() => {
         let diagObj = listOfCategories.find(obj => obj.Name === diagnosis);
         let diagnosisList = diagObj.Categories;
@@ -34,9 +52,10 @@ function Recommendations() {
     useEffect(() => {
         let separatedArray = fullLocation.split(', ')
         setBufferFullLocation(fullLocation);
-        setLocation(separatedArray[separatedArray.length - 3])
+        setLocation(separatedArray[separatedArray.length - 2])
     }, [fullLocation])
-    let handleLocationChange = (value) => {
+    let handleLocationChange = (longvalue) => {
+        let value = longvalue.slice(0, longvalue.length - 5)
         console.log(value)
         let bufferData = searchData;
         if (value == null || value == "") {
@@ -70,6 +89,13 @@ function Recommendations() {
         let filters = [...currentFilters];
         let filterToDeleteIndex = filters.indexOf(name);
         filters.splice(filterToDeleteIndex, 1);
+        setCurrentFilters(filters);
+    }
+    let deleteFilterPopUp = (name) => {
+        let filters = [...currentFilters];
+        let filterToDeleteIndex = filters.indexOf(name);
+        filters.splice(filterToDeleteIndex, 1);
+        setShowPopUp(false);
         setCurrentFilters(filters);
     }
     const [filterItems, setFilterItems] = useState(
@@ -935,6 +961,33 @@ function Recommendations() {
             setShowPopUp(false);
         }
     }, [popUpInfo])
+
+
+    function ChangeBoxValuesPopup(currentValue) {
+        console.log(currentValue)
+        let copyOfCurrentFilters = [...filterItemsToShow];
+        console.log(filterItems)
+        let listOfDataToChange = filterItems.find(obj => obj.Category === currentValue.Type);
+        console.log(listOfDataToChange);
+        let locationsListToPickFrom = listOfDataToChange.Locations;
+        console.log(locationsListToPickFrom)
+        if (locationsListToPickFrom.length > 1) {
+            let currentItemInArrayIndex = locationsListToPickFrom.indexOf(currentValue);
+            while (true) {
+                let randomIndex = randomNumber(0, locationsListToPickFrom.length - 1)
+                if (randomIndex != currentItemInArrayIndex) {
+                    let copyIndex = copyOfCurrentFilters.indexOf(currentValue);
+                    copyOfCurrentFilters[copyIndex] = locationsListToPickFrom[randomIndex];
+                    setPopUpInfo(locationsListToPickFrom[randomIndex])
+                    break;
+                }
+            }
+
+        }
+        setFilterItemsToShow(copyOfCurrentFilters);
+        // let indexOfCurrent = locationsListToPickFrom.indexOf
+    }
+
     function FilterItemList() {
 
 
@@ -1117,9 +1170,10 @@ function Recommendations() {
         <>
             <div className='Rec-Page'>
                 <div className='Nav-Bar'>
-                    <a href='/' className='Nav-Logo'><img src="/SearchfulLogo.png" alt="Logo" className='Logo-img'></img></a>
+                    <a href='/' className='Nav-Logo'><img src="/SearchfulLogo.png" alt="Logo" className='Logo-img'></img><div className='poweredbyai'>Powered by AI</div></a>
+
                     <div className='Nav-Bar-Search'>
-                        <PlacesAutocomplete value={bufferFullLocation} onChange={setBufferFullLocation} onSelect={handleLocationChange}>
+                        <PlacesAutocomplete value={bufferFullLocation} onChange={setBufferFullLocation} onSelect={handleLocationChange} searchOptions={{ types: ['locality'], componentRestrictions: { country: ['us'] } }}>
                             {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
                                 <div className='google-container-rec'>
                                     <input {...getInputProps({ placeholder: "Type address" })} className="googleAuto-rec" />
@@ -1136,7 +1190,7 @@ function Recommendations() {
                                                 return (
                                                     <div>
                                                         <div {...getSuggestionItemProps(suggestion, { style })}>
-                                                            {suggestion.description}
+                                                            {suggestion.description.slice(0, suggestion.description.length - 5)}
                                                         </div>
                                                     </div>
                                                 );
@@ -1205,21 +1259,29 @@ function Recommendations() {
                 <div className='Rec-Scroll-Area'>
 
                     <div className='LocationAndDiagnosis'>
-                        We recommend the following resources around <b>{fullLocation}</b> for <b>{diagnosis}</b>
+                        We selected the best resources around <b>{fullLocation}</b> for <b>{diagnosis}</b> in these ccategories below:
                     </div>
-                    <div className='Rec-Sub-Text'>
+                    {/* <div className='Rec-Sub-Text'>
                         We selected the best resource from each category below
-                    </div>
+                    </div> */}
                     {/* <div className='Filter-List'>
                         <FilterList></FilterList>
                         <div className='Filter-Add' onClick={() => setShowFilterChange(!showFilterChange)}>
                             + Add more
                         </div>
                     </div> */}
-                    <div className='MagicToggleButton' onClick={toggleMagic}>
-                        <img src='/PinkStars.png' alt='Pink Stars' className='MagicStarsToggle'></img>
-                        <div className='MagicButtonText'>
-                            Add more magic
+                    <div className='MagicAndSendButton'>
+                        <div className='MagicToggleButton' onClick={toggleMagic}>
+                            <img src='/PinkStars.png' alt='Pink Stars' className='MagicStarsToggle'></img>
+                            <div className='MagicButtonText'>
+                                Add more magic
+                            </div>
+                        </div>
+                        <div className='SendButton' onClick={handleModalOpen}>
+                            <div className='SendButtonText'>
+                                Send list
+                            </div>
+                            <img src='/SendIcon.png' alt='Pink Stars' className='sendIcon'></img>
                         </div>
                     </div>
                     {magicOn == true ?
@@ -1327,13 +1389,13 @@ function Recommendations() {
                                 <div className='popUpClickableButtons' id="Add" onClick={() => { changeClassToActive("Add") }}>
                                     <img src='/AddFile.png' alt='Add' className='item-img-button'></img>
                                 </div>
-                                <div className='popUpClickableButtons' id="Refresh" onClick={() => { changeClassToActive("Refresh") }}>
+                                <div className='popUpClickableButtons' id="Refresh" onClick={() => { ChangeBoxValuesPopup(popUpInfo) }}>
                                     <img src='/Refresh.png' alt='Refresh' className='item-img-button'></img>
                                 </div>
                                 <div className='popUpClickableButtons' id="Pencil" onClick={() => { changeClassToActive("Pencil") }}>
                                     <img src='/Pencil.png' alt='Pencil' className='item-img-button'></img>
                                 </div>
-                                <div className='popUpClickableButtons' id="Trash" onClick={() => { changeClassToActive("Trash") }}>
+                                <div className='popUpClickableButtons' id="Trash" onClick={() => { deleteFilterPopUp(popUpInfo.Type) }}>
                                     <img src='/TrashRed.png' alt='TrashRed' className='item-img-button'></img>
                                 </div>
                             </div>
@@ -1458,6 +1520,21 @@ function Recommendations() {
                     </div>
                 </div>
                 : <></>}
+            <Modal
+                open={modalOpen}
+                onClose={handleModalClose}
+                aria-labelledby="modal-modal-title"
+                aria-describedby="modal-modal-description"
+            >
+                <Box sx={ModalStyle}>
+                    <Typography id="modal-modal-title" variant="h6" component="h2">
+                        LIST SENT
+                    </Typography>
+                    <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+                        We notified the patient of these resources for {diagnosis} around {location}.
+                    </Typography>
+                </Box>
+            </Modal>
         </>
     )
 }
