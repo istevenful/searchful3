@@ -1259,7 +1259,7 @@ function Recommendations() {
                 <div className='Rec-Scroll-Area'>
 
                     <div className='LocationAndDiagnosis'>
-                        We selected the best resources around <b>{fullLocation}</b> for <b>{diagnosis}</b> in these ccategories below:
+                        We selected the best resources around <b>{fullLocation}</b> for <b>{diagnosis}</b> in these categories below:
                     </div>
                     {/* <div className='Rec-Sub-Text'>
                         We selected the best resource from each category below
@@ -1391,12 +1391,6 @@ function Recommendations() {
                                 </div>
                                 <div className='popUpClickableButtons' id="Refresh" onClick={() => { ChangeBoxValuesPopup(popUpInfo) }}>
                                     <img src='/Refresh.png' alt='Refresh' className='item-img-button'></img>
-                                </div>
-                                <div className='popUpClickableButtons' id="Pencil" onClick={() => { changeClassToActive("Pencil") }}>
-                                    <img src='/Pencil.png' alt='Pencil' className='item-img-button'></img>
-                                </div>
-                                <div className='popUpClickableButtons' id="Trash" onClick={() => { deleteFilterPopUp(popUpInfo.Type) }}>
-                                    <img src='/TrashRed.png' alt='TrashRed' className='item-img-button'></img>
                                 </div>
                             </div>
                         </div>

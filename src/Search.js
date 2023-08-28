@@ -63,7 +63,7 @@ function Search() {
 
                                 Location
                             </div>
-                            <PlacesAutocomplete value={address} onChange={setAddress} onSelect={handleLocationChange} searchOptions={{ types: ['locality'], componentRestrictions: { country: ['us'] } }}>
+                            <PlacesAutocomplete value={address} onChange={setAddress} onSelect={handleLocationChange} searchOptions={{ types: ['neighborhood', 'locality'], componentRestrictions: { country: ['us'] } }}>
                                 {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
                                     <div className='google-container'>
                                         <input {...getInputProps({ placeholder: "Type address" })} className="googleAuto" />
