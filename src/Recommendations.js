@@ -37,8 +37,6 @@ const ModalStyle = {
 const Alert = React.forwardRef(function Alert(props, ref) {
     return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
 });
-
-
 function Recommendations() {
     const [fullLocation, setFullLocation] = useState(useLocation().state.from.searchData[0])
     const [bufferFullLocation, setBufferFullLocation] = useState(useLocation().state.from.searchData[0])
@@ -1543,7 +1541,7 @@ function Recommendations() {
             >
                 <Box sx={ModalStyle} className="ModalContainer">
                     <Typography id="modal-modal-title">
-                        Send Methods
+                        Share List
                     </Typography>
                     <Typography id="modal-modal-description">
                         Send this stack to your patient through SMS or copy the stack&nbsp;
@@ -1554,10 +1552,44 @@ function Recommendations() {
                     </Typography>
                     <div className='method-boxs'>
 
-                        <TextField id="outlined-basic" label="Phone Number" variant="outlined" sx={{ width: '100%', color:"red" }}/>
-                        <button className='send-box'>
+                        <TextField id="outlined-basic" label="Phone Number" variant="outlined" sx={{
+                            width: '100%', color: "red", fieldset: { borderColor: "black" },
+                            "& label.Mui-focused": {
+                                color: "#FF756D"
+                            },
+                            // focused color for input with variant='standard'
+                            "& .MuiInput-underline:after": {
+                                borderBottomColor: "#FF756D"
+                            },
+                            // focused color for input with variant='filled'
+                            "& .MuiFilledInput-underline:after": {
+                                borderBottomColor: "#FF756D"
+                            },
+                            // focused color for input with variant='outlined'
+                            "& .MuiOutlinedInput-root": {
+                                "&.Mui-focused fieldset": {
+                                    borderColor: "#FF756D"
+                                }
+                            }
+                        }} />
+                        <Button variant="contained"
+                            sx={{
+                                width: "100%",
+                                marginTop: "30px",
+                                paddingTop: "18px",
+                                paddingBottom: "18px",
+                                paddingLeft: "5%",
+                                paddingRight: "5%",
+                                backgroundColor: "#FF756D",
+                                ':hover': {
+                                    bgcolor: '#FF5C53', // theme.palette.primary.main
+                                    color: 'white',
+                                },
+                                fontSize:".8vw"
 
-                        </button>
+                            }}
+                            onClick={handleLDChange}
+                        >Share</Button>
                     </div>
 
                 </Box>
