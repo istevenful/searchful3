@@ -11,6 +11,9 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
 import Tooltip from '@mui/material/Tooltip';
 import PlacesAutocomplete from 'react-places-autocomplete';
+import { CopyToClipboard } from 'react-copy-to-clipboard';
+import Snackbar from '@mui/material/Snackbar';
+import MuiAlert from '@mui/material/Alert';
 import {
     geocodeByAddress,
     geocodeByPlaceId,
@@ -24,12 +27,18 @@ const ModalStyle = {
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    width: 400,
+    width: "60%",
     bgcolor: 'background.paper',
     border: '2px solid #000',
     boxShadow: 24,
     p: 4,
+    outline: "none",
 };
+const Alert = React.forwardRef(function Alert(props, ref) {
+    return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
+});
+
+
 function Recommendations() {
     const [fullLocation, setFullLocation] = useState(useLocation().state.from.searchData[0])
     const [bufferFullLocation, setBufferFullLocation] = useState(useLocation().state.from.searchData[0])
@@ -42,6 +51,7 @@ function Recommendations() {
     const [modalOpen, setModalOpen] = useState(false);
     const handleModalOpen = () => setModalOpen(true);
     const handleModalClose = () => setModalOpen(false)
+    const [copyStack, setCopyStack] = useState(false);
     useEffect(() => {
         let diagObj = listOfCategories.find(obj => obj.Name === diagnosis);
         let diagnosisList = diagObj.Categories;
@@ -97,6 +107,17 @@ function Recommendations() {
         filters.splice(filterToDeleteIndex, 1);
         setShowPopUp(false);
         setCurrentFilters(filters);
+    }
+    const [snackBarOpen, setSnackBarOpen] = useState(false);
+    const handleSnackBarClick = () => {
+        setSnackBarOpen(true);
+    };
+    let handleSnackBarClose = (event, reason) => {
+        if (reason === 'clickaway') {
+            return;
+        }
+
+        setSnackBarOpen(false);
     }
     const [filterItems, setFilterItems] = useState(
         [
@@ -1173,7 +1194,7 @@ function Recommendations() {
                     <a href='/' className='Nav-Logo'><img src="/SearchfulLogo.png" alt="Logo" className='Logo-img'></img><div className='poweredbyai'>Powered by AI</div></a>
 
                     <div className='Nav-Bar-Search'>
-                        <PlacesAutocomplete value={bufferFullLocation} onChange={setBufferFullLocation} onSelect={handleLocationChange} searchOptions={{ types: ['locality'], componentRestrictions: { country: ['us'] } }}>
+                        <PlacesAutocomplete value={bufferFullLocation} onChange={setBufferFullLocation} onSelect={handleLocationChange} searchOptions={{ types: ['neighborhood', 'locality'], componentRestrictions: { country: ['us'] } }}>
                             {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
                                 <div className='google-container-rec'>
                                     <input {...getInputProps({ placeholder: "Type address" })} className="googleAuto-rec" />
@@ -1520,15 +1541,34 @@ function Recommendations() {
                 aria-labelledby="modal-modal-title"
                 aria-describedby="modal-modal-description"
             >
-                <Box sx={ModalStyle}>
-                    <Typography id="modal-modal-title" variant="h6" component="h2">
-                        LIST SENT
+                <Box sx={ModalStyle} className="ModalContainer">
+                    <Typography id="modal-modal-title">
+                        Send Methods
                     </Typography>
-                    <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-                        We notified the patient of these resources for {diagnosis} around {location}.
+                    <Typography id="modal-modal-description">
+                        Send this stack to your patient through SMS or copy the stack&nbsp;
+                        <CopyToClipboard text={"this.state.value"}
+                            onCopy={() => setCopyStack(true)}>
+                            <button className='copy-text-button' onClick={handleSnackBarClick}>here</button>
+                        </CopyToClipboard>
                     </Typography>
+                    <div className='method-boxs'>
+
+                        <TextField id="outlined-basic" label="Phone Number" variant="outlined" sx={{ width: '100%', color:"red" }}/>
+                        <button className='send-box'>
+
+                        </button>
+                    </div>
+
                 </Box>
             </Modal>
+            <Snackbar
+                open={snackBarOpen} autoHideDuration={2000} onClose={handleSnackBarClose}
+            >
+                <Alert onClose={handleSnackBarClose} severity="success" sx={{ width: '100%' }}>
+                    Stack Copied!
+                </Alert>
+            </Snackbar>
         </>
     )
 }

@@ -686,3 +686,44 @@ b {
     height: 1.2vw;
     padding-left: 5px;
 }
+.ModalContainer{
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        margin-top: 2.5vh;
+        margin-bottom: 2.5vh;
+        background-color: white;
+        padding: 2.5% 3% 2.5% 3%;
+        border-radius: 15px 15px 15px 15px;
+}
+#modal-modal-title{
+    font-size: 1.6vw;
+    font-family:"Euclid Circular B SemiBold";
+    padding-bottom: 5px;
+}
+#modal-modal-description{
+    font-size: .9vw;
+    font-family:"Euclid Circular B";
+}
+.copy-text-button{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: .9vw;
+    font-family:"Euclid Circular B SemiBold";
+    color: #FF756D;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.method-boxs{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top:15px;
+    width: 100%;
+}
+.alert{
+    width: 100%;
+    position: absolute;
+}
