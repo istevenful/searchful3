@@ -64,12 +64,10 @@ function Recommendations() {
     }, [fullLocation])
     let handleLocationChange = (longvalue) => {
         let value = longvalue.slice(0, longvalue.length - 5)
-        console.log(value)
         let bufferData = searchData;
         if (value == null || value == "") {
             bufferData[0] = fullLocation;
             setSearchData(bufferData)
-            console.log(bufferData)
         }
         else {
             bufferData[0] = value;
@@ -944,8 +942,6 @@ function Recommendations() {
             let foundObj = filterItems.find(obj => obj.Category === filters);
             if (foundObj != undefined) {
                 let numberInRange = randomNumber(0, foundObj.Locations.length - 1);
-                console.log(numberInRange);
-                console.log(foundObj.Locations)
                 locationsToShow.push(foundObj.Locations[numberInRange])
             }
 
@@ -983,13 +979,13 @@ function Recommendations() {
 
 
     function ChangeBoxValuesPopup(currentValue) {
-        console.log(currentValue)
+
         let copyOfCurrentFilters = [...filterItemsToShow];
-        console.log(filterItems)
+
         let listOfDataToChange = filterItems.find(obj => obj.Category === currentValue.Type);
-        console.log(listOfDataToChange);
+
         let locationsListToPickFrom = listOfDataToChange.Locations;
-        console.log(locationsListToPickFrom)
+
         if (locationsListToPickFrom.length > 1) {
             let currentItemInArrayIndex = locationsListToPickFrom.indexOf(currentValue);
             while (true) {
@@ -998,6 +994,30 @@ function Recommendations() {
                     let copyIndex = copyOfCurrentFilters.indexOf(currentValue);
                     copyOfCurrentFilters[copyIndex] = locationsListToPickFrom[randomIndex];
                     setPopUpInfo(locationsListToPickFrom[randomIndex])
+                    break;
+                }
+            }
+
+        }
+        setFilterItemsToShow(copyOfCurrentFilters);
+        // let indexOfCurrent = locationsListToPickFrom.indexOf
+    }
+    
+    function ChangeBoxValues(currentValue) {
+
+        let copyOfCurrentFilters = [...filterItemsToShow];
+
+        let listOfDataToChange = filterItems.find(obj => obj.Category === currentValue.Type);
+
+        let locationsListToPickFrom = listOfDataToChange.Locations;
+
+        if (locationsListToPickFrom.length > 1) {
+            let currentItemInArrayIndex = locationsListToPickFrom.indexOf(currentValue);
+            while (true) {
+                let randomIndex = randomNumber(0, locationsListToPickFrom.length - 1)
+                if (randomIndex != currentItemInArrayIndex) {
+                    let copyIndex = copyOfCurrentFilters.indexOf(currentValue);
+                    copyOfCurrentFilters[copyIndex] = locationsListToPickFrom[randomIndex];
                     break;
                 }
             }
@@ -1016,7 +1036,7 @@ function Recommendations() {
                 if (badgeData.data.length != 0) {
                     let badges = badgeData.data;
                     for (var name of badges) {
-                        console.log(name);
+
                         if (name == "Patient") {
                             returnBadges.push(
 
@@ -1041,8 +1061,12 @@ function Recommendations() {
             }
             return returnBadges;
         }
-        function ChangeButtonColor(itself) {
+        const [copyTextStack, setCopyTextStack] = useState("");
+        const [copyObjStack, setCopyObjStack] = useState([]);
+        function ChangeButtonColor(itself, data) {
             console.log(itself)
+            console.log(data)
+            let bufferStack = [...copyObjStack];
             if (itself.classList[0] == "item-box") {
                 itself.classList = ["item-box-active"]
             }
@@ -1051,29 +1075,6 @@ function Recommendations() {
             }
         }
 
-        function ChangeBoxValues(currentValue) {
-            console.log(currentValue)
-            let copyOfCurrentFilters = [...filterItemsToShow];
-            console.log(filterItems)
-            let listOfDataToChange = filterItems.find(obj => obj.Category === currentValue.Type);
-            console.log(listOfDataToChange);
-            let locationsListToPickFrom = listOfDataToChange.Locations;
-            console.log(locationsListToPickFrom)
-            if (locationsListToPickFrom.length > 1) {
-                let currentItemInArrayIndex = locationsListToPickFrom.indexOf(currentValue);
-                while (true) {
-                    let randomIndex = randomNumber(0, locationsListToPickFrom.length - 1)
-                    if (randomIndex != currentItemInArrayIndex) {
-                        let copyIndex = copyOfCurrentFilters.indexOf(currentValue);
-                        copyOfCurrentFilters[copyIndex] = locationsListToPickFrom[randomIndex];
-                        break;
-                    }
-                }
-
-            }
-            setFilterItemsToShow(copyOfCurrentFilters);
-            // let indexOfCurrent = locationsListToPickFrom.indexOf
-        }
         let filterItemData = filterItemsToShow;
         let filterItemsCards = [];
         let numberTag = 1;
@@ -1110,8 +1111,8 @@ function Recommendations() {
                             </div>
                         </div>
                         <div className='item-box-buttons'>
-                            <div className='item-box' onClick={(e) => { ChangeButtonColor(e.target) }}>
-                                <img src='/AddFile.png' alt='Add' className='item-img-button unselectable' onClick={(e) => { ChangeButtonColor(e.target.parentElement) }}></img>
+                            <div className='item-box' onClick={(e) => { ChangeButtonColor(e.target, itemData) }}>
+                                <img src='/AddFile.png' alt='Add' className='item-img-button unselectable' onClick={(e) => { ChangeButtonColor(e.target.parentElement, itemData) }}></img>
                             </div>
                             <div className='item-box ' onClick={(e) => { ChangeBoxValues(itemData) }}>
                                 <img src='/Refresh.png' alt='Refresh' className='item-img-button unselectable' onClick={(e) => { ChangeBoxValues(itemData) }}></img>
@@ -1135,7 +1136,7 @@ function Recommendations() {
     let changeClassToActive = (id) => {
 
         let classObj = document.getElementById(id).classList;
-        // console.log(classObj.length);
+
         if (classObj.length == 1) {
             document.getElementById(id).classList = ["popUpClickableButtons popUpClickableButtonsActive"]
         }
@@ -1147,6 +1148,10 @@ function Recommendations() {
     let toggleMagic = () => {
         setMagicOn(!magicOn)
 
+    }
+    let toggleMagicChange = () => {
+        setMagicOn(!magicOn)
+        ChangeBoxValues(filterItemsToShow[0])
     }
     const [showFilterChange, setShowFilterChange] = useState(false)
 
@@ -1311,30 +1316,14 @@ function Recommendations() {
                             <div className='MagicText'>
                                 With insurance data and biographical data of the patient we are able to give an even better recommendation!
                             </div>
-                            <Button variant="contained"
-                                sx={{
-                                    width: "100%",
-                                    paddingTop: "18px",
-                                    paddingBottom: "18px",
-                                    paddingLeft: "3%",
-                                    backgroundColor: "white",
-                                    color: "#BDBDBD",
-                                    justifyContent: "flex-start",
-                                    border: "1px solid #DFDEDE",
-                                    boxShadow: "none",
-                                    borderRadius: "300px",
-                                    ':hover': {
-                                        bgcolor: 'white', // theme.palette.primary.main
-                                        color: '#BDBDBD',
-                                        boxShadow: "none",
-                                    },
-
-                                }}
-
-                            >Insurance</Button>
+                            <input
+                                className='insuranceInput'
+                                placeholder='IN'
+                            />
                             <div className='two-button-magic'>
                                 <Button variant="contained"
                                     sx={{
+                                        fontFamily:"Euclid Circular B SemiBold",
                                         width: "48%",
                                         paddingTop: "18px",
                                         paddingBottom: "18px",
@@ -1356,6 +1345,7 @@ function Recommendations() {
                                 >Age</Button>
                                 <Button variant="contained"
                                     sx={{
+                                        fontFamily:"Euclid Circular B SemiBold",
                                         width: "48%",
                                         paddingTop: "18px",
                                         paddingBottom: "18px",
@@ -1377,7 +1367,7 @@ function Recommendations() {
                                 >Sex</Button>
                             </div>
 
-                            <div className='MagicButtonInner' onClick={toggleMagic}>
+                            <div className='MagicButtonInner' onClick={toggleMagicChange}>
                                 <img src='/PinkStars.png' alt='Pink Stars' className='MagicStarsToggle'></img>
                                 <div className='MagicButtonText'>
                                     Make Magic
@@ -1585,7 +1575,7 @@ function Recommendations() {
                                     bgcolor: '#FF5C53', // theme.palette.primary.main
                                     color: 'white',
                                 },
-                                fontSize:".8vw"
+                                fontSize: ".8vw"
 
                             }}
                             onClick={handleLDChange}
