@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import TextField from '@mui/material/TextField';
 import Stack from '@mui/material/Stack';
 import Autocomplete from '@mui/material/Autocomplete';
@@ -11,6 +11,7 @@ import {
     geocodeByPlaceId,
     getLatLng,
 } from 'react-places-autocomplete';
+import { Map } from './Map';
 function Search() {
     const [address, setAddress] = useState("")
     const [searchData, setSearchData] = useState(["San Francisco, CA", "Osteoporosis"])
@@ -134,48 +135,7 @@ function Search() {
                     <div className='Discover-Text'>
                         Searchful is available across 24 different cities across the country. We have over 20,000 high quality resources across 82 different categories
                     </div>
-                    <div className='Discover-Cities'>
-                        <Link to={`/recommendations`} className='City-Card' state={{ from: {searchData: ["Chicago, IL, USA", searchData[1]]} }}>
-                            <img className='Chicago' src='/Chicago.jpg' alt='Chicago'>
-
-                            </img>
-                            <div className='CityHeader'>
-                                <div className='cityName'>
-                                    Chicago
-                                </div>
-                                <div className='cityRes'>
-                                    5,231 Resources
-                                </div>
-                            </div>
-                        </Link>
-                        <Link to={`/recommendations`} className='City-Card' state={{ from: {searchData: ["San Francisco, CA, USA", searchData[1]]} }}>
-                            <img className='GoldenGate' src='/GoldenGate.avif' alt='GGB'>
-
-                            </img>
-                            <div className='CityHeader'>
-                                <div className='cityName'>
-                                    San Francisco
-                                </div>
-                                <div className='cityRes'>
-                                    1,871 Resources
-                                </div>
-                            </div>
-
-                        </Link>
-                        <Link to={`/recommendations`} className='City-Card' state={{ from: {searchData: ["Dallas, TX, USA", searchData[1]]} }}>
-                            <img className='Dallas' src='/Dallas.jpg' alt='Dallas'>
-
-                            </img>
-                            <div className='CityHeader'>
-                                <div className='cityName'>
-                                    Dallas
-                                </div>
-                                <div className='cityRes'>
-                                    2,421 Resources
-                                </div>
-                            </div>
-                        </Link>
-                    </div>
+                    <Map/>
                 </div>
             </div>
         </>
