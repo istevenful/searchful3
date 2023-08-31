@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Icon/Website</title>
+    <g id="Navigator" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="List-view-(Google)" transform="translate(-227, -319)">
+            <g id="List-item" transform="translate(40, 217)">
+                <g id="Group-5" transform="translate(0, 102)">
+                    <g id="Icon/Website" transform="translate(187, 0)">
+                        <polygon id="Stroke-1" points="0 0 23.999999 0 23.999999 23.999999 0 23.999999"></polygon>
+                        <g id="Group-8" transform="translate(3, 3)" stroke="#272727" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
+                            <path d="M8.99999946,0 C13.9819992,0 17.9999995,4.01799986 17.9999995,9 C17.9999995,13.9819992 13.9819992,18 8.99999946,18" id="Stroke-3"></path>
+                            <path d="M9,18 C4.01799986,18 0,13.9819992 0,9 C0,4.01799986 4.01799986,0 9,0" id="Stroke-5"></path>
+                            <path d="M7.16799977,1.05999984 C4.27800014,5.88499985 4.27800014,12.1159985 7.16799977,16.940999 C8.01399942,18.3539989 9.9869999,18.3539989 10.8329996,16.940999 C13.7229988,12.1159995 13.7229988,5.88499985 10.8329996,1.06000034 C9.9859995,-0.352999679 8.01399942,-0.352999679 7.16799977,1.06000034 L7.16799977,1.05999984 Z" id="Stroke-6"></path>
+                            <line x1="0" y1="8.99999946" x2="17.9999989" y2="8.99999946" id="Stroke-7"></line>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

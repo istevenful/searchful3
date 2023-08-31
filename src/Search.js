@@ -127,7 +127,7 @@ function Search() {
                             },
 
                         }}
-                    ><Link to={`/recommendations`} className="Home-Search-Button" state={{ from: { searchData } }}>Search</Link></Button>
+                    ><Link to={`/recommendations`} className="Home-Search-Button" state={{ from: { searchData } }}>Generate</Link></Button>
                 </div>
                 <div className='Discover-Home' onClick={() => { console.log(searchData) }}>
                     <div className='Discover-Header'>

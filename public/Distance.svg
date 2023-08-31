@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Icon/Distance</title>
+    <g id="Navigator" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="List-view-(Google)" transform="translate(-40, -271)">
+            <g id="List-item" transform="translate(40, 217)">
+                <g id="Group-3" transform="translate(0, 54)">
+                    <g id="Icon/Distance" transform="translate(0, 0)">
+                        <polygon id="Stroke-1" points="0 0 23.999999 0 23.999999 23.999999 0 23.999999"></polygon>
+                        <g id="Group-7" transform="translate(4, 3)" stroke="#272727" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
+                            <path d="M12,9.9999994 L14,9.9999994 C15.1049991,9.9999994 16,10.8949998 16,11.9999994 L16,11.9999994 C16,13.1049987 15.1049991,13.9999994 14,13.9999994 L2,13.9999994 C0.894999946,13.9999994 0,14.8949991 0,15.9999994 L0,15.9999994 C0,17.104999 0.894999946,17.9999994 2,17.9999994 L6,17.9999994" id="Stroke-3"></path>
+                            <path d="M6.99999982,10 C6.99999982,10 10.9999998,6.80599939 10.9999998,3.88899967 C10.9999998,1.7410001 9.20899905,0 6.99999982,0 C4.79100011,0 2.99999982,1.7410001 2.99999982,3.88899967 C2.99999982,6.80599939 6.99999982,10 6.99999982,10 Z" id="Stroke-5"></path>
+                            <path d="M7.00099998,3.72199988 C7.15899997,3.72199988 7.28599986,3.84699987 7.28599986,3.99999976 C7.28599986,4.15299965 7.15799957,4.27699974 6.99999958,4.27699974 C6.84199959,4.27699974 6.7149998,4.15299965 6.7149998,3.99899986 C6.7139993,3.84699987 6.84199959,3.72199988 7.00099998,3.72199988" id="Stroke-6"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

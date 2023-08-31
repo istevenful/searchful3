@@ -1111,21 +1111,21 @@ function Recommendations() {
                             <div className='item-Header'>{itemData.Name} <CreateBadges data={itemData.Badge}></CreateBadges></div>
                             <div className='item-row-1'>
                                 <div className='item-info-1'>
-                                    <img src='/Distance.png' alt='Distance' className='item-image-wide'></img>
+                                    <img src='/Distance.svg' alt='Distance' className='item-image-wide'></img>
                                     {itemData.Distance}
                                 </div>
                                 <div className='item-info'>
-                                    <img src='/LocationPin.png' alt='Pin' className='item-image-tall'></img>
+                                    <img src='/Map_pin.svg' alt='Pin' className='item-image-wide'></img>
                                     {itemData.Address}
                                 </div>
                             </div>
                             <div className='item-row-2'>
                                 <div className='item-info-1'>
-                                    <img src='/Phone.png' alt='Phone' className='item-image'></img>
+                                    <img src='/Phone.svg' alt='Phone' className='item-image-wide'></img>
                                     {itemData.Phone}
                                 </div>
                                 <div className='item-info'>
-                                    <img src='/WWW.png' alt='Web Globe' className='item-image'></img>
+                                    <img src='/Website.svg' alt='Web Globe' className='item-image-wide'></img>
                                     <a href={itemData.Website} className='item-website' target='_blank'>Website</a>
                                 </div>
                             </div>
@@ -1169,9 +1169,16 @@ function Recommendations() {
         setMagicOn(!magicOn)
 
     }
-    let toggleMagicChange = () => {
-        setMagicOn(!magicOn)
+    let toggleMagicChange = (parentContainer) => {
+        console.log(parentContainer)
         ChangeBoxValues(filterItemsToShow[0])
+        parentContainer.classList.add("magicAnimiation")
+
+        setTimeout(function() {
+            setMagicOn(!magicOn)
+        }, 900)
+        
+        
     }
     const [showFilterChange, setShowFilterChange] = useState(false)
 
@@ -1297,7 +1304,7 @@ function Recommendations() {
 
                             }}
                             onClick={handleLDChange}
-                        >Search</Button>
+                        >Generate</Button>
                     </div>
                 </div>
                 <div className='Rec-Scroll-Area'>
@@ -1338,9 +1345,9 @@ function Recommendations() {
                             </div>
                             <input
                                 className='insuranceInput'
-                                placeholder='IN'
+                                placeholder='INSURANCE'
                             />
-                            <div className='two-button-magic'>
+                            {/* <div className='two-button-magic'>
                                 <Button variant="contained"
                                     sx={{
                                         fontFamily: "Euclid Circular B SemiBold",
@@ -1385,11 +1392,11 @@ function Recommendations() {
                                     }}
 
                                 >Sex</Button>
-                            </div>
+                            </div> */}
 
-                            <div className='MagicButtonInner' onClick={toggleMagicChange}>
+                            <div className='MagicButtonInner' onClick={(e) => {toggleMagicChange(e.target.parentElement)}}>
                                 <img src='/PinkStars.png' alt='Pink Stars' className='MagicStarsToggle'></img>
-                                <div className='MagicButtonText'>
+                                <div className='MagicButtonText' onClick={(e) => {toggleMagicChange(e.target.parentElement.parentElement)}}>
                                     Make Magic
                                 </div>
                             </div>
@@ -1448,11 +1455,11 @@ function Recommendations() {
 
                         <div className='item-row-1'>
                             <div className='popup-info-1'>
-                                <img src='/Distance.png' alt='Distance' className='item-image-wide'></img>
+                                <img src='/Distance.svg' alt='Distance' className='item-image-wide'></img>
                                 {popUpInfo.Distance}
                             </div>
                             <div className='popup-info'>
-                                <img src='/LocationPin.png' alt='Pin' className='item-image-tall'></img>
+                                <img src='/Map_pin.svg.png' alt='Pin' className='item-image-tall'></img>
                                 {popUpInfo.Address}
                             </div>
                         </div>
@@ -1462,12 +1469,12 @@ function Recommendations() {
                                 13 minutes by car
                             </div>
                             <div className='popup-info-1'>
-                                <img src='/Phone.png' alt='Phone' className='item-image'></img>
+                                <img src='/Phone.svg' alt='Phone' className='item-image'></img>
                                 {popUpInfo.Phone}
                             </div>
 
                             <div className='popup-info'>
-                                <img src='/WWW.png' alt='Web Globe' className='item-image'></img>
+                                <img src='/Website.svg' alt='Web Globe' className='item-image'></img>
                                 <a href={popUpInfo.Website} className='item-website' target='_blank'>Website</a>
                             </div>
                         </div>
@@ -1643,7 +1650,7 @@ const listOfCategories = [
         Categories: ["Hepatologist", "Gastroenterologist", "Gym", "Nutritionist", "Pharmacy"]
     },
     {
-        Name: "Kidney Stones",
+        Name: "Type II Diabetes",
         Categories: ["Gym", "Nutritionist", "Ophthalmologist", "Pharmacy", "Podiatrist", "Primary care provider (PCP)"]
     },
     {
@@ -1651,11 +1658,11 @@ const listOfCategories = [
         Categories: ["Endocrinology", "Nutritionist", "OBGYN", "Occupational Therapy", "Physical Therapy", "Rheumatology"]
     },
     {
-        Name: "Sleep Apnea",
+        Name: "Kidney Stones",
         Categories: ["Nephrology", "Nutritionist", "Pharmacy", "Urology"]
     },
     {
-        Name: "Type II Diabetes",
+        Name: "Sleep Apnea",
         Categories: ["ENT", "Gym", "Neurology", "Nutritionist", "Pulmonologist", "Respiratory Therapy", "Sleep Medicine"]
     },
 ]

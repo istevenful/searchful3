@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Icon/Map pin</title>
+    <g id="Navigator" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="List-view-(Google)" transform="translate(-227, -271)">
+            <g id="List-item" transform="translate(40, 217)">
+                <g id="Group-3" transform="translate(0, 54)">
+                    <g id="Icon/Map-pin" transform="translate(187, 0)">
+                        <polygon id="Stroke-1" points="0 0 23.999999 0 23.999999 23.999999 0 23.999999"></polygon>
+                        <g id="Group-6" transform="translate(5, 3)" stroke="#272727" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
+                            <path d="M6.99999976,9.99999976 L6.99999976,9.99999976 C5.34300008,9.99999976 3.99999976,8.65699908 3.99999976,6.99999976 L3.99999976,6.99999976 C3.99999976,5.34300008 5.34300008,3.99999976 6.99999976,3.99999976 L6.99999976,3.99999976 C8.65699908,3.99999976 9.99999976,5.34300008 9.99999976,6.99999976 L9.99999976,6.99999976 C9.99999976,8.65699908 8.65699908,9.99999976 6.99999976,9.99999976 Z" id="Stroke-3"></path>
+                            <path d="M7,18 C7,18 0,12.2499993 0,7 C0,3.13399961 3.13399961,0 7,0 C10.8659995,0 14,3.13399961 14,7 C14,12.2499993 7,18 7,18 Z" id="Stroke-5"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

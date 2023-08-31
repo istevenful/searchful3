@@ -130,6 +130,8 @@ b {
     display: flex;
     flex-direction: column;
     padding-bottom: 15px;
+    background-color: #FFF1F2;
+    border-radius: 15px;
 }
 
 .item-container {
@@ -137,9 +139,8 @@ b {
     flex-direction: column;
     width: 100%;
     padding: 30px;
-    background-color: #FFF1F2;
-    border-radius: 15px;
-    margin-bottom: 25px;
+
+
 
 }
 
@@ -232,7 +233,7 @@ b {
 
 .item-Category {
     font-family: "Euclid Circular B SemiBold";
-    font-size: 1.2vw;
+    font-size: 1.4vw;
     color: black;
 }
 
@@ -534,6 +535,7 @@ b {
     cursor: pointer;
     text-decoration: none;
     margin-bottom: 10vh;
+    margin-top: 3vh;
 }
 
 .MagicToggleButton {
@@ -561,6 +563,10 @@ b {
     width: fit-content;
     cursor: pointer;
     background-color: white;
+    margin-top:25px;
+}
+.MagicButtonInner:hover{
+    transform: scale(1.02);
 }
 .two-button-magic{
     width: 100%;
@@ -751,14 +757,17 @@ b {
 }
 .verifiedText{
     font-size: .8vw;
-    color:red;
+    margin-top:5px;
+    color:#FF756D;
     font-family:"Euclid Circular B SemiBold";
 }
 
 .shrinkAnimiation{
     animation: analogue forwards 0.7s linear 1;
 }
-
+.magicAnimiation{
+    animation: vanishOut forwards 0.7s linear 1;
+}
 @keyframes analogue {
     0% {
       clip-path: inset(0% 0% 0% 0%);
@@ -766,5 +775,19 @@ b {
 
     100% {
       clip-path: inset(50% 0% 50% 0%);
+    }
+  }
+  @keyframes vanishOut {
+    0% {
+      opacity: 1;
+      -webkit-transform-origin: 50% 50%;
+      -webkit-transform: scale(1, 1);
+      -webkit-filter: blur(0px);
+    }
+    100% {
+      opacity: 0;
+      -webkit-transform-origin: 50% 50%;
+      -webkit-transform: scale(1.4, 1.4);
+      -webkit-filter: blur(20px);
     }
   }
