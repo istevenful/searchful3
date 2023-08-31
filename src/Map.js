@@ -158,9 +158,9 @@ export const Map = () => {
         const map = new mapboxgl.Map({
             // Choose from Mapbox's core styles, or make your own style with Mapbox Studio
             style: 'mapbox://styles/steventangen1e/cllz6wu0m009y01qz0814f21j',
-            center: [-98.579492,37.828316],
+            center: [-100.579492,37.828316],
             zoom: 3.5,
-            pitch: 40,
+            pitch: 10,
             bearing: 0,
             container: 'map',
             antialias: true,
