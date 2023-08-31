@@ -90,11 +90,16 @@ function Recommendations() {
         setFullLocation(searchData[0]);
         setDiagnosis(searchData[1]);
     }
-    let deleteFilter = (name) => {
-        let filters = [...currentFilters];
-        let filterToDeleteIndex = filters.indexOf(name);
-        filters.splice(filterToDeleteIndex, 1);
-        setCurrentFilters(filters);
+    let deleteFilter = (name, container) => {
+        container.classList.add("shrinkAnimiation")
+
+        setTimeout(function() {
+            let filters = [...currentFilters];
+            let filterToDeleteIndex = filters.indexOf(name);
+            filters.splice(filterToDeleteIndex, 1);
+            setCurrentFilters(filters)
+        }, 900)
+
     }
     let deleteFilterPopUp = (name) => {
         let filters = [...currentFilters];
@@ -1099,7 +1104,7 @@ function Recommendations() {
             categoriesUsed.push(filterItemData[filters].Type)
             filterItemsCards.push(
                 <div className='item-container'>
-                    <div className='item-container-titles'><div className='item-Category'>{itemData.Type} </div> <div className='Remove-Item' onClick={() => { deleteFilter(itemData.Type) }}>Remove</div> </div>
+                    <div className='item-container-titles'><div className='item-Category'>{itemData.Type} </div> <div className='Remove-Item' onClick={(e) => { deleteFilter(itemData.Type, e.target.parentElement.parentElement) }}>Remove</div> </div>
                     <div className='item-Box' >
                         <div className='item-box-left'>
 

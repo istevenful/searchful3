@@ -754,3 +754,17 @@ b {
     color:red;
     font-family:"Euclid Circular B SemiBold";
 }
+
+.shrinkAnimiation{
+    animation: analogue forwards 0.7s linear 1;
+}
+
+@keyframes analogue {
+    0% {
+      clip-path: inset(0% 0% 0% 0%);
+    }
+
+    100% {
+      clip-path: inset(50% 0% 50% 0%);
+    }
+  }
