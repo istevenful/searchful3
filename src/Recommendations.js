@@ -115,7 +115,7 @@ function Recommendations() {
 
         setSnackBarOpen(false);
     }
-    let handleShareClicked= () =>{
+    let handleShareClicked = () => {
         setShareClicked(true);
         handleModalClose();
     }
@@ -126,7 +126,7 @@ function Recommendations() {
 
         setShareClicked(false);
     }
-    
+
     const [filterItems, setFilterItems] = useState(
         [
             {
@@ -1014,7 +1014,7 @@ function Recommendations() {
         setFilterItemsToShow(copyOfCurrentFilters);
         // let indexOfCurrent = locationsListToPickFrom.indexOf
     }
-    
+
     function ChangeBoxValues(currentValue) {
 
         let copyOfCurrentFilters = [...filterItemsToShow];
@@ -1047,25 +1047,28 @@ function Recommendations() {
             if (badgeData.data != undefined) {
                 if (badgeData.data.length != 0) {
                     let badges = badgeData.data;
-                    for (var name of badges) {
+                    if (badges.length > 1) {
+                        returnBadges.push(
+                            <div className='verifiedText'>Professional/Patient Verified</div>
+                        )
+                    }
+                    else {
+                        for (var name of badges) {
 
-                        if (name == "Patient") {
-                            returnBadges.push(
+                            if (name == "Patient") {
+                                returnBadges.push(
 
-                                <Tooltip title="User Verified">
-                                    <img src='/UserVerified.png' alt='User Badge' className='item-badges'></img>
-                                </Tooltip>
-                            )
+                                    <div className='verifiedText'>Patient Verified</div>
+                                )
+                            }
+                            else if (name == "Professional") {
+                                returnBadges.push(
+
+                                    <div className='verifiedText'>Professional Verified</div>
+                                )
+                            }
+
                         }
-                        else if (name == "Professional") {
-                            returnBadges.push(
-
-                                <Tooltip title="Verified By A Medical Professional">
-                                    <img src='/ProfessionalBadge.png' alt='Professional Badge' className='item-badges'></img>
-                                </Tooltip>
-                            )
-                        }
-
                     }
                 }
 
@@ -1335,7 +1338,7 @@ function Recommendations() {
                             <div className='two-button-magic'>
                                 <Button variant="contained"
                                     sx={{
-                                        fontFamily:"Euclid Circular B SemiBold",
+                                        fontFamily: "Euclid Circular B SemiBold",
                                         width: "48%",
                                         paddingTop: "18px",
                                         paddingBottom: "18px",
@@ -1357,7 +1360,7 @@ function Recommendations() {
                                 >Age</Button>
                                 <Button variant="contained"
                                     sx={{
-                                        fontFamily:"Euclid Circular B SemiBold",
+                                        fontFamily: "Euclid Circular B SemiBold",
                                         width: "48%",
                                         paddingTop: "18px",
                                         paddingBottom: "18px",

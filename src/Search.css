@@ -36,6 +36,7 @@
     font-size: 3.5vw;
     background: linear-gradient(to right, #FF357E 0%,#FF7C9E 100%);
     background-size: 100%;
+    background-clip: text;
     -webkit-background-clip: text;
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent; 

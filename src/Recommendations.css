@@ -172,9 +172,8 @@ b {
     font-size: 1.2vw;
     font-family: "Euclid Circular B SemiBold";
     display: flex;
-    ;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
+
 }
 
 .item-badges {
@@ -749,4 +748,9 @@ b {
 }
 .insuranceInput::placeholder{
     color: #bdbdbd;
+}
+.verifiedText{
+    font-size: .8vw;
+    color:red;
+    font-family:"Euclid Circular B SemiBold";
 }
