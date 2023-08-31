@@ -1,6 +1,10 @@
 import React, { useRef, useEffect } from "react"
 import mapboxgl from "mapbox-gl"
-mapboxgl.accessToken = "pk.eyJ1Ijoic3RldmVudGFuZ2VuMWUiLCJhIjoiY2xsdmxkOGU2MGxqcTNkb2JkOXloNzg5ZiJ9.OfTRkBDdiCnSOsyNKCDz7g"
+import ReactMapGL from "react-map-gl";
+// eslint-disable-next-line import/no-webpack-loader-syntax
+import MapboxWorker from 'worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker';
+mapboxgl.accessToken = "pk.eyJ1Ijoic3RldmVudGFuZ2VuMWUiLCJhIjoiY2xsdmxkOGU2MGxqcTNkb2JkOXloNzg5ZiJ9.OfTRkBDdiCnSOsyNKCDz7g";
+mapboxgl.workerClass = MapboxWorker; // Wire up loaded worker to be used instead of the default
 export const Map = () => {
     const mapContainer = useRef()
 
