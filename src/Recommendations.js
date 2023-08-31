@@ -45,7 +45,6 @@ function Recommendations() {
     const [currentFilters, setCurrentFilters] = useState([])
 
     const [diagnosisFilters, setDiagnosisFilters] = useState([])
-
     const [modalOpen, setModalOpen] = useState(false);
     const handleModalOpen = () => setModalOpen(true);
     const handleModalClose = () => setModalOpen(false)
@@ -105,6 +104,7 @@ function Recommendations() {
         setCurrentFilters(filters);
     }
     const [snackBarOpen, setSnackBarOpen] = useState(false);
+    const [shareClicked, setShareClicked] = useState(false)
     const handleSnackBarClick = () => {
         setSnackBarOpen(true);
     };
@@ -115,6 +115,18 @@ function Recommendations() {
 
         setSnackBarOpen(false);
     }
+    let handleShareClicked= () =>{
+        setShareClicked(true);
+        handleModalClose();
+    }
+    let handleShareClose = (event, reason) => {
+        if (reason === 'clickaway') {
+            return;
+        }
+
+        setShareClicked(false);
+    }
+    
     const [filterItems, setFilterItems] = useState(
         [
             {
@@ -1578,7 +1590,7 @@ function Recommendations() {
                                 fontSize: ".8vw"
 
                             }}
-                            onClick={handleLDChange}
+                            onClick={handleShareClicked}
                         >Share</Button>
                     </div>
 
@@ -1589,6 +1601,13 @@ function Recommendations() {
             >
                 <Alert onClose={handleSnackBarClose} severity="success" sx={{ width: '100%' }}>
                     Stack Copied!
+                </Alert>
+            </Snackbar>
+            <Snackbar
+                open={shareClicked} autoHideDuration={2000} onClose={handleShareClose}
+            >
+                <Alert onClose={handleShareClose} severity="success" sx={{ width: '100%' }}>
+                    Send Success
                 </Alert>
             </Snackbar>
         </>

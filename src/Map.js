@@ -18,7 +18,7 @@ const geojson = {
             },
             properties: {
                 title: 'Washington, D.C.',
-                description: 'Washington, D.C.'
+                description: '1,219 Resources'
             }
         },
         {
@@ -28,10 +28,274 @@ const geojson = {
                 coordinates: [-122.414, 37.776]
             },
             properties: {
-                title: 'Mapbox',
-                description: 'San Francisco, California'
+                title: 'San Francisco, CA',
+                description: '1,871 Resources'
             }
-        }
+        },
+        {
+            type: 'Feature',
+            geometry: {
+                type: 'Point',
+                coordinates: [-74.006128,40.711978, ]
+            },
+            properties: {
+                title: 'New York, NY',
+                description: '3,753 Resources'
+            }
+        },
+        {
+            type: 'Feature',
+            geometry: {
+                type: 'Point',
+                coordinates: [-118.242653,34.054843]
+            },
+            properties: {
+                title: 'Los Angeles, CA',
+                description: '2,549 Resources'
+            }
+        },
+        {
+            type: 'Feature',
+            geometry: {
+                type: 'Point',
+                coordinates: [-87.629776,41.878146]
+            },
+            properties: {
+                title: 'Chicago, IL',
+                description: '5,231 Resources'
+            }
+        },
+        {
+            type: 'Feature',
+            geometry: {
+                type: 'Point',
+                coordinates: [-95.369809, 29.760413]
+            },
+            properties: {
+                title: 'Houston, TX',
+                description: '2,010 Resources'
+            }
+        },
+        {
+            type: 'Feature',
+            geometry: {
+                type: 'Point',
+                coordinates: [-75.165228,39.952536]
+            },
+            properties: {
+                title: 'Philadelphia, PA',
+                description: '910 Resources'
+            }
+        },
+        {
+            type: 'Feature',
+            geometry: {
+                type: 'Point',
+                coordinates: [-112.074027,33.448343]
+            },
+            properties: {
+                title: 'Phoenix, AZ',
+                description: '1,099 Resources'
+            }
+        },
+        {
+            type: 'Feature',
+            geometry: {
+                type: 'Point',
+                coordinates: [-98.494583,29.425144]
+            },
+            properties: {
+                title: 'San Antonio, TX',
+                description: '1,736 Resources'
+            }
+        },
+        {
+            type: 'Feature',
+            geometry: {
+                type: 'Point',
+                coordinates: [-117.161079,32.715629]
+            },
+            properties: {
+                title: 'San Diego, CA',
+                description: '2,700 Resources'
+            }
+        },
+        {
+            type: 'Feature',
+            geometry: {
+                type: 'Point',
+                coordinates: [-96.796984,32.776625]
+            },
+            properties: {
+                title: 'Dallas, TX',
+                description: '2,421 Resources'
+            }
+        },
+        {
+            type: 'Feature',
+            geometry: {
+                type: 'Point',
+                coordinates: [-81.655674,30.332105]
+            },
+            properties: {
+                title: 'Jacksonville, FL',
+                description: '1981 Resources'
+            }
+        },
+        {
+            type: 'Feature',
+            geometry: {
+                type: 'Point',
+                coordinates: [-86.158071,39.768379]
+            },
+            properties: {
+                title: 'Indianapolis, IN',
+                description: '1522 Resources'
+            }
+        },
+        {
+            type: 'Feature',
+            geometry: {
+                type: 'Point',
+                coordinates: [-80.843115,35.227057]
+            },
+            properties: {
+                title: 'Charlotte, NC',
+                description: '1111 Resources'
+            }
+        },
+        {
+            type: 'Feature',
+            geometry: {
+                type: 'Point',
+                coordinates: [-104.990254,39.739206]
+            },
+            properties: {
+                title: 'Denver, CO',
+                description: '876 Resources'
+            }
+        },
+        {
+            type: 'Feature',
+            geometry: {
+                type: 'Point',
+                coordinates: [-122.332851,47.606083]
+            },
+            properties: {
+                title: 'Seattle, WA',
+                description: '3255 Resources'
+            }
+        },
+        {
+            type: 'Feature',
+            geometry: {
+                type: 'Point',
+                coordinates: [-83.045757,42.331392]
+            },
+            properties: {
+                title: 'Detroit, MI',
+                description: '1655 Resources'
+            }
+        },
+        {
+            type: 'Feature',
+            geometry: {
+                type: 'Point',
+                coordinates: [-90.049091,35.149690]
+            },
+            properties: {
+                title: 'Memphis, TN',
+                description: '2666 Resources'
+            }
+        },
+        {
+            type: 'Feature',
+            geometry: {
+                type: 'Point',
+                coordinates: [-97.516473,35.467534]
+            },
+            properties: {
+                title: 'Oklahoma City, OK',
+                description: '676 Resources'
+            }
+        },
+        {
+            type: 'Feature',
+            geometry: {
+                type: 'Point',
+                coordinates: [-115.139209,36.171421]
+            },
+            properties: {
+                title: 'Las Vegas, NV',
+                description: '5411 Resources'
+            }
+        },
+        {
+            type: 'Feature',
+            geometry: {
+                type: 'Point',
+                coordinates: [-106.650435,35.084345]
+            },
+            properties: {
+                title: 'Albuquerque, NM',
+                description: '874 Resources'
+            }
+        },
+        {
+            type: 'Feature',
+            geometry: {
+                type: 'Point',
+                coordinates: [-93.265007,44.977723]
+            },
+            properties: {
+                title: 'Minneapolis, MN',
+                description: '1081 Resources'
+            }
+        },
+        {
+            type: 'Feature',
+            geometry: {
+                type: 'Point',
+                coordinates: [-87.906501,43.038817]
+            },
+            properties: {
+                title: 'Milwaukee, WI',
+                description: '1950 Resources'
+            }
+        },
+        {
+            type: 'Feature',
+            geometry: {
+                type: 'Point',
+                coordinates: [-94.578565,39.099586]
+            },
+            properties: {
+                title: 'Kansas City, MO',
+                description: '2311 Resources'
+            }
+        },
+        {
+            type: 'Feature',
+            geometry: {
+                type: 'Point',
+                coordinates: [-116.202326,43.614967]
+            },
+            properties: {
+                title: 'Boise, ID',
+                description: '2311 Resources'
+            }
+        },
+        {
+            type: 'Feature',
+            geometry: {
+                type: 'Point',
+                coordinates: [-103.231141,44.080233]
+            },
+            properties: {
+                title: 'Rapid City, SD',
+                description: '311 Resources'
+            }
+        },
     ]
 };
 
@@ -48,10 +312,10 @@ export const Map = () => {
         const map = new mapboxgl.Map({
             // Choose from Mapbox's core styles, or make your own style with Mapbox Studio
             style: 'mapbox://styles/mapbox/light-v11',
-            center: [-87.591707, 41.794238],
-            zoom: 15.5,
-            pitch: 45,
-            bearing: -17.6,
+            center: [-98.579492,37.828316],
+            zoom: 3.5,
+            pitch: 40,
+            bearing: 0,
             container: 'map',
             antialias: true
         });

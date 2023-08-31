@@ -15,6 +15,7 @@ import { Map } from './Map';
 function Search() {
     const [address, setAddress] = useState("")
     const [searchData, setSearchData] = useState(["San Francisco, CA", "Osteoporosis"])
+
     let handleLocationChange = (longvalue) => {
         let value = longvalue.slice(0,longvalue.length-5)
         console.log(value)
@@ -136,6 +137,9 @@ function Search() {
                         Searchful is available across 24 different cities across the country. We have over 20,000 high quality resources across 82 different categories
                     </div>
                     <Map/>
+                </div>
+                <div className='spacer-footer'>
+
                 </div>
             </div>
         </>
