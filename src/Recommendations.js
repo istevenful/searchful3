@@ -93,8 +93,9 @@ function Recommendations() {
     let deleteFilter = (name, container) => {
         container.classList.add("shrinkAnimiation")
 
-        setTimeout(function() {
+        setTimeout(function () {
             let filters = [...currentFilters];
+            let test = [...filterItemsToShow];
             let filterToDeleteIndex = filters.indexOf(name);
             filters.splice(filterToDeleteIndex, 1);
             setCurrentFilters(filters)
@@ -958,13 +959,15 @@ function Recommendations() {
         for (const filters of filterButtons) {
             let foundObj = filterItems.find(obj => obj.Category === filters);
             if (foundObj != undefined) {
-                let numberInRange = randomNumber(0, foundObj.Locations.length - 1);
-                locationsToShow.push(foundObj.Locations[numberInRange])
+                // let numberInRange = randomNumber(0, foundObj.Locations.length - 1);
+                // locationsToShow.push(foundObj.Locations[numberInRange])
+                locationsToShow.push(foundObj.Locations[0])
             }
 
         }
-        locationsToShow.sort(function (a, b) { return (a.Distance > b.Distance) ? 1 : ((b.Distance > a.Distance) ? -1 : 0); });
+        // locationsToShow.sort(function (a, b) { return (a.Distance > b.Distance) ? 1 : ((b.Distance > a.Distance) ? -1 : 0); });
         setFilterItemsToShow(locationsToShow)
+
     }, [currentFilters, filterItems])
 
     function FilterList() {
@@ -1057,7 +1060,7 @@ function Recommendations() {
                             <div className='verifiedText'>Professional/Patient Verified</div>
                         )
                     }
-                    else {
+                    else if (badges.length == 1) {
                         for (var name of badges) {
 
                             if (name == "Patient") {
@@ -1076,7 +1079,12 @@ function Recommendations() {
                         }
                     }
                 }
+                else {
+                    returnBadges.push(
 
+                        <div className='verifiedTextBlank'>Blank But Used For Spacing</div>
+                    )
+                }
 
             }
             return returnBadges;
@@ -1174,11 +1182,11 @@ function Recommendations() {
         ChangeBoxValues(filterItemsToShow[0])
         parentContainer.classList.add("magicAnimiation")
 
-        setTimeout(function() {
+        setTimeout(function () {
             setMagicOn(!magicOn)
         }, 900)
-        
-        
+
+
     }
     const [showFilterChange, setShowFilterChange] = useState(false)
 
@@ -1394,9 +1402,9 @@ function Recommendations() {
                                 >Sex</Button>
                             </div> */}
 
-                            <div className='MagicButtonInner' onClick={(e) => {toggleMagicChange(e.target.parentElement)}}>
+                            <div className='MagicButtonInner' onClick={(e) => { toggleMagicChange(e.target.parentElement) }}>
                                 <img src='/PinkStars.png' alt='Pink Stars' className='MagicStarsToggle'></img>
-                                <div className='MagicButtonText' onClick={(e) => {toggleMagicChange(e.target.parentElement.parentElement)}}>
+                                <div className='MagicButtonText' onClick={(e) => { toggleMagicChange(e.target.parentElement.parentElement) }}>
                                     Make Magic
                                 </div>
                             </div>
@@ -1459,27 +1467,27 @@ function Recommendations() {
                                 {popUpInfo.Distance}
                             </div>
                             <div className='popup-info'>
-                                <img src='/Map_pin.svg.png' alt='Pin' className='item-image-tall'></img>
+                                <img src='/Map_pin.svg' alt='Pin' className='item-image-wide'></img>
                                 {popUpInfo.Address}
                             </div>
                         </div>
                         <div className='item-row-2'>
                             <div className='popup-info-1'>
-                                <img src='/Car.png' alt='Phone' className='item-image'></img>
+                                <img src='/Car.png' alt='Phone' className='item-image-wide'></img>
                                 13 minutes by car
                             </div>
                             <div className='popup-info-1'>
-                                <img src='/Phone.svg' alt='Phone' className='item-image'></img>
+                                <img src='/Phone.svg' alt='Phone' className='item-image-wide'></img>
                                 {popUpInfo.Phone}
                             </div>
 
                             <div className='popup-info'>
-                                <img src='/Website.svg' alt='Web Globe' className='item-image'></img>
+                                <img src='/Website.svg' alt='Web Globe' className='item-image-wide'></img>
                                 <a href={popUpInfo.Website} className='item-website' target='_blank'>Website</a>
                             </div>
                         </div>
                         <div className='popup-Times'>
-                            <img src='/Clock.png' alt='Web Globe' className='item-image'></img>
+                            <img src='/Clock.png' alt='Web Globe' className='item-image-tall'></img>
                             <div className='time-slots'>
                                 <div className='time-slot'>
                                     MON: 8:00AM - 5:00PM

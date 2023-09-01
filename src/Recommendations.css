@@ -761,6 +761,12 @@ b {
     color:#FF756D;
     font-family:"Euclid Circular B SemiBold";
 }
+.verifiedTextBlank{
+    font-size: .8vw;
+    margin-top:5px;
+    color:white;
+    font-family:"Euclid Circular B SemiBold";
+}
 
 .shrinkAnimiation{
     animation: analogue forwards 0.7s linear 1;
