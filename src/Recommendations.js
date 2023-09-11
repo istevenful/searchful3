@@ -1272,7 +1272,7 @@ function Recommendations() {
                             options={listOfDiagnosis}
                             sx={{ width: '40%', borderRadius: "300px", }}
                             defaultValue={diagnosis}
-                            renderInput={(params) => <TextField {...params} label="" sx={{
+                            renderInput={(params) => <TextField {...params} placeholder="Condition" label="" sx={{
                                 width: '100%', background: "white", border: "none", borderRadius: "300px",
                                 "& .MuiOutlinedInput-root": {
                                     borderRadius: "50px",

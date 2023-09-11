@@ -52,7 +52,7 @@ function Search() {
                     <div className='Banner-Context'>
                         <img src='/SearchfulLogo.png' alt='Logo' className='Banner-Logo'></img>
                         <div className='Banner-Heading'>Start your Search</div>
-                        <div className='Banner-Text'>In the fields below type the patient’s location and their diagnosis</div>
+                        <div className='Banner-Text'>In the fields below type the patient’s location and their condition</div>
                     </div>
                     <img src='/BannerAnimation.png' alt="Banner Circle" className='BannerCircle'></img>
                 </div>
@@ -104,7 +104,7 @@ function Search() {
                             <div className='Diagnosis-Text'>
                                 <img className='Diagnosis-Logo' alt='Heart' src='/Diagnosis.png'></img>
 
-                                Diagnosis
+                                Condition
                             </div>
                             <Autocomplete
                                 disablePortal
